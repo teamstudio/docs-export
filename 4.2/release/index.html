@@ -1,0 +1,748 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.2.2, mkdocs-material-7.2.3">
+    
+    
+      
+        <title>Release Notes - Teamstudio Export 4.2</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.f7f47774.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.3f5d1f46.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
+      
+    
+    
+    
+    
+      
+
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+  
+    
+    <script>function __prefix(e){return new URL("..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#release-notes" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Teamstudio Export 4.2" class="md-header__button md-logo" aria-label="Teamstudio Export 4.2" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Teamstudio Export 4.2
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Release Notes
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <div class="md-header__option">
+        <div class="md-select">
+          
+          <button class="md-header__button md-icon" aria-label="Select language">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.52 17.52 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11.76-2.04M18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2l-4.5-12m-2.62 7 1.62-4.33L19.12 17h-3.24z"/></svg>
+          </button>
+          <div class="md-select__inner">
+            <ul class="md-select__list">
+              
+                <li class="md-select__item">
+                  <a href="../" hreflang="en" class="md-select__link">
+                    English
+                  </a>
+                </li>
+                
+                <li class="md-select__item">
+                  <a href="../ja/" hreflang="ja" class="md-select__link">
+                    日本語
+                  </a>
+                </li>
+                
+            </ul>
+          </div>
+        </div>
+      </div>
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Teamstudio Export 4.2" class="md-nav__button md-logo" aria-label="Teamstudio Export 4.2" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    Teamstudio Export 4.2
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        Documentation
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+      
+      <label class="md-nav__link" for="__nav_2">
+        Teamstudio Export
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Teamstudio Export" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Teamstudio Export
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../installing/" class="md-nav__link">
+        Installing Teamstudio Export
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../configuration/" class="md-nav__link">
+        Configuration
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../overview/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../archiving/" class="md-nav__link">
+        Archiving
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_5" type="checkbox" id="__nav_2_5" >
+      
+      <label class="md-nav__link" for="__nav_2_5">
+        HTML
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="HTML" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_5">
+          <span class="md-nav__icon md-icon"></span>
+          HTML
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../html/" class="md-nav__link">
+        Exporting to HTML
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../htmlviewfield/" class="md-nav__link">
+        HTML View and Field Display
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sharepoint/" class="md-nav__link">
+        Storing HTML Sites in Microsoft SharePoint
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keyboard/" class="md-nav__link">
+        Keyboard Navigation
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pdf/" class="md-nav__link">
+        Exporting to PDF
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../progress/" class="md-nav__link">
+        Progress Window
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../archive/" class="md-nav__link">
+        Archive File Format
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Release Notes
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Release Notes
+      </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#teamstudio-export-42" class="md-nav__link">
+    Teamstudio Export 4.2
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pdf-limitations" class="md-nav__link">
+    PDF Limitations
+  </a>
+  
+    <nav class="md-nav" aria-label="PDF Limitations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#doclinks-and-attachments" class="md-nav__link">
+    Doclinks and Attachments
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fix-list" class="md-nav__link">
+    Fix List
+  </a>
+  
+    <nav class="md-nav" aria-label="Fix List">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#export-420" class="md-nav__link">
+    Export 4.2.0
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#export-410" class="md-nav__link">
+    Export 4.1.0
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#export-401" class="md-nav__link">
+    Export 4.0.1
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#teamstudio-export-42" class="md-nav__link">
+    Teamstudio Export 4.2
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pdf-limitations" class="md-nav__link">
+    PDF Limitations
+  </a>
+  
+    <nav class="md-nav" aria-label="PDF Limitations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#doclinks-and-attachments" class="md-nav__link">
+    Doclinks and Attachments
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fix-list" class="md-nav__link">
+    Fix List
+  </a>
+  
+    <nav class="md-nav" aria-label="Fix List">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#export-420" class="md-nav__link">
+    Export 4.2.0
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#export-410" class="md-nav__link">
+    Export 4.1.0
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#export-401" class="md-nav__link">
+    Export 4.0.1
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="release-notes">Release Notes</h1>
+<h2 id="teamstudio-export-42">Teamstudio Export 4.2</h2>
+<p>Teamstudio Export 4.2 is a feature update to Export. It removes the limitation that table cells in PDF documents cannot span multiple pages, and can now export large nested tabbed tables. There are a number of other fixes and enhancements to improve robustness and PDF accuracy.</p>
+<p>The major new features of Export 4.0 include:</p>
+<ul>
+<li><strong>Export to PDF</strong> - Export can now export documents to PDFs, along with an HTML site containing the database views that can be used to navigate the PDFs. See <a href="../pdf/">Exporting to PDF</a> for details. This feature will work with existing archives - there is no need to re-run the archive process.</li>
+<li><strong>Formulas from Hidden Designs</strong> - Export can now export documents to HTML or PDF even if the original database design contains formulas from hidden designs. As with the Notes client, the formulas remain encrypted on disk (in the archive) but can be evaluated for display.</li>
+<li><strong>Encrypted Content</strong> - Version 4.0.0 supports encrypted content, including file attachments.
+ <br />
+<div class="admonition note">
+     <p class="admonition-title">Note</p>
+    You will need to recreate any archives created with a version of Export earlier than 3.2.1 if you
+    need to have access to encrypted content. The ID used to perform the archive must have access to the
+    keys required to decrypt the content, otherwise a warning will be generated during archive. Note that
+    the archive will contain the decrypted content and you should take any steps necessary to secure
+    access to the archive.
+     </p>
+     <p>
+     There is no need to re-archive databases that do not contain encrypted content.
+     </p>
+   </div>
+</li>
+</ul>
+<p>Additional fixes are identified in the Fix List section below.</p>
+<p>Please refer to <a href="../installing/">Installing Teamstudio Export</a> for details on system requirements and installation. This page will be updated with any known issues and fixes as they become available.</p>
+<h2 id="pdf-limitations">PDF Limitations</h2>
+<p>Converting Notes documents to PDF is a complex process and some Notes concepts do not map well to PDFs. This section lists some known limitations in the current version, but please contact our tech support team if you run into these or any other issues and we are happy to work with you to find a solution for your application.</p>
+<h3 id="doclinks-and-attachments">Doclinks and Attachments</h3>
+<p>While PDFs do an excellent job of providing a consistent display across devices and viewers, different PDF viewers behave very differently when handling links between files. Unfortunately, there is no one solution that works flawlessly in all environments. In our testing, relative web links worked with the most viewers for both file-system and server-hosted exports so that is the solution we have currently implemented as the default option. An option is available in the Export configuration to embed the attachment within the PDF, which may be the best option if you intend to utilize or distribute the PDFs separate from the viewer application produced by Export. At this time, however, most browsers cannot view embedded files and you will need to use Acrobat Reader or Firefox. Please contact us if you need a different solution in your environment.</p>
+<h2 id="fix-list">Fix List</h2>
+<h3 id="export-420">Export 4.2.0</h3>
+<p>[TMS-1428] - An invalid image can cause PDF export to abort<br />
+[TMS-1431] - PDF page height for US Letter is incorrect<br />
+[TMS-1432] - InvalidOperationException generating HTML/PDF with invalid numeric values<br />
+[TMS-1433] - Support the 'weekday' date format<br />
+[TMS-1434] - Support for NotesBitmap images<br />
+[TMS-1435] - External doclinks in PDFs resolve to the HTML directory rather than the PDF directory<br />
+[TMS-1436] - Installer signature expires May 2021<br />
+[TMS-1438] - 'The format string is empty' error writing views with empty datetimeformats<br />
+[TMS-1439] - Write a map file to convert attachment short names to their original names<br />
+[TMS-1440] - String comparisons with empty strings in formulas are incorrect<br />
+[TMS-1441] - PDF exporter doesn't handle encrypted formulas<br />
+[TMS-1443] - Computed text should display numeric and date values, not just text<br />
+[TMS-1444] - Intermittent XML parse errors when archives are on a network drive<br />
+[TMS-1445] - Shared rich text fields on documents can cause PDF generation to fail<br />
+[TMS-1446] - Table cells in PDFs cannot span multiple pages and are truncated<br />
+[TMS-1447] - Scaled images are not sized appropriately<br />
+[TMS-1448] - Support A3 page size and landscape orientation in PDF<br />
+[TMS-1449] - Improve 'Error decompressing bitmap segment' handling during archiving<br />
+[TMS-1450] - PDF nested tables don't respect colspan on their parent cell  </p>
+<h3 id="export-410">Export 4.1.0</h3>
+<p>[TMS-1409] - Error exporting to PDF when a form references a missing subform with quotes etc in its name<br />
+[TMS-1410] - Support @Repeat<br />
+[TMS-1411] - PDF tables columns may extend into right margin<br />
+[TMS-1412] - PDF tables created when a form is not available have extraneous backticks<br />
+[TMS-1413] - Support for subtraction of datetimes in formulas<br />
+[TMS-1414] - Pdf section headers with a border are always left-aligned regardless of paragraph style<br />
+[TMS-1415] - Pdf export fails when a document references a font with a localized name from a TrueType Collection font<br />
+[TMS-1416] - Support EmbeddedControl elements in HTML and PDF<br />
+[TMS-1417] - Pdf Export should allocate more width to narrow columns when fixed width columns exceed the page width<br />
+[TMS-1418] - FT Index grows massively when the data contains large base64 text fields<br />
+[TMS-1419] - The archive log should show if the archive was built in demo mode<br />
+[TMS-1420] - Run in demo mode if no serial number and key provided<br />
+[TMS-1421] - Computed for display fields should not be evaluated if they already exist in the document<br />
+[TMS-1422] - Support for @ThisName  </p>
+<h3 id="export-401">Export 4.0.1</h3>
+<p>[TMS-1400] - PDF links to unreferenced attachments don't work on the web<br />
+[TMS-1401] - Optionally support attachments embedded in PDFs, enabled in the advanced settings<br />
+[TMS-1402] - Copying logs to the clipboard occasionally fails with 0x800401D0 and crashes Export<br />
+[TMS-1403] - PDFs can use the display name for attachments, retaining the extension<br />
+[TMS-1404] - Invalid attachment size causes HTML export to fail<br />
+[TMS-1405] - PDF export fails when the document contains strings of backticks<br />
+[TMS-1406] - Nested tables should ignore the left margin when computing width<br />
+[TMS-1407] - Tables on subforms inside tables have the wrong width<br />
+[TMS-1408] - Internet Explorer fails with blank page (Export 4.0.0)  </p>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="../archive/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Archive File Format" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Archive File Format
+            </div>
+          </div>
+        </a>
+      
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+        
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../assets/javascripts/workers/search.709b4209.min.js", "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.29db7785.min.js"></script>
+      
+    
+  </body>
+</html>
