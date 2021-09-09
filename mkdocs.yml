@@ -1,0 +1,43 @@
+site_name: Teamstudio Export 4.2
+
+nav:
+  - 'index.md'
+  - 'Teamstudio Export':
+    - 'installing.md'
+    - 'configuration.md'
+    - 'overview.md'
+    - 'archiving.md'
+    - 'HTML' :
+      - 'html.md'
+      - 'htmlviewfield.md'
+      - 'sharepoint.md'
+      - 'keyboard.md'
+    - 'pdf.md'
+    - 'progress.md'
+  - 'archive.md'
+  - 'release.md'
+
+theme:
+  name: material
+
+extra:
+  alternate:
+    - name: English
+      link: ./
+      lang: en
+    - name: 日本語
+      link: ./ja/
+      lang: ja
+      
+markdown_extensions:
+  - admonition
+  - md_in_html
+  - pymdownx.highlight
+  - pymdownx.superfences
+  
+plugins:
+  - search
+  - i18n:
+      default_language: en
+      languages:
+        ja: 日本語
