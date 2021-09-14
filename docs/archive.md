@@ -5,6 +5,8 @@ Teamstudio Export archive files are designed to be simple to access without requ
 ## Directory Structure
 The easiest way to explore an archive file is to add a .zip extension and then open the file in Windows Explorer.
 
+![archive folder](img/archive_dir.png)
+
 ### Data Folder
 The *data* folder contains a file for every data document in the database. Each file is XML, using the Domino DXL format. While this is largely self-explanatory, a DTD for DXL is available at [The Domino DTD](https://help.hcltechsw.com/dom_designer/11.0.0/appdev/builds/H_DOMINO_DTD.html). The name of each file is *noteid*.dxl where *noteid* is the id of the document, expressed as an 8 digit hexadecimal number.
 

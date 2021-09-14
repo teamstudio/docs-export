@@ -14,6 +14,8 @@ Teamstudio Export caches the data displayed in the main window in a local databa
 
 ## Database Status Icons
 
+There are four icons in the final column of the main window that indicate the current status of a database.
+
 ### ![Server](img/server@1x.png) Server
 This icon indicates that the database exists on the Domino server. It will not be present for databases that exist only as an archive.
 

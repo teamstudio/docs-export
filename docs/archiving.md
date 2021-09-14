@@ -1,6 +1,6 @@
 # Archiving
 
-Teamstudio Export can generate an archive file from a Notes database. The archive file contains a complete copy of all of the design and data from the database but is stored in a simple, XML-based format that can be accessed with no proprietary tools or libraries. See (Archive File Format)[archivefmt.md] for more details on the structure of an archive file.
+Teamstudio Export can generate an archive file from a Notes database. The archive file contains a complete copy of all of the design and data from the database but is stored in a simple, XML-based format that can be accessed with no proprietary tools or libraries. See [Archive File Format](archive.md) for more details on the structure of an archive file.
 
 !!! note
     You need an active subscription to use the Teamstudio Export tool to **generate** archives, but
