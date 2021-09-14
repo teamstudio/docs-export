@@ -14,7 +14,7 @@
     
     
       
-        <title>Storing HTML Sites in Microsoft SharePoint - Teamstudio Export 4.2</title>
+        <title>Microsoft SharePointにHTMLサイトを保存 - Teamstudio Export 4.2</title>
       
     
     
@@ -61,7 +61,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#storing-html-sites-in-microsoft-sharepoint" class="md-skip">
+        <a href="#microsoft-sharepointhtml" class="md-skip">
           コンテンツにスキップ
         </a>
       
@@ -91,7 +91,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Storing HTML Sites in Microsoft SharePoint
+              Microsoft SharePointにHTMLサイトを保存
             
           </span>
         </div>
@@ -264,7 +264,7 @@
   
     <li class="md-nav__item">
       <a href="../overview/" class="md-nav__link">
-        Overview
+        概要
       </a>
     </li>
   
@@ -276,7 +276,7 @@
   
     <li class="md-nav__item">
       <a href="../archiving/" class="md-nav__link">
-        Archiving
+        アーカイブ
       </a>
     </li>
   
@@ -311,7 +311,7 @@
   
     <li class="md-nav__item">
       <a href="../html/" class="md-nav__link">
-        Exporting to HTML
+        HTMLへのエクスポート
       </a>
     </li>
   
@@ -323,7 +323,7 @@
   
     <li class="md-nav__item">
       <a href="../htmlviewfield/" class="md-nav__link">
-        HTML View and Field Display
+        HTML ビューとフィールドの表示
       </a>
     </li>
   
@@ -344,7 +344,7 @@
       
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        Storing HTML Sites in Microsoft SharePoint
+        Microsoft SharePointにHTMLサイトを保存
       </a>
       
     </li>
@@ -357,7 +357,7 @@
   
     <li class="md-nav__item">
       <a href="../keyboard/" class="md-nav__link">
-        Keyboard Navigation
+        キーボードナビゲーション
       </a>
     </li>
   
@@ -375,7 +375,7 @@
   
     <li class="md-nav__item">
       <a href="../pdf/" class="md-nav__link">
-        Exporting to PDF
+        PDFへのエクスポート
       </a>
     </li>
   
@@ -387,7 +387,7 @@
   
     <li class="md-nav__item">
       <a href="../progress/" class="md-nav__link">
-        Progress Window
+        進行状況ウィンドウ
       </a>
     </li>
   
@@ -408,7 +408,7 @@
   
     <li class="md-nav__item">
       <a href="../archive/" class="md-nav__link">
-        Archive File Format
+        アーカイブファイルの形式
       </a>
     </li>
   
@@ -459,36 +459,29 @@
               
                 
                 
-                <h1 id="storing-html-sites-in-microsoft-sharepoint">Storing HTML Sites in Microsoft SharePoint</h1>
-<p>Starting with Export 2.1, applications that have been exported to HTML are automatically compatible with Microsoft SharePoint. The sites that Export generates are self-contained folders and all that is necessary is to import the entire folder into the Site Pages library in your SharePoint site. Note that you cannot currently do this with the SharePoint web interface, you will need to use Microsoft SharePoint Designer.</p>
-<p>Once you have exported your applications to HTML in Teamstudio Export, follow these steps to import them into SharePoint.</p>
+                <h1 id="microsoft-sharepointhtml">Microsoft SharePointにHTMLサイトを保存</h1>
+<p>Export 2.1から、HTMLにエクスポートされたアプリケーションは自動的にMicrosoft SharePointとの互換性があります。エクスポートによって生成されるサイトは自分を含むフォルダとなり、必要な作業はSharePointのサイト内にあるサイトページライブラリにフォルダ全体をインポートするだけです。現在、SharePointのウェブインターフェイス上ではこのプロセスを実行できない為、Microsoft SharePoint Designerの使用が必要になることにご注意ください。</p>
+<p>Teamstudio ExportでHTMLにアプリケーションをエクスポートした後、次の手順に従うことでSharePointにインポートすることができます。</p>
 <ol>
-<li>If you do not already have it, download and install Microsoft SharePoint Designer. This is a free download from Microsoft: the current version is available <a href="https://www.microsoft.com/en-us/download/details.aspx?id=35491">here</a>.</li>
-<li>Launch SharePoint Designer and open the SharePoint site where you want to host the exported applications.</li>
-<li>You will import the applications into the <em>Site Pages</em> library in SharePoint. If you will be importing multiple applications and want to store them in a directory structure then you will need to enable the <em>Display New Folder command on the New menu</em> setting to allow you to create folders. To do this, select <em>Lists and Libraries</em> from the <em>Site Objects</em> list in SharePoint Designer, choose the <em>Site Pages</em> Document Library and check the option in the <em>Advanced Settings</em> section.
+<li>Microsoft SharePoint Designerが環境下にない場合は、ダウンロードしてインストールしてください。Microsoftによる無料ダウンロードが可能です。最新版は<a href="https://www.microsoft.com/en-us/download/details.aspx?id=35491">こちら</a>です</li>
+<li>SharePoint Designerを起動し、エクスポートされたアプリケーションをホストにしたいSharePointサイトで開きます。</li>
+<li>アプリケーションをSharePoint内のサイトページライブラリにインポートします。複数のアプリケーションをインポートし、後にディレクトリ構造として保存したい場合は、[新規メニューの新しいフォルダコマンドを表示する]を有効にすることで、フォルダの作成を可能にする必要があります。またこのプロセスを実行する際は、SharePoint Designerにある[サイトオブジェクト]のリストから[リストとライブラリ]を選択し、[サイトページ]の文書ライブラリを選択した後、[詳細設定]の部分からオプションをチェックします。
    <img alt="SharepointDesigner" src="../../img/spd.png" /></li>
 <li>
-<p>Now select <em>Site Pages</em> from the <em>Site Objects</em> list. Create any folders that you need by right-clicking in the list of contents and using the <em>New</em> menu.
+<p>[サイトオブジェクト]のリストから[サイトページ]を選択します。その後、コンテンツを含むリストを右クリックし、[新規]メニューを使用することで、必要なフォルダを作成します。
  <br />
 <div class="admonition note">
      <p class="admonition-title">Note</p>
-    Each application exported from Teamstudio Export is a completely self-contained folder and you can
-    store the folder anywhere you like on your file system or in SharePoint. The only exception to this is
-    when you have doclinks between applications. Those links will only work correctly if you retain the
-    same relative path between the applications. So if they were both in the same folder on your Domino
-    server then they must be in the same folder in SharePoint. Similarly, if they were in sibling
-    folders on the server then they must be in sibling folders with the same names in SharePoint.
-    If you recreate the same folder structure in SharePoint that Export created in the HTML output
-    folder then everything will work correctly.
+    Teamstudio Exportからエクスポートされた各アプリケーションは完全な自分自身を含むフォルダとなっており、お使いのPCのファイルシステム、又はSharePoint内に任意に保存することができます。唯一考えられる例外は、アプリケーション間に文書リンクがある場合です。これらのリンクは、アプリケーション間で同じ相対パスを保持する場合のみ正常に動作します。従って、それらのアプリケーションが両方ともドミノサーバー上の同じフォルダに存在する場合は、SharePoint内においても同じフォルダに存在する必要があります。同様に、サーバー上に兄弟関係のフォルダがある場合は、SharePoint内においても同じ名前の兄弟兄弟関係のフォルダが存在する必要があります。Exportが作成するHTML出力フォルダと同じフォルダ構造を再度SharePoint内に作成した場合、全て正常に動作します。
      </p>
    </div></p>
 </li>
 <li>
-<p>All that remains is to drag the exported applications into SharePoint. If you are importing your entire collection of exported applications then you can just drag the root HTML folder into <em>Site Pages</em>. More likely, you will want to drag individual applications. To do this, select the appropriate folder (it will have a <em>.tse</em> extension) and drag it to appropriate folder in SharePoint Designer.
+<p>残っている作業として、エクスポートされたアプリケーションをSharePointにドラッグします。エクスポートされたアプリケーションのコレクション全体をインポートする場合は、ルートHTMLフォルダを[サイトページ]にドラッグします。また、個々のアプリケーションをドラッグしたい場合は、適切なフォルダ(.tse拡張子)を選択し、SharePoint Designer内にある適切なフォルダにドラッグします。
    <img alt="SharePoint Designer Upload" src="../../img/spd2.png" />
-   You may find that the SharePoint Designer UI does not update automatically when the import is complete. If that happens, click the green refresh button in the top-right of the SharePoint Designer window to force a refresh.</p>
+   インポートが完了しても、SharePoint DesignerのUIが自動的に更新されないことがあります。その場合は、SharePoint Designerウィンドウの右側になる緑色のボタンをクリックすることで、更新を行うことができます。</p>
 </li>
-<li>Once your site is imported, you can access it from a browser by choosing <em>Site Pages</em> from the site, navigating to the appropriate folder if necessary and then clicking the <em>indexsp.aspx</em> page. If your SharePoint site contains a single exported application  then you can make this display automatically when you enter the site by right-clicking on the <em>indexsp.aspx</em> file in SharePoint Designer and choosing <em>Set as Home Page</em> from the menu. If your SharePoint site contains multiple exported applications then you may want to modify the default <em>Home.aspx</em> page that SharePoint creates to contain links to the <em>indexsp.aspx</em> files for your exported applications.</li>
+<li>サイトをインポートした後に、ブラウザからアクセスするにはサイトから[サイトページ]を選択し、必要に応じて適切なフォルダに移動してから、<em>[indexsp.aspx]</em>ページをクリックします。SharePointのサイトに1つだけエクスポートされたアプリケーションが含まれている場合は、SharePoint Designerで<em>[indexsp.aspx]</em>ファイルを右クリックし、メニューから[ホームページに設定]を選択することで、サイトに訪れた際の表示を自動的に行うことができます。SharePointのサイトに複数のエクスポートされたアプリケーションが含まれている場合は、エクスポートされたアプリケーションのために<em>SharePointが[indexsp.aspx]</em>ファイルへリンクを含むように作成したデフォルトの<em>[Home.aspx]</em>ページを変更することも可能です。</li>
 </ol>
                 
               
@@ -509,7 +502,7 @@
     <nav class="md-footer__inner md-grid" aria-label="フッター">
       
         
-        <a href="../htmlviewfield/" class="md-footer__link md-footer__link--prev" aria-label="前: HTML View and Field Display" rel="prev">
+        <a href="../htmlviewfield/" class="md-footer__link md-footer__link--prev" aria-label="前: HTML ビューとフィールドの表示" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -518,20 +511,20 @@
               <span class="md-footer__direction">
                 前
               </span>
-              HTML View and Field Display
+              HTML ビューとフィールドの表示
             </div>
           </div>
         </a>
       
       
         
-        <a href="../keyboard/" class="md-footer__link md-footer__link--next" aria-label="次: Keyboard Navigation" rel="next">
+        <a href="../keyboard/" class="md-footer__link md-footer__link--next" aria-label="次: キーボードナビゲーション" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 次
               </span>
-              Keyboard Navigation
+              キーボードナビゲーション
             </div>
           </div>
           <div class="md-footer__button md-icon">

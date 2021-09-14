@@ -14,7 +14,7 @@
     
     
       
-        <title>HTML View and Field Display - Teamstudio Export 4.2</title>
+        <title>HTML ビューとフィールドの表示 - Teamstudio Export 4.2</title>
       
     
     
@@ -61,7 +61,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#html-view-and-field-display" class="md-skip">
+        <a href="#html" class="md-skip">
           コンテンツにスキップ
         </a>
       
@@ -91,7 +91,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              HTML View and Field Display
+              HTML ビューとフィールドの表示
             
           </span>
         </div>
@@ -264,7 +264,7 @@
   
     <li class="md-nav__item">
       <a href="../overview/" class="md-nav__link">
-        Overview
+        概要
       </a>
     </li>
   
@@ -276,7 +276,7 @@
   
     <li class="md-nav__item">
       <a href="../archiving/" class="md-nav__link">
-        Archiving
+        アーカイブ
       </a>
     </li>
   
@@ -311,7 +311,7 @@
   
     <li class="md-nav__item">
       <a href="../html/" class="md-nav__link">
-        Exporting to HTML
+        HTMLへのエクスポート
       </a>
     </li>
   
@@ -332,12 +332,12 @@
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          HTML View and Field Display
+          HTML ビューとフィールドの表示
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        HTML View and Field Display
+        HTML ビューとフィールドの表示
       </a>
       
         
@@ -355,29 +355,29 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#the-configuration-file" class="md-nav__link">
-    The Configuration File
+  <a href="#_1" class="md-nav__link">
+    設定ファイル
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#default-view-display" class="md-nav__link">
-    Default View Display
+  <a href="#_2" class="md-nav__link">
+    ビューのフィルタリング
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#filtering-views" class="md-nav__link">
-    Filtering Views
+  <a href="#_3" class="md-nav__link">
+    フィールドのフィルタリング
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#filtering-fields" class="md-nav__link">
-    Filtering Fields
+  <a href="#ui" class="md-nav__link">
+    UIでのフィルタリングの一時的な無効化
   </a>
   
 </li>
@@ -396,7 +396,7 @@
   
     <li class="md-nav__item">
       <a href="../sharepoint/" class="md-nav__link">
-        Storing HTML Sites in Microsoft SharePoint
+        Microsoft SharePointにHTMLサイトを保存
       </a>
     </li>
   
@@ -408,7 +408,7 @@
   
     <li class="md-nav__item">
       <a href="../keyboard/" class="md-nav__link">
-        Keyboard Navigation
+        キーボードナビゲーション
       </a>
     </li>
   
@@ -426,7 +426,7 @@
   
     <li class="md-nav__item">
       <a href="../pdf/" class="md-nav__link">
-        Exporting to PDF
+        PDFへのエクスポート
       </a>
     </li>
   
@@ -438,7 +438,7 @@
   
     <li class="md-nav__item">
       <a href="../progress/" class="md-nav__link">
-        Progress Window
+        進行状況ウィンドウ
       </a>
     </li>
   
@@ -459,7 +459,7 @@
   
     <li class="md-nav__item">
       <a href="../archive/" class="md-nav__link">
-        Archive File Format
+        アーカイブファイルの形式
       </a>
     </li>
   
@@ -506,29 +506,29 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#the-configuration-file" class="md-nav__link">
-    The Configuration File
+  <a href="#_1" class="md-nav__link">
+    設定ファイル
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#default-view-display" class="md-nav__link">
-    Default View Display
+  <a href="#_2" class="md-nav__link">
+    ビューのフィルタリング
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#filtering-views" class="md-nav__link">
-    Filtering Views
+  <a href="#_3" class="md-nav__link">
+    フィールドのフィルタリング
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#filtering-fields" class="md-nav__link">
-    Filtering Fields
+  <a href="#ui" class="md-nav__link">
+    UIでのフィルタリングの一時的な無効化
   </a>
   
 </li>
@@ -546,63 +546,44 @@
               
                 
                 
-                <h1 id="html-view-and-field-display">HTML View and Field Display</h1>
-<p>Teamstudio Export can generate a static HTML site from an archive. By default, the HTML site displays all of the non-hidden views in the original application, and all of the fields found on the exported documents.  Some Notes applications contain a significant number of views and fields that are used by application logic.  Often, these views and fields do not provide useful information to the end-user and impede the end user's ability to locate relevant information.
-Teamstudio Export supports configuration settings within the exported HTML site that can be used to:</p>
+                <h1 id="html">HTML ビューとフィールドの表示</h1>
+<p>Teamstudio Exportはアーカイブから静的なHTMLサイトを生成することを可能にしています。デフォルトでは、HTMLサイトはオリジナルアプリケーションの全ての非表示でないビューとエクスポートされた文書にある全てのフィールドを表示します。いくつかのNotesアプリケーションには、アプリケーション ロジックで使用される多数のビューとフィールドが含まれています。時折これらのビューおよびフィールドは、エンドユーザーに有用な情報を提供せず、さらには関連情報を見つけることを妨げてしまいます。</p>
+<p>Teamstudio ExportはエクスポートされたHTMLサイトに対して以下の設定をサポートしています:</p>
 <ul>
-<li>control which views are displayed</li>
-<li>control which fields are displayed, including the order of display, and optionally provide field labels</li>
+<li>どのビューが表示されるかを制御する</li>
+<li>どのフィールドが表示されているか、表示の順番などを制御し、オプションでフィールドラベルを設定する</li>
 </ul>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Configuration settings for an HTML site are located inside the site's HTML folder (the .tse folder),
-at config/config.js. Documentation for configuring view and field display, along with examples can be
-found in the default config.js file generated when a site is created.</p>
+<p>HTMLサイトの設定は、サイトのHTMLフォルダ(.tseフォルダ)のatconfig/config.js内にあります。ビューとフィールドを表示させるためのドキュメンテーションとサンプルは、サイトの作成時に生成されるデフォルトのconfig.jsにあります。</p>
 </div>
-<h2 id="the-configuration-file">The Configuration File</h2>
-<p>The configuration file (config.js) is essentially a JavaScript / JSON configuration file, similar to properties files used by many modern web technologies.  To allow an HTML site to be self-contained and browsed locally without the use of a web server, the JavaScript object that represents the configuration properties is registered with the application by passing it to a function ('tmsData') that is called when config.js is loaded by the browser.  The default config.js file contains comments documenting this function, along with example settings that can be uncommented and modified as appropriate. A basic understanding of JavaScript syntax and JSON is helpful when editing this file.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>The web application must be reloaded in the browser for changes to the config.js file to take effect.</p>
-</div>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>The file config-base.js contains default settings, and is overwritten with each HTML export. 
-The config.js file is only created the first time an HTML export is created, and can override
-properties in config-base.js.  See config-base.js for information on properties that are overridden
-in groups.</p>
-</div>
-<h2 id="default-view-display">Default View Display</h2>
-<p>By default, views are displayed if:</p>
+<h2 id="_1">設定ファイル</h2>
+<p>設定ファイル(config.js)は本質的には、多くの最新のWeb技術で使用されているプロパティファイルと似た形式でJavaScript/JSONによる設定ファイルになります。Webサーバーを使用せずにHTMLサイトを自前でブラウズができるようにするために、設定プロパティを表すJavaScriptオブジェクトは、config.jsが読み込まれる時に呼ばれる関数(“tmsData”)を通すことでアプリケーションに登録されます。デフォルトのconfig,jsファイルには、この関数について記述した説明とコメントを外して利用できるコードの設定例が含まれています。</p>
+<p>JavaScriptに関する構文とJSONの基本的な理解はこのファイルを編集する際に役立ちます。</p>
+<p>Config.jsファイルの変更を有効にするには、Webアプリケーションをブラウザに再ロードする必要があります。</p>
+<h2 id="_2">ビューのフィルタリング</h2>
+<p>この設定は、どのビューを表示するかを制御することができます:</p>
 <ul>
-<li>they are not hidden (the view name does not start with the '(' character)</li>
-<li>they are recognized as a <em>special view name</em> in standard Notes templates, for example, <em>($Inbox)</em></li>
-</ul>
-<p>When <em>special view names</em> are encountered, Export tries to apply the same title that the Notes client uses, for example, a view named <em>($All)</em> is displayed as <em>All Documents</em>, and <em>($Inbox)</em> as <em>Inbox</em>.</p>
-<p>The mapping of view names is provided by config-base.js in the function assigned to the <em>views.filterFn</em> property.  This function can be copied to the same property in config.js, and adapted as desired to override the default handling.</p>
-<h2 id="filtering-views">Filtering Views</h2>
-<p>The configuration allows control of which views are displayed by:</p>
-<ul>
-<li>explicitly listing the views to display</li>
-<li>providing a JavaScript function that accepts an array of available view names and returns an array of views to show</li>
-<li>disabling the default hiding of views that start with '(' </li>
+<li>明示的に表示するビューの指定</li>
+<li>使用可能なビュー名の配列を受け取り、表示するビューの配列を返すJavaScript関数の提供</li>
+<li>()で始まるビューのデフォルトの非表示を無効化 </li>
 </ul>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Views that start with '(' are filtered by default in Export 2.0 and later.</p>
+<p>「(」で始まるビューのフィルタリングは、エクスポート2.0以降の標準機能です。</p>
 </div>
 <p>A simple config.js filtering views
 <div class="highlight"><pre><span></span><code><span class="nb">window</span><span class="p">.</span><span class="nx">tmsData</span><span class="p">(</span><span class="s1">&#39;config.js&#39;</span><span class="p">,</span> <span class="p">{</span>
    <span class="nx">views</span><span class="o">:</span> <span class="p">{</span> <span class="nx">filter</span><span class="o">:</span> <span class="p">[</span> <span class="s1">&#39;all&#39;</span><span class="p">,</span> <span class="s1">&#39;by date&#39;</span><span class="p">,</span> <span class="s1">&#39;by author&#39;</span><span class="p">]</span> <span class="p">}</span>
 <span class="p">});</span>
 </code></pre></div></p>
-<p>See the default config.js file for detailed examples of view filters.</p>
-<h2 id="filtering-fields">Filtering Fields</h2>
-<p>The configuration allows control of which fields are displayed for a particular form by:</p>
+<p>ビューのフィルタリングの詳細な例については、標準のconfig.jsファイルを参照してください。</p>
+<h2 id="_3">フィールドのフィルタリング</h2>
+<p>この設定では、特定のフォームに対してどのフィールドを表示するか制御することができます:</p>
 <ul>
-<li>explicitly listing the fields to display, in display order</li>
-<li>explicitly listing fields to display along with the labels to display for the fields</li>
-<li>providing a JavaScript function that accepts an array of field names and returns an array of fields to show in one of the above formats</li>
+<li>明示的に順番通りに表示するフィールドの指定</li>
+<li>フィールドに表示するラベルと共に、表示するフィールドを明示的に一覧表示する</li>
+<li>フィールド名の配列を受け取り、上記のいずれかの形式で表示するフィールドの配列を返すJavaScript関数の提供</li>
 </ul>
 <p>A simple config.js filtering fields
 <div class="highlight"><pre><span></span><code><span class="nb">window</span><span class="p">.</span><span class="nx">tmsData</span><span class="p">(</span><span class="s1">&#39;config.js&#39;</span><span class="p">,</span> <span class="p">{</span>
@@ -618,13 +599,9 @@ in groups.</p>
         <span class="p">}</span>
 <span class="p">});</span>
 </code></pre></div></p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>The view generated in the <em>Preview</em> tab is created by rendering the document based on the form
-design, and is not influenced by the <em>forms</em> property in the config.js file. These settings
-control display of the fields in the <em>Data</em> tab only.</p>
-</div>
-<p>See the default config.js file for detailed examples of field filters.</p>
+<p>フィールドのフィルタリングの詳細な例については、標準のconfig.jsファイルを参照してください。</p>
+<h2 id="ui">UIでのフィルタリングの一時的な無効化</h2>
+<p>ビューとフィールドのフィルターの開発を支援するために、ビューのメインリストと文書上の両方のフィルターにおいて、メインのエクスポートヘッダーバーでShiftキーを押しながらダブルクリックすると、オン/オフのトグル設定が可能です。この機能はconfig.jsの保存やアプリケーションを再ロードせずに、フィルターを変更するときに使用できる全てのフィールドの一覧をリスト表示させるのに役立ちます。</p>
                 
               
               
@@ -644,7 +621,7 @@ control display of the fields in the <em>Data</em> tab only.</p>
     <nav class="md-footer__inner md-grid" aria-label="フッター">
       
         
-        <a href="../html/" class="md-footer__link md-footer__link--prev" aria-label="前: Exporting to HTML" rel="prev">
+        <a href="../html/" class="md-footer__link md-footer__link--prev" aria-label="前: HTMLへのエクスポート" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -653,20 +630,20 @@ control display of the fields in the <em>Data</em> tab only.</p>
               <span class="md-footer__direction">
                 前
               </span>
-              Exporting to HTML
+              HTMLへのエクスポート
             </div>
           </div>
         </a>
       
       
         
-        <a href="../sharepoint/" class="md-footer__link md-footer__link--next" aria-label="次: Storing HTML Sites in Microsoft SharePoint" rel="next">
+        <a href="../sharepoint/" class="md-footer__link md-footer__link--next" aria-label="次: Microsoft SharePointにHTMLサイトを保存" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 次
               </span>
-              Storing HTML Sites in Microsoft SharePoint
+              Microsoft SharePointにHTMLサイトを保存
             </div>
           </div>
           <div class="md-footer__button md-icon">
