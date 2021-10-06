@@ -31,6 +31,27 @@ Converting Notes documents to PDF is a complex process and some Notes concepts d
 While PDFs do an excellent job of providing a consistent display across devices and viewers, different PDF viewers behave very differently when handling links between files. Unfortunately, there is no one solution that works flawlessly in all environments. In our testing, relative web links worked with the most viewers for both file-system and server-hosted exports so that is the solution we have currently implemented as the default option. An option is available in the Export configuration to embed the attachment within the PDF, which may be the best option if you intend to utilize or distribute the PDFs separate from the viewer application produced by Export. At this time, however, most browsers cannot view embedded files and you will need to use Acrobat Reader or Firefox. Please contact us if you need a different solution in your environment.
 
 ## Fix List
+### Export 4.2.1
+179549001	URL links do not function correctly when exported to PDF (TMS-1452)  
+179549002	Certain URL links can cause 'Name cannot begin with the & character...' error exporting to PDF (TMS-1453)  
+179549004	Images taller than a single page cause multiple errors exporting to PDF (TMS-1454)  
+179549006	Work around PDF viewers not handling network paths in URL Links (TMS-1455)  
+179549007	Include the Export version number in stack traces (TMS-1456)  
+179549009	Export uses the current locale when parsing decimal table column widths for PDFs (TMS-1457)  
+179549014	Support for monochrome bitmaps (TMS-1458)  
+179549015	Invalid cdstorage images cause html/pdf export to abort (TMS-1459)  
+179549016	Support for NotesBitmaps that contain image data vs cdstoragelinks (TMS-1460)  
+179549017	Doclinks don't work on HTML data hosted on SharePoint (TMS-1461)  
+179549018	Attachments with long extensions can exceed the max windows path length (TMS-1462)  
+179549020	Display warning if DxlExporter fails with a non-zero exit code (TMS-1463)  
+179549023	Nested urllinks cause PDF export to fail (TMS-1464)  
+179549024	Errors deleting and moving DXL file (TMS-1465)  
+179531650	Archives should use a forward slash as the directory separator (TMS-1451)  
+179552203	Remove lang="en" from the template index.html page  
+179552189	Include UNIDs in Full Text Search  
+179552074	Support for UNC file paths as the HTML/PDF output directory  
+179584382	HTML UI doesn't correctly update to show views with no entries
+
 ### Export 4.2.0
 [TMS-1428] - An invalid image can cause PDF export to abort  
 [TMS-1431] - PDF page height for US Letter is incorrect  
