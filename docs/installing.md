@@ -4,7 +4,7 @@
 Teamstudio Export installs onto a workstation. There is no server component and no changes are required to your Domino server other than ensuring that the user running Export has the necessary acess permissions if you will be creating archives.
 
 ## Workstation Requirements
-* Windows 7, 8, 10
+* Windows 7, 8, 10, 11
 
 If you want to create new archives in addition to browsing and managing existing archives, then you will also need
 
