@@ -1,2 +1,2 @@
 # Documentation
-This is the documentation for Teamstudio Export 4.2.
+This is the documentation for Teamstudio Export 4.3.

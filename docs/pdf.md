@@ -46,6 +46,14 @@ Doclinks within a single database are supported. Doclinks between databases are 
     If you have a group of databases that contain doclinks between themselves, you should archive **all**
     of the databases before exporting any of them to PDF. This ensures that all doclinks will be exported
     correctly.
+
+## Embedded Views
+Starting with Export 4.3.0, Embedded Views are exported to PDF. There are a few requirements for the view to be exported:
+
+* The view must be in the current database.
+* The embedded view must have the *Show Single Category* option set.
+
+Exporting embedded views will slow down the export process a little. The current implementation has been optimized for views up to a few hundred thousand entries. If you have significantly larger views and encounter performance problems, please contact support.
     
 ## Preview Limitations
 The Export PDF exporter understands most of the properties that are necessary to display a Notes form. The main features that are not supported are
@@ -56,7 +64,7 @@ The Export PDF exporter understands most of the properties that are necessary to
 * Functions that break the read-only contract such as @SetField
 * Actions
 * Layout Regions
-* Embedded Controls
+* Embedded Controls (Embedded Views *are* supported)
 * OLE Objects
 
 Export converts rich text to PDF and processes a subset of @Formula language to generate documents that include computed values and respect hide-when calculations, where possible. New releases of Export often enhance @Formula support and improve rendering. Export can regenerate the PDFs from the application archive to incorporate improvements - without requiring access to the original Notes application. Missing @Formula functions, and other rendering issues, can be reported to [techsupport@teamstudio.com](mailto:techsupport@teamstudio.com) for evaluation.
