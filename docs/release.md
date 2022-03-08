@@ -13,27 +13,37 @@ Additional fixes are identified in the Fix List section below.
 Please refer to [Installing Teamstudio Export](installing.md) for details on system requirements and installation. This page will be updated with any known issues and fixes as they become available.
 
 ## Fix List
+### Export 4.3.1
+[181273536]	PDF export error when a hyperlink directly contains a tab or linebreak  
+[181301985]	Formula unary minus fails with non-numeric argument  
+[181303536]	Embedded views fail on '(Not Categorized)' value  
+[181305464]	Computed text fails when value is an empty list  
+[181317062]	Support for embedded radio button fields  
+[181374656]	Invalid Unicode surrogates cause HTML/PDF export to fail  
+[181466465]	Support additional LMBCS->Unicode translations  
+[181466767]	Handle well-formed but unrecognized LMBCS
+
 ### Export 4.3.0
-179665914	Local database support is no longer in beta  
-179665918	Japanese full-text indexing is no longer in beta  
-180136338	Empty tablerows can mess up rowspans  
-180381305	Certain Windows metafile images export as a black rectangle  
-180498324	Fix 'Parameter must be positive and < Width' error exporting a NotesBitmap  
-180500000	Use a valid bitmap in preference to a metafile  
-180515732	Protect against corrupt native NotesBitmap data  
-180563874	Error 'e-06' is an unknown unit type during PDF export  
-180562030	Protect against exceptions while displaying an unhandled exception  
-180565355	Add 'Support mode', additional options on the right-click menu if you hold down 'alt' when clicking  
-180698882	HTML/PDF exports fail calling @Name on name with trailing $ sign  
-180731984	Error exporting to HTML/PDF for computed authors field with no default value formula  
-180739876	Add more protection against corrupt bitmaps  
-180829295	Support custom date formats  
-180882791	PDF export - Don't render underline or strikethrough for tabs  
-180957791	Support commas in addition to periods as decimal separators in formulas  
-181038393	HTML significant characters in views don't render correctly  
-181144493	Add an option to hide templates in the UI  
-181162785	Update demo text to include a link to web site enquiry page  
-181193818   View column values incorrectly hidden when 'Hide detail rows' checked  
-181209557   Improve handling of illegal XML characters, especially in PDF export  
-181227029   PDF export fails when a form contains the DXL layer tag  
-181237416   Error exporting a fully spanned row in a stored form to PDF
+[179665914]	Local database support is no longer in beta  
+[179665918]	Japanese full-text indexing is no longer in beta  
+[180136338]	Empty tablerows can mess up rowspans  
+[180381305]	Certain Windows metafile images export as a black rectangle  
+[180498324]	Fix 'Parameter must be positive and < Width' error exporting a NotesBitmap  
+[180500000]	Use a valid bitmap in preference to a metafile  
+[180515732]	Protect against corrupt native NotesBitmap data  
+[180563874]	Error 'e-06' is an unknown unit type during PDF export  
+[180562030]	Protect against exceptions while displaying an unhandled exception  
+[180565355]	Add 'Support mode', additional options on the right-click menu if you hold down 'alt' when clicking  
+[180698882]	HTML/PDF exports fail calling @Name on name with trailing $ sign  
+[180731984]	Error exporting to HTML/PDF for computed authors field with no default value formula  
+[180739876]	Add more protection against corrupt bitmaps  
+[180829295]	Support custom date formats  
+[180882791]	PDF export - Don't render underline or strikethrough for tabs  
+[180957791]	Support commas in addition to periods as decimal separators in formulas  
+[181038393]	HTML significant characters in views don't render correctly  
+[181144493]	Add an option to hide templates in the UI  
+[181162785]	Update demo text to include a link to web site enquiry page  
+[181193818] View column values incorrectly hidden when 'Hide detail rows' checked  
+[181209557] Improve handling of illegal XML characters, especially in PDF export  
+[181227029] PDF export fails when a form contains the DXL layer tag  
+[181237416] Error exporting a fully spanned row in a stored form to PDF

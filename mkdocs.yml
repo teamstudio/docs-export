@@ -10,7 +10,6 @@ nav:
     - 'HTML' :
       - 'html.md'
       - 'htmlviewfield.md'
-      - 'sharepoint.md'
       - 'keyboard.md'
     - 'pdf.md'
     - 'progress.md'
