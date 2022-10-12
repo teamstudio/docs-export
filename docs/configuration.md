@@ -51,7 +51,10 @@ The list of servers that Teamstudio Export will search for databases to archive.
 * To remove a server from the list, select the server and press the Remove button.
 
 To pick from a list of available servers, click the down arrow at the end of the server name field and select <Scan> from the dropdown. This will populate the dropdown with a list of known servers from the address books on your local client and home mail server. Note that the ability to scan for available servers relies on earlier Notes settings being correct so you may see an error if, for example, the Notes program folder is not set correctly.
-  
+
+### Local Databases
+Export 3.2 and later supports archiving local databases (those located in the Notes "data" folder on the local workstation). This feature can be enabled in the Export configuration settings.  When enabled, local databases are listed in the Export UI along with server-based databases, and can be archived in the same manner.
+
 ## Advanced Settings
 The settings on this page allow you to configure advanced properties in Export and enable beta features.
 
@@ -78,8 +81,5 @@ This option allows you to specify the font to use when exporting documents to PD
 ### PDF Attachments
 By default, attachments in documents are created as files within the PDF output folder, and *relative links* are used in documents where the attachments reside. This configuration works best when the full archive folder is made available via web browser from a file server or web server, and is supported by most browsers' PDF viewers.  Alternatively, if this setting is set to *Embedded*, Export will insert the attached files within the PDF, which is helpful when distributing PDFs individually. At this time, however, most browsers cannot view embedded files and you will need to use Acrobat Reader or FireFox.
 
-### Local Databases (BETA)
-Export 3.2 and later supports archiving local databases (those located in the Notes "data" folder on the local workstation). This feature can be enabled in the Export configuration settings.  When enabled, local databases are listed in the Export UI along with server-based databases, and can be archived in the same manner.
-
-### HTML Full-Text Search Language (BETA)
+### Full-Text Search Language
 The Export configuration includes an option to optimize searches for Japanese content by creating the search index using a tokenizer tuned for Japanese ideograms. Enabling this option improves search accuracy for Japanese content.

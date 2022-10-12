@@ -64,8 +64,7 @@ The Export document previewer understands most of the properties that are necess
 
 * LotusScript, JavaScript, or Agents used by the form or invoked to populate fields
 * Functions that require context normally provided by Notes, such as current username and associated properties like roles
-* Access to data in other documents, including @GetDocField, and @DbLookup/@DbColumn
-* Functions that break the read-only contract such as @SetField
+* Access to data in other documents, including @GetDocField and @DbColumn
 * Actions
 * Layout Regions
 * Embedded Controls (Embedded Views *are* supported)
