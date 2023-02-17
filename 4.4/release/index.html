@@ -475,6 +475,13 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#export-441" class="md-nav__link">
+    Export 4.4.1
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#export-440" class="md-nav__link">
     Export 4.4.0
   </a>
@@ -536,6 +543,13 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#export-441" class="md-nav__link">
+    Export 4.4.1
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#export-440" class="md-nav__link">
     Export 4.4.0
   </a>
@@ -576,6 +590,36 @@
 <p>There is no need to re-archive your database to take advantage of the most of the new features and fixes in Export 4.4. The only exception is the fix for the missing <em>db.dxl</em> file in archives. If you encounter an <em>object reference not set to an instance of an object</em> error during HTML/PDF export and have no db.dxl file in the corresponding archive, regenerating the archive with Export 4.4 will solve the problem.</p>
 <p>Please refer to <a href="../installing/">Installing Teamstudio Export</a> for details on system requirements and installation. This page will be updated with any known issues and fixes as they become available.</p>
 <h2 id="fix-list">Fix List</h2>
+<h3 id="export-441">Export 4.4.1</h3>
+<p>[183595114] Add notranslate attributes to the HTML/PDF sites<br />
+[183621773] An error creating db.dxl should halt archiving<br />
+[183621836] DxlExporter fails to generate db.dxl with a timeout<br />
+[183623774] PDF export fails with invalid binary rt tables<br />
+[183632221] Add more protection against bad data in binary rich text<br />
+[183681762] Improve WriteMarkerFile error handling<br />
+[183681036] Unable to access log file when archiving fails<br />
+[183680706] Jobs window leaves 'Cleaning up temporary files' message when displaying archive error<br />
+[183680251] Display save/replication conflicts in views<br />
+[183692935] Support view column hide formulas<br />
+[183743597] Support non-text keys in @DbLookup<br />
+[183754923] Render checkbox and radio button fields<br />
+[183783673] Improve embedded view formatting<br />
+[183952090] Provide limited support for invalid field names<br />
+[183952259] Ignore file items that aren't named $file<br />
+[183954016] Always display checkbox/radio button characters in black on PDF<br />
+[184094392] Handle nested attachments in binary rich text<br />
+[184155752] OutOfMemoryException loading processing large document with stored form<br />
+[184165648] PDF - Handle fonts with invalid cmap<br />
+[184199258] Subform lookup in stored forms should also search database<br />
+[184197574] Ignore embedded subform bodies in stored forms<br />
+[184093717] InvalidOperationException in @DbLookup<br />
+[184261228] Create support files for failed view exports<br />
+[184274174] Bump copyright year to 2023<br />
+[184274148] Handle shared keyword fields in PDF<br />
+[184282155] Handle unavailable values as @DbLookup keys<br />
+[184282018] Handle empty strings in @DbLookup<br />
+[184298267] Support computed URL links<br />
+[184366765] Handle paragraphs within attachmentrefs in binary rich text  </p>
 <h3 id="export-440">Export 4.4.0</h3>
 <p>[181489567] HTML/PDF export fails if an embedded view data file is missing<br />
 [181505115] Paragraphs directly in a tablerow (i.e., not in a tablecell) cause HTML and PDF export to fail<br />
