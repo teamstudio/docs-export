@@ -15,6 +15,37 @@ There is no need to re-archive your database to take advantage of the most of th
 Please refer to [Installing Teamstudio Export](installing.md) for details on system requirements and installation. This page will be updated with any known issues and fixes as they become available.
 
 ## Fix List
+### Export 4.4.1
+[183595114]	Add notranslate attributes to the HTML/PDF sites  
+[183621773]	An error creating db.dxl should halt archiving  
+[183621836]	DxlExporter fails to generate db.dxl with a timeout  
+[183623774]	PDF export fails with invalid binary rt tables  
+[183632221]	Add more protection against bad data in binary rich text  
+[183681762]	Improve WriteMarkerFile error handling  
+[183681036]	Unable to access log file when archiving fails  
+[183680706]	Jobs window leaves 'Cleaning up temporary files' message when displaying archive error  
+[183680251]	Display save/replication conflicts in views  
+[183692935]	Support view column hide formulas  
+[183743597]	Support non-text keys in @DbLookup  
+[183754923]	Render checkbox and radio button fields  
+[183783673]	Improve embedded view formatting  
+[183952090]	Provide limited support for invalid field names  
+[183952259]	Ignore file items that aren't named $file  
+[183954016]	Always display checkbox/radio button characters in black on PDF  
+[184094392]	Handle nested attachments in binary rich text  
+[184155752]	OutOfMemoryException loading processing large document with stored form  
+[184165648]	PDF - Handle fonts with invalid cmap  
+[184199258]	Subform lookup in stored forms should also search database  
+[184197574]	Ignore embedded subform bodies in stored forms  
+[184093717]	InvalidOperationException in @DbLookup  
+[184261228]	Create support files for failed view exports  
+[184274174]	Bump copyright year to 2023  
+[184274148]	Handle shared keyword fields in PDF  
+[184282155]	Handle unavailable values as @DbLookup keys  
+[184282018]	Handle empty strings in @DbLookup  
+[184298267]	Support computed URL links  
+[184366765]	Handle paragraphs within attachmentrefs in binary rich text  
+
 ### Export 4.4.0
 [181489567]	HTML/PDF export fails if an embedded view data file is missing  
 [181505115]	Paragraphs directly in a tablerow (i.e., not in a tablecell) cause HTML and PDF export to fail  
