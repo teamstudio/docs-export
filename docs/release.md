@@ -1,120 +1,62 @@
 # Release Notes
-## Teamstudio Export 4.4
-Teamstudio Export 4.4 is a feature update to Export. It adds support for @DbLookup, along with many fixes and enhancements.
+## Teamstudio Export 4.5
+Teamstudio Export 4.5 is a feature update to Export. It adds support for embedded Microsoft Office OLE objects, along with many fixes and enhancements.
 
-The major new features of Export 4.4 include:
+The major new features of Export 4.5 include:
 
-* **@DbLookup** - Export can now evaluate @DbLookup calls within the current database. All of the common @DbLookup options are supported, but note that lookups that retrieve data from the document rather than the view may run very slowly in Export. However, since exported data is read only, all lookups can be cached which will help offset the performance cost. This feature works with existing archives - there is no need to regenerate the archive file.
+* **OLE Support** - Export can now extract embedded Microsoft Office OLE objects. It supports Word, Office and PowerPoint documents in both the older .doc, .xls and .ppt formats and the newer .docx, .xlsx and .pptx formats. Other document types will not be extracted. Please contact us if you need support for additional OLE object types.
 
-* **Binary Rich Text** - Export generally relies on Notes to convert rich text into XML within the DXL files. In some cases, typically where there is some corruption in the document, Notes is unable to convert rich text to XML and saves the raw binary data to the DXL file instead. Earlier versions of Export ignored this binary rich text data when exporting to HTML/PDF, but Export 4.4 will now attempt to display it. Depending on the severity of the corruption, Export may not be able to convert it, and in that case it will display the message *Invalid Rich Text* instead. These messages can typically be fixed by opening the affected document in the Notes client, making a simple edit (e.g. adding and removing a space), resaving the document and regenerating the archive.
+* **Database Level Configuration** - Some applications rely on hide-when formulas using @UserRoles to control which parts of a form should be visible. Earlier versions of Export always returned an empty list for @UserRoles, resulting in incorrect output. Since user roles are specific to a particular database, it doesn't make sense to configure these in the global Export configuration. Export 4.5 adds the ability to configure, for each database, which roles should be returned by @UserRoles so that you can tailor the output as required. These settings are stored in the *config* folder of the PDF or HTML output and will be re-used for any subsequent exports of the same database.  Although rarely needed, you can also configure the value of @UserName and any notes.ini values that should be returned by @Environment.
 
 Additional fixes are identified in the Fix List section below.
 
-There is no need to re-archive your database to take advantage of the most of the new features and fixes in Export 4.4. The only exception is the fix for the missing *db.dxl* file in archives. If you encounter an *object reference not set to an instance of an object* error during HTML/PDF export and have no db.dxl file in the corresponding archive, regenerating the archive with Export 4.4 will solve the problem.
+There is no need to re-archive your database to take advantage of any of the new features and fixes in Export 4.5.
 
 Please refer to [Installing Teamstudio Export](installing.md) for details on system requirements and installation. This page will be updated with any known issues and fixes as they become available.
 
 ## Fix List
-### Export 4.4.1
-[183595114]	Add notranslate attributes to the HTML/PDF sites  
-[183621773]	An error creating db.dxl should halt archiving  
-[183621836]	DxlExporter fails to generate db.dxl with a timeout  
-[183623774]	PDF export fails with invalid binary rt tables  
-[183632221]	Add more protection against bad data in binary rich text  
-[183681762]	Improve WriteMarkerFile error handling  
-[183681036]	Unable to access log file when archiving fails  
-[183680706]	Jobs window leaves 'Cleaning up temporary files' message when displaying archive error  
-[183680251]	Display save/replication conflicts in views  
-[183692935]	Support view column hide formulas  
-[183743597]	Support non-text keys in @DbLookup  
-[183754923]	Render checkbox and radio button fields  
-[183783673]	Improve embedded view formatting  
-[183952090]	Provide limited support for invalid field names  
-[183952259]	Ignore file items that aren't named $file  
-[183954016]	Always display checkbox/radio button characters in black on PDF  
-[184094392]	Handle nested attachments in binary rich text  
-[184155752]	OutOfMemoryException loading processing large document with stored form  
-[184165648]	PDF - Handle fonts with invalid cmap  
-[184199258]	Subform lookup in stored forms should also search database  
-[184197574]	Ignore embedded subform bodies in stored forms  
-[184093717]	InvalidOperationException in @DbLookup  
-[184261228]	Create support files for failed view exports  
-[184274174]	Bump copyright year to 2023  
-[184274148]	Handle shared keyword fields in PDF  
-[184282155]	Handle unavailable values as @DbLookup keys  
-[184282018]	Handle empty strings in @DbLookup  
-[184298267]	Support computed URL links  
-[184366765]	Handle paragraphs within attachmentrefs in binary rich text  
-
-### Export 4.4.0
-[181489567]	HTML/PDF export fails if an embedded view data file is missing  
-[181505115]	Paragraphs directly in a tablerow (i.e., not in a tablecell) cause HTML and PDF export to fail  
-[181564495]	PDF export fails with extraneous table columns  
-[181588431]	Support "month" custom date format  
-[181588978]	Handle computed imagerefs in stored forms  
-[181613461]	Error exporting certain native NotesBitmaps  
-[181659131]	Improve thread-safety of PDF generation  
-[181779390]	Improve exception reporting during HTML/PDF export  
-[181779342]	Improve error reporting when adding formatted text to a PDF  
-[181781782]	Handle case differences in attachment references and $File names  
-[181827402]	Handle missing attachments in PDF embed mode  
-[181860691]	Unreferenced attachments leak an icon handle, ultimately causing Export to crash  
-[181860746]	Protect the unhandled exception handler against recursion  
-[181904774]	Handle missing colortable when checking for a bitmap metafile alternate  
-[181964782]	Support computed subforms in stored forms  
-[181964789]	Handle aliases in stored subforms  
-[182005300]	Support formulas with no whitespace after REM/SELECT  
-[182004980]	SELECT formulas parse but fail at runtime  
-[182057508]	Support @Sqrt  
-[182067660]	Support @Transform and @Nothing  
-[182120640]	Support page breaks in PDF  
-[182151133]	Error exporting to PDF when text begins with a Unicode combining character  
-[182185976]	Export hangs with an empty DXL document  
-[182218239]	Horizontal rules inside urllinks cause PDF export to fail  
-[182250778]	@Length should return 0 for an empty list  
-[182278248]	Handle empty text lists in computed image refs  
-[182281270]	Support @ThisName in compiled formulas  
-[182281249]	Support @ThisValue  
-[182280872]	Computed fields should evaluate if the field is missing from the original document  
-[182279873]	Support @SetField  
-[182280528]	Fully implement FIELD assignment  
-[182302659]	Support 'edit' and 'datetime' embedded controls  
-[182303634]	DateTimePair field values don't render in HTML/PDF  
-[182303204]	Handle self-closed datetimes in DXL  
-[182337594]	Ignore page breaks inside a table cell  
-[182365580]	Protect IndexRtItems against document modifications  
-[182379274]	Prevent embedded view error when view has no entries  
-[182395232]	Support descending category sort in embedded views  
-[182575000]	Handle missing pattern table when checking for a bitmap metafile alternate  
-[182578735]	Handle linebreaks in embedded field values  
-[182588109]	Allow longer PDF documents to be created  
-[182590994]	Tables with cells that span both rows and columns do not export to PDF correctly  
-[182611234]	Add count and size attributes to files.xml  
-[182752420]	Handle self-assignment in default value formulas  
-[182754402]	Support raw rich text data  
-[182795881]	Handle non-xml chars in binary rich text  
-[182796727]	Upgrade third-party dependencies  
-[182812479]	Handle missing CDPARAGRAPHs in binary rich text  
-[182812845]	Handle nested attachment hotspots in binary rich text  
-[182839715]	Support 'checkmark' list style  
-[182823807]	Support embedded combobox controls  
-[183082205]	Handle binary rich text that cannot be converted to DXL  
-[183085117]	Url links with ampersands corrupted when exported to PDF  
-[183086033]	Handle non-xml chars in embedded field values  
-[183094808]	Support @LeftBack  
-[183132002]	Support for font linking  
-[183131534]	Support for embedded checkbox fields  
-[183161561]	Date component @functions should return -1 on empty argument  
-[183194389]	Create db.dxl ourselves rather than using DxlExportIDTable  
-[183256652]	Stop invalid NotesBitmaps terminating an export  
-[183256261]	Allow invalid colors when processing bitmaps  
-[183304950]	Allow orphaned table cells in binary rich text  
-[183304812]	PDF - Set a minimum width of 1% on table columns  
-[183304731]	PDF - prevent paragraphs/tables from indenting more than the current width  
-[183332385]	Doclinks should be more forgiving of missing views  
-[183331946]	Handle bad doclinks consistently  
-[183346159]	Left margins may be incorrect rendering binary rich text  
-[183346055]	Handle table cell background colors in binary rich text  
-[183346515]	Handle hide formula references in binary rich text  
-[183346397]	Handle pre-subform embedded forms  
-[183488422]	@Adjust fails with NaN argument values
+### Export 4.5.0
+[184587425]	Improve handling of missing $File items  
+[184578743]	Handle attachments in forms/subforms  
+[184633099]	Handle unsupported year formats  
+[184666006]	Handle rowspans in PDF tabbed tables  
+[184690086]	Support database-level configuration for @UserName, @UserRoles, @Environment  
+[184764016]	Don't try to preview empty documents  
+[184763654]	Support 'onread' = 'collapse' in sections  
+[184764830]	Handle missing documents in @DbLookup  
+[184835589]	Handle corruption in binary bitmaps  
+[184836217]	meta.xml should be written without a BOM  
+[184847648]	Protect against errant paragraphs inside runs  
+[184873442]	Include item name in files.xml  
+[184873262]	Unreferenced attachment names may not display correctly in PDF  
+[184873249]	Improve detection of unreferenced attachments  
+[184884947]	Protect against 0-length records in binary rich text  
+[184893394]	Protect against errant paragraphs inside paragraphs  
+[184972331]	Support @GetDocField  
+[184992361]	Installer should offer to install shortcuts  
+[184992632]	Improve wording on configuration dialog  
+[185047386]	Support cross-database embedded views  
+[185086409]	Set the $REF item for response documents  
+[185086023]	Support TYPE\_NOTEREF\_LIST items in dxl  
+[185103812]	Support 'weekday' custom date format  
+[185131124]	Update code signing certificate  
+[185140992]	Fix NPE for attachments on stored forms  
+[185141852]	Ignore corrupt OLE object files  
+[185142986]	Ignore OLE object files with missing segments  
+[185152697]	Improve handling of corrupt tables in binary rich text  
+[185216262]	Handle AttachmentRefs outside paragraphs in binary rich text  
+[185249056]	Allow longer PDF documents to be created  
+[185249094]	Disable style support in MigradocXML to improve PDF performance  
+[185250993]	Handle errant runs in DXL tables  
+[185252245]	Handle hidden Excel OLE objects  
+[185260169]	Basic support for rich text in @Text  
+[185260108]	Plain text in paragraphs may not display correctly in PDF  
+[185297670]	@DbLookup views aren't always added to support files  
+[185316756]	Handle @ERROR view numeric values in @DbLookup  
+[185358166]	@ThisName should be available in keyword formulas  
+[185466971]	Handle nested attachments at the end of binary rich text  
+[185525338]	Computed fields should be evaluated if not present on the document  
+[185577528]	Handle computed fields with no formula  
+[185578342]	Support 'day' custom date format  
+[185579036]	Add a timestamp to error logs  
+[185592149]	Fix rare problem with one digit day/month custom formats

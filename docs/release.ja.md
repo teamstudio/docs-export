@@ -1,121 +1,62 @@
 # Release Notes
-## Teamstudio Export 4.4
-Teamstudio Export 4.4 は Export に対する機能アップデート版です。多くの不具合修正や機能拡張に加え、@DbLookup のサポートを追加しています。
+## Teamstudio Export 4.5
+Teamstudio Export 4.5 is a feature update to Export. It adds support for embedded Microsoft Office OLE objects, along with many fixes and enhancements.
 
-Export 4.4 の主要な新機能は下記のとおりです:
+The major new features of Export 4.5 include:
 
-* **@DbLookup** - Export は @DbLookup の呼び出しを現在のデータベース内で評価できるようになりました。一般的な @DbLookup オプションのすべてをサポートしていますが、文書ではなくビューからデータを取得する参照では実行速度は遅くなる可能性があります。しかしながら出力されたデータは読み取り専用であるため、すべての参照はキャッシュされパフォーマンスコストが相殺されるものと考えられます。この機能は既存のアーカイブでも動作します - アーカイブファイルを再度作り直す必要はありません。
+* **OLE Support** - Export can now extract embedded Microsoft Office OLE objects. It supports Word, Office and PowerPoint documents in both the older .doc, .xls and .ppt formats and the newer .docx, .xlsx and .pptx formats. Other document types will not be extracted. Please contact us if you need support for additional OLE object types.
 
-* **Binary Rich Text** - Export では通常 Notes が変換するリッチテキストは DXL ファイル内の XML に依存しています。稀に文書内に破損が見られる場合には Notes はリッチテキストを XML に変換することができず、その代わり生のバイナリーデータを DXL に保存してしまいます。Export の以前のバージョンでは HTML/PDF に出力する際にこのバイナリーのリッチテキストデータをまったく無視していましたが、Export 4.4 ではこれを表示しようと試みるようにしました。破損の重大度の程度にもよりますが、Export でもこれを変換できなかった場合には代わりに *Invalid Rich Text* を表示するようにしました。このメッセージが出た場合には Notes クライアントで該当する文書を開き、簡単なダミー修正(例えばスペースを追加し削除)し、その文書を再保存することで破損が修復されます。修復後にはアーカイブの再作成を行なってください。
+* **Database Level Configuration** - Some applications rely on hide-when formulas using @UserRoles to control which parts of a form should be visible. Earlier versions of Export always returned an empty list for @UserRoles, resulting in incorrect output. Since user roles are specific to a particular database, it doesn't make sense to configure these in the global Export configuration. Export 4.5 adds the ability to configure, for each database, which roles should be returned by @UserRoles so that you can tailor the output as required. These settings are stored in the *config* folder of the PDF or HTML output and will be re-used for any subsequent exports of the same database.  Although rarely needed, you can also configure the value of @UserName and any notes.ini values that should be returned by @Environment.
 
+Additional fixes are identified in the Fix List section below.
 
-追加された不具合修正は以下の不具合修正リストよりご確認ください。
+There is no need to re-archive your database to take advantage of any of the new features and fixes in Export 4.5.
 
-Export 4.4 で追加された新機能や不具合修正をご利用いただくのに改めてデータベースをアーカイブから作成し直すことは必要ありません。唯一の例外はアーカイブに *db.dxl* ファイルが存在しないという問題に対する不具合修正のみです。HTML/PDF 出力中に *object reference not set to an instance of an object* のエラーに遭遇し、対応するアーカイブ内に db.dxl が存在しない場合には Export 4.4 でアーカイブを作成し直すことでこの問題が解決されます。
+Please refer to [Installing Teamstudio Export](installing.md) for details on system requirements and installation. This page will be updated with any known issues and fixes as they become available.
 
-システム要件やインストール方法の詳細については [Installing Teamstudio Export](installing.md) をご参照ください。このページには既知の問題や利用可能になった不具合修正が掲載されています。
-
-## 不具合修正リスト
-### Export 4.4.1
-[183595114] HTML/PDFサイトに notranslate 属性を追加  
-[183621773] db.dxl 作成時にエラーが発生した場合アーカイブそのものを停止するように修正  
-[183621836] DxlExporter がタイムアウトで db.dxl の生成に失敗する問題を修正  
-[183623774] PDF 出力が不正なバイナリーRTテーブルで失敗する問題を修正  
-[183632221] バイナリーリッチテキスト内の悪いデータに対するさらなる保護を追加  
-[183681762] WriteMarkerFile エラーに対するハンドリングを改善  
-[183681036] アーカイブが失敗した際にログにアクセスできない問題を修正  
-[183680706] アーカイブエラーが表示されている際に Job ウィンドウが「Cleaning up temporary files」メッセージを表示したままになる問題を修正  
-[183680251] ビューないの複製競合文書を表示するように修正  
-[183692935] ビュー列の非表示式をサポート  
-[183743597] @DbLookup の非テキストキーをサポート  
-[183754923] チェックボックスおよびラジオボタンフィールドのレンダリング  
-[183783673] 埋め込みビューのフォーマットを改善  
-[183952090] 不正なフィールド名に対して制限付きでサポートするようになりました  
-[183952259] $File という名前ではないファイルアイテムを無視する問題を修正  
-[183954016] PDF 上でチェックボックス/ラジオボタン文字を表示するように修正  
-[184094392] バイナリーのリッチテキスト内のネストした添付ファイルの操作に関する修正  
-[184155752] 格納フォームで大きな文書をロード、処理する際に出る OutOfMemoryException に対する修正  
-[184165648] PDF - 不正な cmap をもつフォントを処理できるように修正  
-[184199258] 格納フォーム内のサブフォーム参照でもデータベース検索できるように修正  
-[184197574] 格納フォーム内の格納サブフォームの内容を無視する問題を修正  
-[184093717] @DbLookup での InvalidOperationException の問題を修正  
-[184261228] 失敗したビュー出力に対するサポートファイルを作成できるように修正  
-[184274174] 著作権表示の年を 2023 に変更  
-[184274148] PDF 内の共有キーワードフィールドを処理できるように修正  
-[184282155] @DbLookup のキーとして利用不可の値を処理できるように修正  
-[184282018] @DbLookup 内の空の文字列を処理できるように修正  
-[184298267] 計算結果の URL リンクをサポート  
-[184366765] バイナリーリッチテキスト内にある attachmentrefs(添付ファイル参照)内の段落を処理できるように修正  
-
-### Export 4.4.0
-[181489567]	埋め込みビューデータファイルが存在しない場合に HTML/PDF 出力が失敗する不具合を修正  
-[181505115]	表の行内(行のセル内でない)に直接段落がある場合に HTML および PDF 出力が失敗する不具合を修正  
-[181564495]	余分な表列があると PDF 出力に失敗する不具合を修正  
-[181588431]	カスタムの「月」データフォーマットをサポート  
-[181588978]	格納フォーム内の計算結果イメージ参照に対応するように修正  
-[181613461]	ネイティブな NotesBitmaps を出力中にエラーとなる不具合を修正  
-[181659131]	PDF 生成のスレッドセーフ性を向上  
-[181779390]	HTML/PDF 出力時の例外に関するレポートの改善  
-[181779342]	PDF において書式付きテキストを追加する際のエラーレポートの改善  
-[181781782]	添付ファイル参照と $File 名の大文字小文字の違いへの対応  
-[181827402]	PDF 埋め込みモードでの添付ファイル欠落の処理を修正  
-[181860691]	未参照の添付ファイルがアイコンハンドルをリークしその結果出力時にクラッシュする不具合を修正  
-[181860746]	処理されない例外ハンドラを再帰から保護するよう修正  
-[181904774]	ビットマップメタファイルの代替をチェックする際に、カラーテーブルの欠落を処理するよう修正  
-[181964782]	格納フォーム内の計算結果サブフォームをサポート  
-[181964789]	格納サブフォームのエイリアスを処理するよう修正  
-[182005300]	REM/SELECT の後に空白がない数式をサポート  
-[182004980]	SELECT 式は解析されるが、実行時に失敗する不具合を修正  
-[182057508]	@Sqrt のサポート  
-[182067660]	@Transform と @Nothing のサポート  
-[182120640]	PDF 内の改ページをサポート  
-[182151133]	テキストが Unicode 結合文字で始まる場合、PDF 出力でエラーが発生する問題を修正  
-[182185976]	空の DXL 文書で Export がハングする問題を修正  
-[182218239]	リンク内の水平方向の罫線が要因で PDF 出力が失敗する問題を修正  
-[182250778]	@Length が空のリストには 0 を返さなかった問題を修正  
-[182278248]	計算結果のイメージ参照における空のテキストリストの処理をするよう修正  
-[182281270]	コンパイル済みの式内の @ThisName をサポート  
-[182281249]	@ThisValue のサポート  
-[182280872]	計算結果フィールドで元の文書からフィールドが欠落していないかを評価するよう修正  
-[182279873]	@SetField のサポート  
-[182280528]	FIELD アサインの完全な実行をするように修正  
-[182302659]	「編集」と「日時」の埋め込みコントロールに対応  
-[182303634]	DateTimePair フィールドの値が HTML/PDF でレンダリングされない不具合を修正  
-[182303204]	DXLで自己完結した日付時刻を処理するよう修正  
-[182337594]	表セル内の改ページを無視するよう修正  
-[182365580]	文書修正から IndexRtItems を保護するように修正  
-[182379274]	ビューにエントリーがない場合に埋め込みビューのエラーが発生しないように修正  
-[182395232]	埋め込みビュー内の降順カテゴリーをサポート  
-[182575000]	ビットマップメタファイルの代替チェック時に、パターンテーブルがない場合の処理を修正  
-[182578735]	埋め込みフィールド値内の改行を処理するように修正  
-[182588109]	より長い PDF 文書の作成を可能にするように修正  
-[182590994]	行と列の両方にまたがるセルを持つ表が正しく PDF 出力しない問題を修正  
-[182611234]	files.xml に count と size の属性を追加  
-[182752420]	デフォルト値計算式での自己割り当てを処理するように修正  
-[182754402]	生のリッチテキストデータをサポート  
-[182795881]	バイナリリッチテキストで非 XML 文字を扱うように修正  
-[182796727]	サードパーティの依存関係のアップグレード  
-[182812479]	バイナリリッチテキストの CDPARAGRAPH の欠落を処理するよう修正  
-[182812845]	バイナリリッチテキストにおけるネストした添付ファイルのホットスポットを処理するよう修正  
-[182839715]	チェックマークのリストスタイルをサポート  
-[182823807]	埋め込みコンボボックスコントロールのサポート  
-[183082205]	DXL に変換できないバイナリリッチテキストを処理するように修正  
-[183085117]	アンパサンドを含む URL リンクを PDF に書き出す際に文字化けする問題を修正  
-[183086033]	埋め込みフィールドの値に含まれる非 XML 文字を処理するよう修正  
-[183094808]	@LeftBack のサポート  
-[183132002]	フォントリンクのサポート  
-[183131534]	埋め込みチェックボックスフィールドのサポート  
-[183161561]	日付コンポーネントの @関数で引数が空の場合 -1 を返さなかった問題を修正  
-[183194389]	DxlExportIDTable を使用せずに db.dxl を自前で作成するように修正  
-[183256652]	出力を停止する無効な NotesBitmaps 抑制するように修正  
-[183256261]	ビットマップの処理時に無効な色を許容するよう修正  
-[183304950]	バイナリリッチテキストで孤立した表セルを許容する修正  
-[183304812]	PDF - テーブルの列の最小幅を1％に設定するように修正  
-[183304731]	PDF - 段落や表が現在の幅以上にインデントされないように修正  
-[183332385]	文書リンクが前提となるビューが存在しない場合にも作成するように修正  
-[183331946]	不正な文書リンクを一貫して処理するように修正  
-[183346159]	バイナリリッチテキストのレンダリングで左余白が不正になることがある問題を修正  
-[183346055]	バイナリリッチテキストで表セルの背景色を処理するよう修正  
-[183346515]	バイナリリッチテキストで非表示式の参照を処理するよう修正  
-[183346397]	事前サブフォームの埋め込みフォームを処理するよう修正  
-[183488422]	NaN の引数値で @Adjust が動作しない問題を修正
+## Fix List
+### Export 4.5.0
+[184587425]	Improve handling of missing $File items  
+[184578743]	Handle attachments in forms/subforms  
+[184633099]	Handle unsupported year formats  
+[184666006]	Handle rowspans in PDF tabbed tables  
+[184690086]	Support database-level configuration for @UserName, @UserRoles, @Environment  
+[184764016]	Don't try to preview empty documents  
+[184763654]	Support 'onread' = 'collapse' in sections  
+[184764830]	Handle missing documents in @DbLookup  
+[184835589]	Handle corruption in binary bitmaps  
+[184836217]	meta.xml should be written without a BOM  
+[184847648]	Protect against errant paragraphs inside runs  
+[184873442]	Include item name in files.xml  
+[184873262]	Unreferenced attachment names may not display correctly in PDF  
+[184873249]	Improve detection of unreferenced attachments  
+[184884947]	Protect against 0-length records in binary rich text  
+[184893394]	Protect against errant paragraphs inside paragraphs  
+[184972331]	Support @GetDocField  
+[184992361]	Installer should offer to install shortcuts  
+[184992632]	Improve wording on configuration dialog  
+[185047386]	Support cross-database embedded views  
+[185086409]	Set the $REF item for response documents  
+[185086023]	Support TYPE\_NOTEREF\_LIST items in dxl  
+[185103812]	Support 'weekday' custom date format  
+[185131124]	Update code signing certificate  
+[185140992]	Fix NPE for attachments on stored forms  
+[185141852]	Ignore corrupt OLE object files  
+[185142986]	Ignore OLE object files with missing segments  
+[185152697]	Improve handling of corrupt tables in binary rich text  
+[185216262]	Handle AttachmentRefs outside paragraphs in binary rich text  
+[185249056]	Allow longer PDF documents to be created  
+[185249094]	Disable style support in MigradocXML to improve PDF performance  
+[185250993]	Handle errant runs in DXL tables  
+[185252245]	Handle hidden Excel OLE objects  
+[185260169]	Basic support for rich text in @Text  
+[185260108]	Plain text in paragraphs may not display correctly in PDF  
+[185297670]	@DbLookup views aren't always added to support files  
+[185316756]	Handle @ERROR view numeric values in @DbLookup  
+[185358166]	@ThisName should be available in keyword formulas  
+[185466971]	Handle nested attachments at the end of binary rich text  
+[185525338]	Computed fields should be evaluated if not present on the document  
+[185577528]	Handle computed fields with no formula  
+[185578342]	Support 'day' custom date format  
+[185579036]	Add a timestamp to error logs  
+[185592149]	Fix rare problem with one digit day/month custom formats

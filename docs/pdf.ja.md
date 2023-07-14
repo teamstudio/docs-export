@@ -15,7 +15,10 @@ PDFを出力する前に、設定ウィザードを実行して、(再)出力を
     フォルダをファイルシステム上の別の場所や Web サーバーにコピーし、最新のブラウザで表示することができます。
     Teamstudio Export ライセンスは、サイトの**生成**に関してのみ必要で、閲覧するだけの用途では継続的なライセンスは必要ありません。
     生成したサイトを配布し閲覧するためのコストは発生しません。
-    
+
+## Database-level Configuration
+Export 4.5.0 adds the ability to tailor the values returned by @UserName, @UserRoles and @Environment for each database. To access the new configuration dialog, right-click on a database and select *Configure PDF...* from the context menu. The values entered into the dialog are saved into the *config* folder within the PDF output and will be re-used if you subsequently re-export the same database. 
+
 ## PDF サイトの表示
 アーカイブを PDF にエクスポートしたら、メイン画面からデータベースを右クリックし、コンテキストメニューから*View PDF*を選択してサイトを表示させることができます。このプロセスによりデフォルトブラウザでサイトのホームページが表示されます。
 
@@ -48,21 +51,22 @@ Teamstudio Export が文書のレンダリングに使用するフォームを�
 ## 埋め込みビュー
 Export 4.3.0 より埋め込みビューも HTML へ出力できるようになりました。埋め込みビューを出力するための要件があります:
 
-* 対象のビューが現在のデータベースに存在していること。
+* The view must be in a database that has been archived.
 * 埋め込みビューには *単一カテゴリの表示* のオプションがセットされていること。
 
 埋め込みビューをエクスポートすると、エクスポート処理が少し遅くなります。現在の実装は、数十万エントリまでのビューに最適化されています。これよりはるかに大きなビューを使用していて、パフォーマンスの問題が発生した場合は、サポートに連絡してください。
-    
+
+Prior to Export 4.5.0, embedded views had to be in the current database. Export 4.5.0 added support for embedded views in other databases but, as with doclinks, the other database must have been archived so that the view data is available to Export.
+
 ## プリビュー表示の制限
 Export の PDF 出力は Notes フォームを表示するのに必要なほとんどのプロパティを理解し動作します。しかしながらサポートされない主な機能は以下のとおりです
 
 * フォームで使用されていたりフィールドから起動される LotusScript、JavaScript、エージェント
-* 通常 Notes で提供されるコンテキストが必要となる関数。例えば、現在のユーザー名やロールのようなそれに関連するプロパティ類
-* 他の文書のデータにアクセスする @GetDocField や @DbColumn
+* @DbColumn. As of Export 4.5.0, both @DbLookup and @GetDocField are now supported
 * アクション
 * レイアウト領域
 * 埋め込みのコントロール群 (埋め込みビューはサポート*しています*)
-* OLE オブジェクト
+* Passthru HTML
 
 Export はリッチテキストを PDF へ変換し、@関数言語のサブセットを処理し文書プリビューを生成します。プリビューには計算結果の値や非表示式の計算も可能な限り遵守しています。Export の新リリースでは頻繁に @関数 のサポートとレンダリングに関する改善を行っています。Export はアプリケーションのアーカイブからPDFを再生成することでこれらの改善を組み入れることができるようになっています。オリジナルの Notes アプリケーションにアクセスする必要はありません。実装されていない @関数およびレンダリングに関する問題がありましたら調査のために [techsupport_japan@teamstudio.com](mailto:techsupport_japan@teamstudio.com) までご連絡ください。
 

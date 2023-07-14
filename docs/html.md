@@ -12,6 +12,10 @@ HTML sites will be generated inside the *HTML Output Folder* specified in the Co
 !!! note
     HTML sites are self-contained and have no runtime requirements. You can copy the site folder to another location on the file system or onto a web server and view it with any modern browser. While a Teamstudio Export license is required to generate the site, there are no ongoing licensing or runtime costs to distribute and view generated sites.
     
+
+## Database-level Configuration
+Export 4.5.0 adds the ability to tailor the values returned by @UserName, @UserRoles and @Environment for each database. To access the new configuration dialog, right-click on a database and select *Configure HTML...* from the context menu. The values entered into the dialog are saved into the *config* folder within the HTML output and will be re-used if you subsequently re-export the same database.
+
 ## Viewing an HTML Site
 Once an archive has been exported to HTML, you can view the site by right-clicking on the database in the main window and selecting *View HTML* from the context menu. This will launch your default browser to the home page of the site.
 
@@ -54,21 +58,22 @@ Doclinks within a single database are supported. Doclinks between databases are 
 ## Embedded Views
 Starting with Export 4.3.0, Embedded Views are exported to HTML. There are a few requirements for the view to be exported:
 
-* The view must be in the current database.
+* The view must be in a database that has been archived.
 * The embedded view must have the *Show Single Category* option set.
 
 Exporting embedded views will slow down the export process a little. The current implementation has been optimized for views up to a few hundred thousand entries. If you have significantly larger views and encounter performance problems, please contact support.
+
+Prior to Export 4.5.0, embedded views had to be in the current database. Export 4.5.0 added support for embedded views in other databases but, as with doclinks, the other database must have been archived so that the view data is available to Export.
 
 ## Preview Limitations
 The Export document previewer understands most of the properties that are necessary to display a Notes form. The main features that are not supported are
 
 * LotusScript, JavaScript, or Agents used by the form or invoked to populate fields
-* Functions that require context normally provided by Notes, such as current username and associated properties like roles
-* Access to data in other documents, including @GetDocField and @DbColumn
+* @DbColumn. As of Export 4.5.0, both @DbLookup and @GetDocField are now supported
 * Actions
 * Layout Regions
 * Embedded Controls (Embedded Views *are* supported)
-* OLE Objects
+* Passthru HTML
 
 Export converts Rich Text to HTML and processes a subset of @Formula language to generate document previews that include computed values and respect hide-when calculations, where possible. New releases of Export often enhance @Formula support and improve rendering. Export can regenerate the HTML from the application archive to incorporate improvements - without requiring access to the original Notes application. Missing @Formula functions, and other rendering issues, can be reported to [techsupport@teamstudio.com](mailto:techsupport@teamstudio.com) for evaluation.
 
