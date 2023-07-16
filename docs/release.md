@@ -4,7 +4,7 @@ Teamstudio Export 4.5 is a feature update to Export. It adds support for embedde
 
 The major new features of Export 4.5 include:
 
-* **OLE Support** - Export can now extract embedded Microsoft Office OLE objects. It supports Word, Office and PowerPoint documents in both the older .doc, .xls and .ppt formats and the newer .docx, .xlsx and .pptx formats. Other document types will not be extracted. Please contact us if you need support for additional OLE object types.
+* **OLE Support** - Export can now extract embedded Microsoft Office OLE objects. It supports Word, Excel and PowerPoint documents in both the older .doc, .xls and .ppt formats and the newer .docx, .xlsx and .pptx formats. Other document types will not be extracted. Please contact us if you need support for additional OLE object types.
 
 * **Database Level Configuration** - Some applications rely on hide-when formulas using @UserRoles to control which parts of a form should be visible. Earlier versions of Export always returned an empty list for @UserRoles, resulting in incorrect output. Since user roles are specific to a particular database, it doesn't make sense to configure these in the global Export configuration. Export 4.5 adds the ability to configure, for each database, which roles should be returned by @UserRoles so that you can tailor the output as required. These settings are stored in the *config* folder of the PDF or HTML output and will be re-used for any subsequent exports of the same database.  Although rarely needed, you can also configure the value of @UserName and any notes.ini values that should be returned by @Environment.
 
