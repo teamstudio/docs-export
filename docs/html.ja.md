@@ -13,8 +13,8 @@ HTML サイトは、設定で指定した *HTML Output Folder* 内に生成さ�
     HTML サイトはそのまま動作が可能で、実行の際ランタイム等の必要はありません。またサイトフォルダをファイルシステム上の別の場所またはWebサーバーにコピーして、最新のブラウザで表示させることができます。サイトを作成するには Teamstudio Export のライセンスが必要ですが、生成されたサイトを配布および表示するだけなら継続的なライセンスも実行時の費用も必要ありません。
     
 
-## Database-level Configuration
-Export 4.5.0 adds the ability to tailor the values returned by @UserName, @UserRoles and @Environment for each database. To access the new configuration dialog, right-click on a database and select *Configure HTML...* from the context menu. The values entered into the dialog are saved into the *config* folder within the HTML output and will be re-used if you subsequently re-export the same database.
+## データベースレベルの設定
+Export 4.5.0 では、各データベースごとに @UserName、@UserRoles、@Environment で返される値をカスタマイズする機能が追加されました。新しい設定ダイアログにアクセスするには、データベースを右クリックし、コンテキストメニューから *Configure HTML...* を選択してください。ダイアログに入力された値は、HTML出力の *config* フォルダに保存され、後で同じデータベースを再出力する場合にも再利用されます。
 
 ## HTML サイトの表示
 アーカイブを HTML にエクスポートしたら、メイン画面からデータベースを右クリックし、コンテキストメニューから *View HTML* を選択してサイトを表示させることができます。このプロセスによりデフォルトブラウザでサイトのホームページが表示されます。
@@ -56,22 +56,22 @@ Export 4.5.0 adds the ability to tailor the values returned by @UserName, @UserR
 ## 埋め込みビュー
 Export 4.3.0 より埋め込みビューも HTML へ出力できるようになりました。埋め込みビューを出力するための要件があります:
 
-* The view must be in a database that has been archived.
+* データベースにあるビューはアーカイブされていること。
 * 埋め込みビューには *単一カテゴリの表示* のオプションがセットされていること。
 
 埋め込みビューをエクスポートすると、エクスポート処理が少し遅くなります。現在の実装は、数十万エントリまでのビューに最適化されています。これよりはるかに大きなビューを使用していて、パフォーマンスの問題が発生した場合は、サポートに連絡してください。
 
-Prior to Export 4.5.0, embedded views had to be in the current database. Export 4.5.0 added support for embedded views in other databases but, as with doclinks, the other database must have been archived so that the view data is available to Export.
+Export 4.5.0　より前のバージョンでは、埋め込みビューは現在のデータベース内にある必要がありましたが、Export 4.5.0 より他のデータベースの埋め込みビューの参照をサポートするようになりました。ただし、文書リンクと同様、他のデータベースはアーカイブされている必要があり、ビューデータが Export で利用できる状態である必要があります。
 
 ## プリビュー表示の制限
 Export の文書プリビュー表示は Notes フォームを表示するのに必要なほとんどのプロパティを理解し動作します。しかしながらサポートされない主な機能は以下のとおりです
 
 * フォームで使用されていたりフィールドから起動される LotusScript、JavaScript、エージェント
-* @DbColumn. As of Export 4.5.0, both @DbLookup and @GetDocField are now supported
+* @DbColumn。 ただし、Export 4.5.0　では @DbLookup と @GetDocField の両方をサポートしています
 * アクション
 * レイアウト領域
 * 埋め込みのコントロール群 (埋め込みビューはサポート*しています*)
-* Passthru HTML
+* パススルー HTML
 
 Export はリッチテキストを HTML へ変換し、@関数言語のサブセットを処理し文書プリビューを生成します。プリビューには計算結果の値や非表示式の計算も可能な限り遵守しています。Export の新リリースでは頻繁に @関数 のサポートとレンダリングに関する改善を行っています。Export はアプリケーションのアーカイブから HTML を再生成することでこれらの改善を組み入れることができるようになっています。オリジナルの Notes アプリケーションにアクセスする必要はありません。実装されていない @関数およびレンダリングに関する問題がありましたら調査のために [techsupport_japan@teamstudio.com](mailto:techsupport@teamstudio.com) までご連絡ください。
 
