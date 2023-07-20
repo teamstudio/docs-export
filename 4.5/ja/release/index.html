@@ -467,11 +467,11 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#fix-list" class="md-nav__link">
-    Fix List
+  <a href="#_1" class="md-nav__link">
+    不具合修正リスト
   </a>
   
-    <nav class="md-nav" aria-label="Fix List">
+    <nav class="md-nav" aria-label="不具合修正リスト">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -528,11 +528,11 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#fix-list" class="md-nav__link">
-    Fix List
+  <a href="#_1" class="md-nav__link">
+    不具合修正リスト
   </a>
   
-    <nav class="md-nav" aria-label="Fix List">
+    <nav class="md-nav" aria-label="不具合修正リスト">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -562,65 +562,65 @@
 
 <h1 id="release-notes">Release Notes</h1>
 <h2 id="teamstudio-export-45">Teamstudio Export 4.5</h2>
-<p>Teamstudio Export 4.5 is a feature update to Export. It adds support for embedded Microsoft Office OLE objects, along with many fixes and enhancements.</p>
-<p>The major new features of Export 4.5 include:</p>
+<p>Teamstudio Export 4.5 は Export に対する機能アップデートです。多くの不具合修正や機能拡張に加え、埋め込み Microsoft Office OLE オブジェクトのサポートを追加しています。</p>
+<p>Export 4.5 の主要な新機能は以下のとおりです:</p>
 <ul>
 <li>
-<p><strong>OLE Support</strong> - Export can now extract embedded Microsoft Office OLE objects. It supports Word, Office and PowerPoint documents in both the older .doc, .xls and .ppt formats and the newer .docx, .xlsx and .pptx formats. Other document types will not be extracted. Please contact us if you need support for additional OLE object types.</p>
+<p><strong>OLE のサポート</strong> - Export は埋め込み Microsoft Office の OLE オブジェクトを展開できるようになりました。 Word, Excel, PowerPoint をサポートし、古い形式の .doc、.xls、 .ppt の形式はもちろん .docx、.xlsx、.pptx の形式もサポートします。その他の文書タイプについては現在展開されません。追加でその他の OLE オブジェクトタイプのサポートが必要な場合には弊社までご連絡ください。</p>
 </li>
 <li>
-<p><strong>Database Level Configuration</strong> - Some applications rely on hide-when formulas using @UserRoles to control which parts of a form should be visible. Earlier versions of Export always returned an empty list for @UserRoles, resulting in incorrect output. Since user roles are specific to a particular database, it doesn't make sense to configure these in the global Export configuration. Export 4.5 adds the ability to configure, for each database, which roles should be returned by @UserRoles so that you can tailor the output as required. These settings are stored in the <em>config</em> folder of the PDF or HTML output and will be re-used for any subsequent exports of the same database.  Although rarely needed, you can also configure the value of @UserName and any notes.ini values that should be returned by @Environment.</p>
+<p><strong>データベースレベルの設定</strong> - アプリケーションの中には、@UserRoles を使用した非表示式を用いてフォームのある部分にコンテンツを表示するかしないかを制御するものがあります。以前のバージョンの Export では、@UserRoles に対して常に空のリストが返さざるを得ず正しく出力することができませんでした。ユーザーロールはデータベースによってそれぞれ異なり固有であるため、Export 内のグローバル構成で設定することは何の意味もありませんでした。Export 4.5 では、@UserRoles によって返されるロールをデータベースごとに設定する機能が追加され、必要に応じて出力を調整できるようになりました。これらの設定は、PDF または HTML 出力の <em>config</em> フォルダに保存され、同じデータベースの次回以降の出力にも再利用されます。稀にしか必要としませんが、@UserName の値や、@Environment を用いて notes.ini からの取得していた値も設定できます。</p>
 </li>
 </ul>
-<p>Additional fixes are identified in the Fix List section below.</p>
-<p>There is no need to re-archive your database to take advantage of any of the new features and fixes in Export 4.5.</p>
-<p>Please refer to <a href="../installing/">Installing Teamstudio Export</a> for details on system requirements and installation. This page will be updated with any known issues and fixes as they become available.</p>
-<h2 id="fix-list">Fix List</h2>
+<p>追加された不具合修正は以下の不具合修正リストよりご確認ください。</p>
+<p>Export 4.5 で追加された新機能や不具合修正をご利用いただくのに改めてデータベースをアーカイブから作成し直すことは必要ありません。</p>
+<p>システム要件やインストール方法の詳細については <a href="../installing/">Installing Teamstudio Export</a> をご参照ください。このページには既知の問題や利用可能になった不具合修正が掲載されています。</p>
+<h2 id="_1">不具合修正リスト</h2>
 <h3 id="export-450">Export 4.5.0</h3>
-<p>[184587425] Improve handling of missing $File items<br />
-[184578743] Handle attachments in forms/subforms<br />
-[184633099] Handle unsupported year formats<br />
-[184666006] Handle rowspans in PDF tabbed tables<br />
-[184690086] Support database-level configuration for @UserName, @UserRoles, @Environment<br />
-[184764016] Don't try to preview empty documents<br />
-[184763654] Support 'onread' = 'collapse' in sections<br />
-[184764830] Handle missing documents in @DbLookup<br />
-[184835589] Handle corruption in binary bitmaps<br />
-[184836217] meta.xml should be written without a BOM<br />
-[184847648] Protect against errant paragraphs inside runs<br />
-[184873442] Include item name in files.xml<br />
-[184873262] Unreferenced attachment names may not display correctly in PDF<br />
-[184873249] Improve detection of unreferenced attachments<br />
-[184884947] Protect against 0-length records in binary rich text<br />
-[184893394] Protect against errant paragraphs inside paragraphs<br />
-[184972331] Support @GetDocField<br />
-[184992361] Installer should offer to install shortcuts<br />
-[184992632] Improve wording on configuration dialog<br />
-[185047386] Support cross-database embedded views<br />
-[185086409] Set the $REF item for response documents<br />
-[185086023] Support TYPE_NOTEREF_LIST items in dxl<br />
-[185103812] Support 'weekday' custom date format<br />
-[185131124] Update code signing certificate<br />
-[185140992] Fix NPE for attachments on stored forms<br />
-[185141852] Ignore corrupt OLE object files<br />
-[185142986] Ignore OLE object files with missing segments<br />
-[185152697] Improve handling of corrupt tables in binary rich text<br />
-[185216262] Handle AttachmentRefs outside paragraphs in binary rich text<br />
-[185249056] Allow longer PDF documents to be created<br />
-[185249094] Disable style support in MigradocXML to improve PDF performance<br />
-[185250993] Handle errant runs in DXL tables<br />
-[185252245] Handle hidden Excel OLE objects<br />
-[185260169] Basic support for rich text in @Text<br />
-[185260108] Plain text in paragraphs may not display correctly in PDF<br />
-[185297670] @DbLookup views aren't always added to support files<br />
-[185316756] Handle @ERROR view numeric values in @DbLookup<br />
-[185358166] @ThisName should be available in keyword formulas<br />
-[185466971] Handle nested attachments at the end of binary rich text<br />
-[185525338] Computed fields should be evaluated if not present on the document<br />
-[185577528] Handle computed fields with no formula<br />
-[185578342] Support 'day' custom date format<br />
-[185579036] Add a timestamp to error logs<br />
-[185592149] Fix rare problem with one digit day/month custom formats</p>
+<p>[184587425] 欠如する $File アイテムの操作における改善 
+[184578743] フォーム/サブフォーム内の添付ファイルにおける操作の改善<br />
+[184633099] サポートしていない「年」の形式における操作の改善<br />
+[184666006] PDF 内のタブ付き表における行間操作の改善<br />
+[184690086] @UserName、@UserRoles、@Environment に対するデータベースレベルでの設定のサポート<br />
+[184764016] 空の文書をプレビューしないように修正<br />
+[184763654] セクション内の 'onread' = 'collapse' のサポート<br />
+[184764830] @DbLookup 内で文書が見つからなかった際の操作の改善<br />
+[184835589] バイナリービットマップ内の破損に対する操作の改善<br />
+[184836217] meta.xml が BOM 情報なしでも出力するように改善<br />
+[184847648] 変換中に不正な段落でエラーになる問題を修正<br />
+[184873442] files.xml 内にアイテム名を含めるよう修正<br />
+[184873262] 参照情報のない添付ファイル名が PDF で正しく表示されない問題を修正<br />
+[184873249] 参照情報のない添付ファイル検知を改善<br />
+[184884947] バイナリーリッチテキスト内の 0 長レコードでエラーとなる問題を修正<br />
+[184893394] 段落内部の不正な段落でエラーになる問題を修正<br />
+[184972331] @GetDocField のサポート<br />
+[184992361] インストーラーでデスクトップショートカットを作成する機能を追加<br />
+[184992632] 設定ダイアログでよりわかるやすい言い回しに改良<br />
+[185047386] データベースを跨ぐ埋め込みビューのサポート<br />
+[185086409] 返答文書に $REF アイテムをセットするように改善<br />
+[185086023] dxl 内の TYPE_NOTEREF_LIST アイテムをサポート<br />
+[185103812] 'weekday' のカスタム日付フォーマットをサポート<br />
+[185131124] コード署名認証者の更新に関する修正<br />
+[185140992] 格納フォーム上の添付ファイルに対する NPE を修正<br />
+[185141852] 破損した OLE オブジェクトファイルを無視するよう修正<br />
+[185142986] セグメントのない OLE オブジェクトファイルを無視するように修正<br />
+[185152697] バイナリーリッチテキスト内の破損した表の操作を改善<br />
+[185216262] バイナリーリッチテキスト内の段落外にある添付ファイル参照の操作を修正<br />
+[185249056] より長い PDF 文書が作成できるように修正<br />
+[185249094] PDF 作成時のパフォーマンスを上げるため MigradocXML 内のスタイルサポートを無効<br />
+[185250993] DXL 表内での誤実行の操作を改善<br />
+[185252245] 非表示の Excel OLE オブジェクトの操作を改善<br />
+[185260169] @Text 内のリッチテキストに対する基本的なサポート<br />
+[185260108] PDF 内で正しく表示されない段落内のプレーンテキストに関する修正<br />
+[185297670] @DbLookup でビューがサポートファイルに常に追加されなかった問題を修正<br />
+[185316756] @DbLookup 内でビューの数値の値を @ERROR で返される操作の修正<br />
+[185358166] @ThisName がキーワードの式で使用できるように修正<br />
+[185466971] バイナリーリッチテキストの終わりにあるネストした添付ファイルの操作を改善<br />
+[185525338] 計算結果フィールドが文書上になくても評価されるように修正<br />
+[185577528] 式のない計算結果フィールドの操作を修正<br />
+[185578342] 'day' カスタム日付フォーマットのサポート<br />
+[185579036] エラーログにタイムスタンプの追加<br />
+[185592149] 1桁の day/month カスタム日付フォーマットにおける問題を修正</p>
 
               
             </article>
