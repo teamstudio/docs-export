@@ -4,7 +4,7 @@ You must run the Configuration wizard before you can use Teamstudio Export. You 
 
 ## Configuration Settings
 ### Archive Folder
-This is the folder where Teamstudio Export will loook for archive files and create new archive files. Archive files will be created within the folder using a subfolder structure that mirrors your servers. You can have multiple workstations running Teamstudio Export all sharing a single archive folder on a network drive.
+This is the folder where Teamstudio Export will look for archive files and create new archive files. Archive files will be created within the folder using a subfolder structure that mirrors your servers. You can have multiple workstations running Teamstudio Export all sharing a single archive folder on a network drive.
 
 !!! note
     The Archive Folder is required. Teamstudio Export cannot run without an Archive Folder.
