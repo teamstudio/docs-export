@@ -17,7 +17,9 @@ You can view the status of any active and queued tasks from the [Progress Window
     or runtime costs to distribute and view generated sites.
 
 ## Database-level Configuration
-Export 4.5.0 adds the ability to tailor the values returned by @UserName, @UserRoles and @Environment for each database. To access the new configuration dialog, right-click on a database and select *Configure PDF...* from the context menu. The values entered into the dialog are saved into the *config* folder within the PDF output and will be re-used if you subsequently re-export the same database. 
+Export 4.5.0 adds the ability to tailor the values returned by @UserName, @UserRoles and @Environment for each database. To access the new configuration dialog, right-click on a database and select *Configure PDF...* from the context menu. The values entered into the dialog are saved into the *config* folder within the PDF output and will be re-used if you subsequently re-export the same database.
+
+Export 4.5.1 adds additional database-level configuration options to modify display settings. If the *Use Defaults* box is checked, the global settings from the configuration wizard will be used. If you uncheck this box, you can configure the *Display Mode* and *Expand all sections* settings for this database only.
 
 ## Viewing a PDF Site
 Once an archive has been exported to PDF, you can view the site by right-clicking on the database in the main window and selecting *View PDF* from the context menu. This will launch your default browser to the home page of the site.

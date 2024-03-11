@@ -16,6 +16,8 @@ HTML sites will be generated inside the *HTML Output Folder* specified in the Co
 ## Database-level Configuration
 Export 4.5.0 adds the ability to tailor the values returned by @UserName, @UserRoles and @Environment for each database. To access the new configuration dialog, right-click on a database and select *Configure HTML...* from the context menu. The values entered into the dialog are saved into the *config* folder within the HTML output and will be re-used if you subsequently re-export the same database.
 
+Export 4.5.1 adds additional database-level configuration options to modify display settings. If the *Use Defaults* box is checked, the global settings from the configuration wizard will be used. If you uncheck this box, you can configure the *Display Mode* and *Expand all sections* settings for this database only.
+
 ## Viewing an HTML Site
 Once an archive has been exported to HTML, you can view the site by right-clicking on the database in the main window and selecting *View HTML* from the context menu. This will launch your default browser to the home page of the site.
 

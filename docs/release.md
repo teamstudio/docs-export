@@ -1,6 +1,6 @@
 # Release Notes
-## Teamstudio Export 4.5
-Teamstudio Export 4.5 is a feature update to Export. It adds support for embedded Microsoft Office OLE objects, along with many fixes and enhancements.
+## Teamstudio Export 4.5.1
+Teamstudio Export 4.5.1 is a maintenance update to Export. It contains a number of fixes and minor enhancements.
 
 The major new features of Export 4.5 include:
 
@@ -15,6 +15,36 @@ There is no need to re-archive your database to take advantage of any of the new
 Please refer to [Installing Teamstudio Export](installing.md) for details on system requirements and installation. This page will be updated with any known issues and fixes as they become available.
 
 ## Fix List
+### Export 4.5.1
+[185642000]	Support '\*' format in @Text  
+[185659716]	Add a basic view when creating support files  
+[185894864]	Improve handling of onread="collapse" sections  
+[185769401]	Support imagemaps  
+[186028370]	Allow exporting in read or print mode  
+[186043382]	Incorrect search match highlight breaks images  
+[186205126]	Possible hang when creating a support file by noteid  
+[186216769]	Support Excel 5 OLE objects  
+[186267662]	Handle "Word.Document" OLE type  
+[186288032]	PDF export can fail with embedded attachments  
+[186326438]	Support % characters in formulas  
+[186489298]	Allow multiple descriptions for support file entries  
+[186488956]	Embedded views are not included in support files  
+[186572669]	@Adjust can fail with an OverflowException  
+[186751698]	Support image resource icons in embedded views  
+[186754146]	Improve edge cases in @Middle  
+[186759675]	Support repeat="center" on cell background images  
+[186775545]	Protect @GetField against an empty list argument  
+[186775840]	Improve positioning of keyword fields in paragraphs  
+[186813576]	Include profile documents in support files  
+[186864681]	Non-pairwise (\*) operators can return incorrect results  
+[187005613]	OpenExportFileWrite can fail under load  
+[187013849]	Handle doclinks with no view attribute  
+[187015303]	Tabbed tables don't honor fixed width on HTML  
+[187056924]	Add an option to expand all sections  
+[187093492]	Support OLE1 objects  
+[187100941]	Support "ExcelWorksheet" object type  
+[187128050]	Implement basic @Abstract rich text handling
+
 ### Export 4.5.0
 [184587425]	Improve handling of missing $File items  
 [184578743]	Handle attachments in forms/subforms  

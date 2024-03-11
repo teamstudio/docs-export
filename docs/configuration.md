@@ -55,6 +55,33 @@ To pick from a list of available servers, click the down arrow at the end of the
 ### Local Databases
 Export 3.2 and later supports archiving local databases (those located in the Notes "data" folder on the local workstation). This feature can be enabled in the Export configuration settings.  When enabled, local databases are listed in the Export UI along with server-based databases, and can be archived in the same manner.
 
+## HTML Settings
+### Display Mode
+Notes can display documents slightly differently when they are opened for reading, editing, printing, etc. Export 4.5.1 and above allows you to configure whether the document should be displayed in read mode (the default in earlier versions) or print mode. Display modes primarily affect hide-when formulas and whether sections are displayed expanded or collapsed. This option can be overridden using database-level configuration.
+
+### Expand All Sections
+If you have sections that are configured to collapse in both read and print mode, you can use this option to force all sections to be displayed expanded. This option can be overridden using database-level configuration.
+
+## PDF Settings
+### PDF Page Size
+If you are exporting archives to PDF, this allows you to choose between US Letter, A4 and A3 page sizes in Portrait and Landscape orientation. Please contact Teamstudio Technical Support if you need a different page size.
+
+### PDF Default Font
+This option allows you to specify the font to use when exporting documents to PDF if no specific font is specified in the form design or rich text content. This font will also be used for any characters that cannot be represented using the font specified in the form design. The default is *Arial* since it is available on the widest variety of machines and it is a good choice for English and Western European languages. If your applications require Japanese or other characters then you should change this font to a unicode font that is available to you and your users. If it is available to you, *Arial Unicode MS* is known to work well.
+
+!!! note
+    Notes, in common with other Windows programs, often substitutes fonts when displaying content on the screen. So if, for example, you have some rich text containing Japanese characters and specifying the *Calibri* font, Notes will display it correctly even though Japanese characters are not available in Calibri. PDFs are much stricter and will only display characters using the specified font. That is why Export will substitute the default font for characters that cannot be displayed. If you have characters that display correctly in Notes but display as empty squares after exporting to PDF then you need to change the default font setting to a font that contains the missing characters.
+    
+### Display Mode
+Notes can display documents slightly differently when they are opened for reading, editing, printing, etc. Export 4.5.1 and above allows you to configure whether the document should be displayed in read mode (the default in earlier versions) or print mode. Display modes primarily affect hide-when formulas and whether sections are displayed expanded or collapsed. This option can be overridden using database-level configuration.
+
+### Expand All Sections
+If you have sections that are configured to collapse in both read and print mode, you can use this option to force all sections to be displayed expanded. This option can be overridden using database-level configuration.
+
+### PDF Attachments
+By default, attachments in documents are created as files within the PDF output folder, and *relative links* are used in documents where the attachments reside. This configuration works best when the full archive folder is made available via web browser from a file server or web server, and is supported by most browsers' PDF viewers.  Alternatively, if this setting is set to *Embedded*, Export will insert the attached files within the PDF, which is helpful when distributing PDFs individually. At this time, however, most browsers cannot view embedded files and you will need to use Acrobat Reader or FireFox.
+
+
 ## Advanced Settings
 The settings on this page allow you to configure advanced properties in Export and enable beta features.
 
@@ -67,19 +94,6 @@ This setting writes more detailed information to the log.txt file during archivi
 
 ### Enable Archive/HTML Deletion
 Some users prefer to manage everything to do with archives and HTML/PDF output from within Teamstudio Export. Checking this box enables menu options to allow users to delete archives and exported content from within Export. Deleting HTML and PDF output is relatively benign as it can always be recreated from the archive file. Deleting archives may be irreversible if the original Domino server is no longer available. While Export will prompt for confirmation before deleting files, we also disable this option by default to minimize the likelihood of accidental deletion.
-
-
-### PDF Page Size
-If you are exporting archives to PDF, this allows you to choose between US Letter, A4 and A3 page sizes in Portrait and Landscape orientation. Please contact Teamstudio Technical Support if you need a different page size.
-
-### PDF Default Font
-This option allows you to specify the font to use when exporting documents to PDF if no specific font is specified in the form design or rich text content. This font will also be used for any characters that cannot be represented using the font specified in the form design. The default is *Arial* since it is available on the widest variety of machines and it is a good choice for English and Western European languages. If your applications require Japanese or other characters then you should change this font to a unicode font that is available to you and your users. If it is available to you, *Arial Unicode MS* is known to work well.
-
-!!! note
-    Notes, in common with other Windows programs, often substitutes fonts when displaying content on the screen. So if, for example, you have a some rich text containing Japanese characters and specifying the *Calibri* font, Notes will display it correctly even though Japanese characters are not available in Calibri. PDFs are much stricter and will only display characters using the specified font. That is why Export will substitute the default font for characters that cannot be displayed. If you have characters that display correctly in Notes but display as empty squares after exporting to PDF then you need to change the default font setting to a font that contains the missing characters.
-    
-### PDF Attachments
-By default, attachments in documents are created as files within the PDF output folder, and *relative links* are used in documents where the attachments reside. This configuration works best when the full archive folder is made available via web browser from a file server or web server, and is supported by most browsers' PDF viewers.  Alternatively, if this setting is set to *Embedded*, Export will insert the attached files within the PDF, which is helpful when distributing PDFs individually. At this time, however, most browsers cannot view embedded files and you will need to use Acrobat Reader or FireFox.
 
 ### Full-Text Search Language
 The Export configuration includes an option to optimize searches for Japanese content by creating the search index using a tokenizer tuned for Japanese ideograms. Enabling this option improves search accuracy for Japanese content.
