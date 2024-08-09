@@ -1,0 +1,1115 @@
+
+<!doctype html>
+<html lang="ja" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.1.3">
+    
+    
+      
+        <title>設定 - Teamstudio Export 5.0</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.edf004c2.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.e6a45f82.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          コンテンツにスキップ
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="ヘッダー">
+    <a href="../.." title="Teamstudio Export 5.0" class="md-header__button md-logo" aria-label="Teamstudio Export 5.0" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Teamstudio Export 5.0
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              設定
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <div class="md-header__option">
+        <div class="md-select">
+          
+          <button class="md-header__button md-icon" aria-label="Select language">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.52 17.52 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11.76-2.04M18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2l-4.5-12m-2.62 7 1.62-4.33L19.12 17h-3.24z"/></svg>
+          </button>
+          <div class="md-select__inner">
+            <ul class="md-select__list">
+              
+                <li class="md-select__item">
+                  <a href="../../configuration/" hreflang="en" class="md-select__link">
+                    English
+                  </a>
+                </li>
+                
+                <li class="md-select__item">
+                  <a href="./" hreflang="ja" class="md-select__link">
+                    日本語
+                  </a>
+                </li>
+                
+            </ul>
+          </div>
+        </div>
+      </div>
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="検索" placeholder="検索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="クリア" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            検索を初期化
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="ナビゲーション" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Teamstudio Export 5.0" class="md-nav__button md-logo" aria-label="Teamstudio Export 5.0" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    Teamstudio Export 5.0
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        ドキュメンテーション
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          Teamstudio Export
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Teamstudio Export" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Teamstudio Export
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../installing/" class="md-nav__link">
+        Teamstudio Exportのインストール
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          設定
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        設定
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目次">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目次
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    環境設定
+  </a>
+  
+    <nav class="md-nav" aria-label="環境設定">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    アーカイブフォルダ
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#html" class="md-nav__link">
+    HTMLアウトプットフォルダ
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pdf" class="md-nav__link">
+    PDF アウトプットフォルダ
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    ノーツフォルダ
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#notesini" class="md-nav__link">
+    Notes.ini の場所
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#notesid" class="md-nav__link">
+    NotesID ファイル
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    パスワード
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    フルアクセスアドミニストレーションのリクエスト
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    ドミノサーバー
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    ローカルデータベース
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#html_1" class="md-nav__link">
+    HTML の設定
+  </a>
+  
+    <nav class="md-nav" aria-label="HTML の設定">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    表示モード
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    全セクションの展開
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pdf_1" class="md-nav__link">
+    PDF の設定
+  </a>
+  
+    <nav class="md-nav" aria-label="PDF の設定">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pdf_2" class="md-nav__link">
+    PDF のページサイズ
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pdf_3" class="md-nav__link">
+    PDF のデフォルトフォント
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    表示モード
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    全セクションの展開
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pdf_4" class="md-nav__link">
+    PDF 上の添付ファイル
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    詳細の追加設定
+  </a>
+  
+    <nav class="md-nav" aria-label="詳細の追加設定">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    一時ファイルフォルダー
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    拡張ロギングの有効化
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#html_2" class="md-nav__link">
+    アーカイブ/HTML 削除の有効化
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    全文検索言語
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../overview/" class="md-nav__link">
+        概要
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../archiving/" class="md-nav__link">
+        アーカイブ
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_5" type="checkbox" id="__nav_2_5" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_5">
+          HTML
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="HTML" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_5">
+          <span class="md-nav__icon md-icon"></span>
+          HTML
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../html/" class="md-nav__link">
+        HTMLへのエクスポート
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../htmlviewfield/" class="md-nav__link">
+        HTML ビューとフィールドの表示
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keyboard/" class="md-nav__link">
+        キーボードナビゲーション
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pdf/" class="md-nav__link">
+        PDFへのエクスポート
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_7" type="checkbox" id="__nav_2_7" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_7">
+          Exporting Data
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Exporting Data" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_7">
+          <span class="md-nav__icon md-icon"></span>
+          Exporting Data
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../data/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../spsites/" class="md-nav__link">
+        Configuring SharePoint
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../progress/" class="md-nav__link">
+        進行状況ウィンドウ
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../archive/" class="md-nav__link">
+        アーカイブファイルの形式
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../release/" class="md-nav__link">
+        リリースノート
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目次">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目次
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    環境設定
+  </a>
+  
+    <nav class="md-nav" aria-label="環境設定">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    アーカイブフォルダ
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#html" class="md-nav__link">
+    HTMLアウトプットフォルダ
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pdf" class="md-nav__link">
+    PDF アウトプットフォルダ
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    ノーツフォルダ
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#notesini" class="md-nav__link">
+    Notes.ini の場所
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#notesid" class="md-nav__link">
+    NotesID ファイル
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    パスワード
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    フルアクセスアドミニストレーションのリクエスト
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    ドミノサーバー
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    ローカルデータベース
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#html_1" class="md-nav__link">
+    HTML の設定
+  </a>
+  
+    <nav class="md-nav" aria-label="HTML の設定">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    表示モード
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    全セクションの展開
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pdf_1" class="md-nav__link">
+    PDF の設定
+  </a>
+  
+    <nav class="md-nav" aria-label="PDF の設定">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pdf_2" class="md-nav__link">
+    PDF のページサイズ
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pdf_3" class="md-nav__link">
+    PDF のデフォルトフォント
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    表示モード
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    全セクションの展開
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pdf_4" class="md-nav__link">
+    PDF 上の添付ファイル
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    詳細の追加設定
+  </a>
+  
+    <nav class="md-nav" aria-label="詳細の追加設定">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    一時ファイルフォルダー
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    拡張ロギングの有効化
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#html_2" class="md-nav__link">
+    アーカイブ/HTML 削除の有効化
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    全文検索言語
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+
+<h1 id="_1">設定</h1>
+<p>Teamstudio Export を使用する前に、設定ウィザードを起動する必要があります。設定自体はファイルメニューから設定を選択することによって、いつでも設定し直すことができます。</p>
+<h2 id="_2">環境設定</h2>
+<h3 id="_3">アーカイブフォルダ</h3>
+<p>このフォルダは Teamstudio Export がアーカイブファイルの参照や新規作成を行う際に利用されます。アーカイブファイルはサーバーを反映するサブフォルダ構造を元に作成されます。また Teamstudio Export はネットワークドライブにて一つのアーカイブフォルダを共有しているので、複数のワークステーションを持つことができます。</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>アーカイブフォルダは必須です。Teamstudio Export はアーカイブフォルダ無しに作動することはできません。</p>
+</div>
+<h3 id="html">HTMLアウトプットフォルダ</h3>
+<p>このフォルダは Teamstudio Export でアーカイブのHTML版を作成するフォルダを指定します。アーカイブフォルダと同様に、Teamstudio Export はこのフォルダ内のサブフォルダ構造を管理しています。このフォルダの設定はアーカイブを HTML 形式でエクスポートしない限り必須ではありません。</p>
+<h3 id="pdf">PDF アウトプットフォルダ</h3>
+<p>このフォルダーは Teamstudio Export でアーカイブの PDF 版を作成するフォルダを指定します。アーカイブや HTML フォルダと同様に、Teamstudio Export はこのフォルダ内のサブフォルダ構造を管理しています。このフォルダの設定はアーカイブを PDF 形式でエクスポートしない限り必須ではありません。</p>
+<h3 id="_4">ノーツフォルダ</h3>
+<p>アーカイブを作成する際、どのフォルダに Notes がインストールされているか特定する必要があります。Teamstudio Export はこの設定を自動で行いますが、もし複数バージョンの Notes がインストールされている場合は変更を加えなければなりません。Teamstudio Export はアーカイブを作成するために DxIExporter という補助プログラムを使用しています。エクスポートは DxIExporter が呼び出される前に、ここで指定したフォルダをファイルパスに追加します。また以下のエラーが発生した場合は、フォルダ設定が適切に指定されていないことを示します。 </p>
+<figure>
+<p><img alt="nnotes_error" src="../../img/nnotes_error.png" /></p>
+</figure>
+<h3 id="notesini">Notes.ini の場所</h3>
+<p>アーカイブを生成するために使われる Notes.ini ファイルの場所を指します。基本的には適切に設定されてはいますが、必要であれば自分で修正することも可能です。</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>ファイル名含めた notes.ini ファイルへのパスを特定する必要があります。Notes.ini のファイルを含むフォルダ名だけでは不十分です。</p>
+</div>
+<h3 id="notesid">NotesID ファイル</h3>
+<p>アーカイブ生成するための Notes ID ファイルの場所です。この ID はアーカイブにしたいデータベースへのアクセス権限を持つ必要があります。</p>
+<h3 id="_5">パスワード</h3>
+<p>上記に記述した NotesID のパスワードです。このパスワードは暗号化された形式で保存されますが、アーカイブ生成時に平文の状態で DxlExporter に送信されます。パスポートを保存したくない場合は入力フィールドを空白にし、エクスポートが起動する間、ノーツクライアントが実行されているようにしてください。エクスポートにノーツにあるログイン情報を共有するためには、ノーツクライアントのメニューからファイル/セキュリティ/ユーザーセキュリティを選択し、他の Notes ベースのプログラムからのパスワード要求をしないをチェックしてください (セキュリティレベルは低下します)</p>
+<h3 id="_6">フルアクセスアドミニストレーションのリクエスト</h3>
+<p>このチェックボックスがオンになった場合、Teamstudio Export はデータベースをエクスポートする時のフルアクセスアドミニストレーションモードを可能にする試みを実行します。これにより、そのデータベースがACLのリストにない場合や読者フィールドにより通常時はアクセスできない場合でもエクスポートができるにようになります。この設定はユーザー自身がドミノサーバーの文書にあるセキュリティタブのフルアクセス管理者リストに存在する場合のみ有効です。またこの設定をノーツのセキュリティ基準を無視するために使うことはできません。</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>ユーザーによるフルアクセスアドミニストレーションのリクエストが認められていない状態では、Teamstudio Exportによるエラー表示はありません。これらの情報はNotes APIを通してもエラーの表示できません。しかし、Teamstudio ExportはACLや読者の問題によるデータベースの一部で起きたエクスポートの失敗については、エラーを表示します。</p>
+</div>
+<h3 id="_7">ドミノサーバー</h3>
+<p>Teamstudio Exportがアーカイブするデータベースを検索するために使用するサーバーのリストです</p>
+<ul>
+<li>新しいサーバーを追加する場合、サーバー名を入力し追加ボタンを押してください。サーバー名は正式名、略語、一般名などいかなる形式でも入力可能です。アーカイブは常に正式なサーバー名を保持しています。</li>
+<li>サーバーをリストから削除する場合、そのサーバーを選択し、削除ボタンを押してください。</li>
+</ul>
+<p>利用可能なサーバーをリストから選択する場合は、サーバー名のフィールドの最後にある下矢印をクリックし、ドロップダウンリストからスキャンを選択してください。これにより、ローカルクライアントとホームメールアドレスにあるアドレス帳から既知のサーバーの情報がドロップダウンリストへ出力されます。利用可能なサーバーをスキャンする機能は今まで行われていたすべての Notes の設定が正しいと仮定して実行するため、例えば Notes プログラムフォルダの設定が適切でない、など設定に不備があるとエラーが発生することがあります。 </p>
+<h3 id="_8">ローカルデータベース</h3>
+<p>Export 3.2 以降ではローカルデータベースのアーカイブをサポートします (ローカルワークステーションの Notes ”data" フォルダーに配置されているデータベースが対象)。この機能は Export の環境設定で有効化できます。有効化にするとローカルデータベースはサーバーベースのデータベース群とともに Export の UI に表示され、同様にアーカイブすることができます。</p>
+<h2 id="html_1">HTML の設定</h2>
+<h3 id="_9">表示モード</h3>
+<p>Notes では文書を読み込み、編集、印刷などのそれぞれのモードで開く際にその文書の表示が若干異なっています。Export 4.5.1 以降では文書を読み込みモード(過去のバージョンではデフォルト)で開くか印刷モードで開くかを設定できるようになりました。この表示モードの設定は主に段落非表示式やセクションの展開および省略に作用します。このオプションはデータベースレベルの設定を使用して上書きすることが可能です。</p>
+<h3 id="_10">全セクションの展開</h3>
+<p>読み込みモードや印刷モードにおいて省略する指定を持つセクションがある場合、このオプションを使用して強制的にセクションを展開し表示させることができます。このオプションはデータベースレベルの設定を使用して上書きすることが可能です。</p>
+<h2 id="pdf_1">PDF の設定</h2>
+<h3 id="pdf_2">PDF のページサイズ</h3>
+<p>アーカイブを PDF へ出力する際 US Letter サイズから A4 サイズの間でページサイズを指定することができます。それ以外の異なるページサイズで出力する必要がある場合には技術サポートまでお問い合わせください。</p>
+<h3 id="pdf_3">PDF のデフォルトフォント</h3>
+<p>このオプションでは、フォーム設計やリッチテキストの内容で特定のフォントが指定されていない場合に、文書をPDFに書き出す際に使用するフォントを指定することができます。このフォントは、フォーム設計で指定したフォントでは表現できない文字にも使用できます。デフォルトフォントは Arial ですが、これは最も多様なマシンで利用可能であり、英語や西ヨーロッパ言語に適しているためです。アプ リ ケーショ ンで日本語やその他の文字が必要な場合は、このフォントを自分やユーザーが使用している Unicode フォントに変更する必要があります。利用可能であれば、Arial Unicode MS が問題なく動作することが知られています。</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Notes は他の Windows プログラムと同様に、画面にコンテンツを表示する際にフォントを代用することがよくあります。そのため、例えば、日本語の文字を含むリッチなテキストに Calibri フォントを指定している場合、日本語の文字そのものが Calibri では利用できなくても、Notesはそれを正しく表示します。一方、PDFの方がこの点においてはるかに厳密であり、指定したフォントでしか文字を表示しません。そのため、表示できない文字は Export ではデフォルトのフォントを代用して表示するようにしています。Notes 上では正しく表示されているのに、PDFに書き出した後に空の四角で表示されてしまう文字がある場合は、デフォルトのフォント設定で、表示されない文字が設定されているフォントに変更する必要があります。</p>
+</div>
+<h3 id="_11">表示モード</h3>
+<p>Notes では文書を読み込み、編集、印刷などのそれぞれのモードで開く際にその文書の表示が若干異なっています。Export 4.5.1 以降では文書を読み込みモード(過去のバージョンではデフォルト)で開くか印刷モードで開くかを設定できるようになりました。この表示モードの設定は主に段落非表示式やセクションの展開および省略に作用します。このオプションはデータベースレベルの設定を使用して上書きすることが可能です。</p>
+<h3 id="_12">全セクションの展開</h3>
+<p>読み込みモードや印刷モードにおいて省略する指定を持つセクションがある場合、このオプションを使用して強制的にセクションを展開し表示させることができます。このオプションはデータベースレベルの設定を使用して上書きすることが可能です。</p>
+<h3 id="pdf_4">PDF 上の添付ファイル</h3>
+<p>デフォルトでは、文書内の添付は PDF 出力フォルダ内のファイルとし て作成され、 添付が存在する文書内ではそのファイルへの相対リンクを使用しています。この設定は、完全なアーカイブフォルダがファイルサーバーや WebサーバーからWebブラウザ経由でアクセスできるようになっている場合に最適で、ほとんどのブラウザ PDF ビューアでサポートされています。  あるいは、この設定を［埋め込み］に設定している場合、Export は PDF 内に添付ファイルを挿入するので、PDF を個別に配布する場合に便利です。しかし、現時点では、ほとんどのブラウザでは埋め込みファイルを表示することはできませんので、Acrobat Reader または FireFox を使用する必要があることに注意してください。</p>
+<h2 id="_13">詳細の追加設定</h2>
+<p>このページの設定で Export 内の詳細プロパティやベータ機能の有効化などの設定を行うことができます。</p>
+<h3 id="_14">一時ファイルフォルダー</h3>
+<p>これは Teamstudio Export がデータベースのアーカイブ中に一時ファイルを作成するフォルダーになります。ファイルのサイズが非常に大きくなり、通常ではデータベースがアーカイブされるサイズの2〜3倍の大きさになる可能性があります。Export ではデフォルトでシステムの一時フォルダーを使用するようになっており、ほとんどのユーザーでは C: ドライブ上となります。異なるロケーションを指定したい場合には、<em>Use system folder for temporary files</em> のチェックを外し、ご希望のフォルダーを選択してください。</p>
+<h3 id="_15">拡張ロギングの有効化</h3>
+<p>この設定でアーカイブ中に <em>log.txt</em> へ追加の詳細情報を書き込むことができます。お客様がアーカイブ生成時に問題に遭遇した場合、問題判別のため弊社の技術サポートがこのオプションを有効化することをお願いする場合があります。</p>
+<h3 id="html_2">アーカイブ/HTML 削除の有効化</h3>
+<p>アーカイブと HTML/PDF 出力のすべてを Teamstudio Export 内で管理(ファイルシステムからの削除操作ではなく)したい場合もあります。このボックスにチェックを入れることで、メニューオプションが有効になり、Export 内からアーカイブとエクスポートされたコンテンツを削除することが可能になります。HTML や PDF 出力の削除しても、アーカイブファイルからすぐに再作成できるので比較的安全です。元の Domino サーバーが使用できなくなった場合、アーカイブの削除は不可逆的になる可能性があります。Export はファイルを削除する前に確認を求めますが、誤って削除する可能性を最小限に抑えるために、デフォルトでこのオプションを無効にしています。</p>
+<h3 id="_16">全文検索言語</h3>
+<p>Export の環境設定には日本語コンテンツの検索を最適化するオプションが用意されていますおり、検索の言語を日本語にすることで日本語の表意文字用に調整されたトークナイザー(単語)を使用して検索インデックスを作成します。このオプションを有効化することで日本語コンテンツの検索の正確性が改善されます。</p>
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="フッター">
+      
+        
+        <a href="../installing/" class="md-footer__link md-footer__link--prev" aria-label="前: Teamstudio Exportのインストール" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                前
+              </span>
+              Teamstudio Exportのインストール
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../overview/" class="md-footer__link md-footer__link--next" aria-label="次: 概要" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                次
+              </span>
+              概要
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "translations": {"clipboard.copy": "\u30af\u30ea\u30c3\u30d7\u30dc\u30fc\u30c9\u3078\u30b3\u30d4\u30fc", "clipboard.copied": "\u30b3\u30d4\u30fc\u3057\u307e\u3057\u305f", "search.config.lang": "ja", "search.config.pipeline": "trimmer, stemmer", "search.config.separator": "[\\s\\-\u3000\u3001\u3002\uff0c\uff0e]+", "search.placeholder": "\u691c\u7d22", "search.result.placeholder": "\u691c\u7d22\u30ad\u30fc\u30ef\u30fc\u30c9\u3092\u5165\u529b\u3057\u3066\u304f\u3060\u3055\u3044", "search.result.none": "\u4f55\u3082\u898b\u3064\u304b\u308a\u307e\u305b\u3093\u3067\u3057\u305f", "search.result.one": "1\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.other": "#\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.more.one": "\u3053\u306e\u30da\u30fc\u30b8\u5185\u306b\u3082\u30461\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.more.other": "\u3053\u306e\u30da\u30fc\u30b8\u5185\u306b\u3042\u3068#\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.term.missing": "\u691c\u7d22\u306b\u542b\u307e\u308c\u306a\u3044", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.0bbba5b5.min.js"}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.e1a181d9.min.js"></script>
+      
+    
+  </body>
+</html>

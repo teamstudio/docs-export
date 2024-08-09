@@ -1,0 +1,1117 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.1.3">
+    
+    
+      
+        <title>Configuration - Teamstudio Export 5.0</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.edf004c2.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.e6a45f82.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#configuration" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Teamstudio Export 5.0" class="md-header__button md-logo" aria-label="Teamstudio Export 5.0" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Teamstudio Export 5.0
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Configuration
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <div class="md-header__option">
+        <div class="md-select">
+          
+          <button class="md-header__button md-icon" aria-label="Select language">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.52 17.52 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11.76-2.04M18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2l-4.5-12m-2.62 7 1.62-4.33L19.12 17h-3.24z"/></svg>
+          </button>
+          <div class="md-select__inner">
+            <ul class="md-select__list">
+              
+                <li class="md-select__item">
+                  <a href="./" hreflang="en" class="md-select__link">
+                    English
+                  </a>
+                </li>
+                
+                <li class="md-select__item">
+                  <a href="../ja/configuration/" hreflang="ja" class="md-select__link">
+                    日本語
+                  </a>
+                </li>
+                
+            </ul>
+          </div>
+        </div>
+      </div>
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Teamstudio Export 5.0" class="md-nav__button md-logo" aria-label="Teamstudio Export 5.0" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    Teamstudio Export 5.0
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        Documentation
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          Teamstudio Export
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Teamstudio Export" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Teamstudio Export
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../installing/" class="md-nav__link">
+        Installing Teamstudio Export
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Configuration
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Configuration
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#configuration-settings" class="md-nav__link">
+    Configuration Settings
+  </a>
+  
+    <nav class="md-nav" aria-label="Configuration Settings">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#archive-folder" class="md-nav__link">
+    Archive Folder
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#html-output-folder" class="md-nav__link">
+    HTML Output Folder
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pdf-output-folder" class="md-nav__link">
+    PDF Output Folder
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#notes-folder" class="md-nav__link">
+    Notes Folder
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#notes-ini-location" class="md-nav__link">
+    Notes INI Location
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#notes-id-file" class="md-nav__link">
+    Notes ID File
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#password" class="md-nav__link">
+    Password
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#request-full-access-admin" class="md-nav__link">
+    Request Full Access Admin
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#domino-servers" class="md-nav__link">
+    Domino Servers
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#local-databases" class="md-nav__link">
+    Local Databases
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#html-settings" class="md-nav__link">
+    HTML Settings
+  </a>
+  
+    <nav class="md-nav" aria-label="HTML Settings">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#display-mode" class="md-nav__link">
+    Display Mode
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#expand-all-sections" class="md-nav__link">
+    Expand All Sections
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pdf-settings" class="md-nav__link">
+    PDF Settings
+  </a>
+  
+    <nav class="md-nav" aria-label="PDF Settings">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pdf-page-size" class="md-nav__link">
+    PDF Page Size
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pdf-default-font" class="md-nav__link">
+    PDF Default Font
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#display-mode_1" class="md-nav__link">
+    Display Mode
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#expand-all-sections_1" class="md-nav__link">
+    Expand All Sections
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pdf-attachments" class="md-nav__link">
+    PDF Attachments
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#advanced-settings" class="md-nav__link">
+    Advanced Settings
+  </a>
+  
+    <nav class="md-nav" aria-label="Advanced Settings">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#temporary-files-folder" class="md-nav__link">
+    Temporary Files Folder
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#enable-enhanced-logging" class="md-nav__link">
+    Enable Enhanced Logging
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#enable-archivehtml-deletion" class="md-nav__link">
+    Enable Archive/HTML Deletion
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#full-text-search-language" class="md-nav__link">
+    Full-Text Search Language
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../overview/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../archiving/" class="md-nav__link">
+        Archiving
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_5" type="checkbox" id="__nav_2_5" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_5">
+          HTML
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="HTML" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_5">
+          <span class="md-nav__icon md-icon"></span>
+          HTML
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../html/" class="md-nav__link">
+        Exporting to HTML
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../htmlviewfield/" class="md-nav__link">
+        HTML View and Field Display
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keyboard/" class="md-nav__link">
+        Keyboard Navigation
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pdf/" class="md-nav__link">
+        Exporting to PDF
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_7" type="checkbox" id="__nav_2_7" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_7">
+          Exporting Data
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Exporting Data" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_7">
+          <span class="md-nav__icon md-icon"></span>
+          Exporting Data
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../data/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../spsites/" class="md-nav__link">
+        Configuring SharePoint
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../progress/" class="md-nav__link">
+        Progress Window
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../archive/" class="md-nav__link">
+        Archive File Format
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../release/" class="md-nav__link">
+        Release Notes
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#configuration-settings" class="md-nav__link">
+    Configuration Settings
+  </a>
+  
+    <nav class="md-nav" aria-label="Configuration Settings">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#archive-folder" class="md-nav__link">
+    Archive Folder
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#html-output-folder" class="md-nav__link">
+    HTML Output Folder
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pdf-output-folder" class="md-nav__link">
+    PDF Output Folder
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#notes-folder" class="md-nav__link">
+    Notes Folder
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#notes-ini-location" class="md-nav__link">
+    Notes INI Location
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#notes-id-file" class="md-nav__link">
+    Notes ID File
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#password" class="md-nav__link">
+    Password
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#request-full-access-admin" class="md-nav__link">
+    Request Full Access Admin
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#domino-servers" class="md-nav__link">
+    Domino Servers
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#local-databases" class="md-nav__link">
+    Local Databases
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#html-settings" class="md-nav__link">
+    HTML Settings
+  </a>
+  
+    <nav class="md-nav" aria-label="HTML Settings">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#display-mode" class="md-nav__link">
+    Display Mode
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#expand-all-sections" class="md-nav__link">
+    Expand All Sections
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pdf-settings" class="md-nav__link">
+    PDF Settings
+  </a>
+  
+    <nav class="md-nav" aria-label="PDF Settings">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pdf-page-size" class="md-nav__link">
+    PDF Page Size
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pdf-default-font" class="md-nav__link">
+    PDF Default Font
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#display-mode_1" class="md-nav__link">
+    Display Mode
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#expand-all-sections_1" class="md-nav__link">
+    Expand All Sections
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pdf-attachments" class="md-nav__link">
+    PDF Attachments
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#advanced-settings" class="md-nav__link">
+    Advanced Settings
+  </a>
+  
+    <nav class="md-nav" aria-label="Advanced Settings">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#temporary-files-folder" class="md-nav__link">
+    Temporary Files Folder
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#enable-enhanced-logging" class="md-nav__link">
+    Enable Enhanced Logging
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#enable-archivehtml-deletion" class="md-nav__link">
+    Enable Archive/HTML Deletion
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#full-text-search-language" class="md-nav__link">
+    Full-Text Search Language
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+
+<h1 id="configuration">Configuration</h1>
+<p>You must run the Configuration wizard before you can use Teamstudio Export. You can rerun it at any time by choosing <em>Configuration</em> from the <em>File</em> menu.</p>
+<h2 id="configuration-settings">Configuration Settings</h2>
+<h3 id="archive-folder">Archive Folder</h3>
+<p>This is the folder where Teamstudio Export will look for archive files and create new archive files. Archive files will be created within the folder using a subfolder structure that mirrors your servers. You can have multiple workstations running Teamstudio Export all sharing a single archive folder on a network drive.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The Archive Folder is required. Teamstudio Export cannot run without an Archive Folder.</p>
+</div>
+<h3 id="html-output-folder">HTML Output Folder</h3>
+<p>This is the folder where Teamstudio Export will generate the HTML version of any archives that you choose to export. As with the Archive Folder, Teamstudio Export will manage the subfolder structure within this folder. This setting is not required if you will not be exporting archives to HTML.</p>
+<h3 id="pdf-output-folder">PDF Output Folder</h3>
+<p>This is the folder where Teamstudio Export will generate the PDF version of any archives that you choose to export. As with the Archive and HTML Folders, Teamstudio Export will manage the subfolder structure within this folder. This setting is not required if you will not be exporting archives to PDF.</p>
+<h3 id="notes-folder">Notes Folder</h3>
+<p>If you will be generating archives then you must specify the folder where Notes is installed. Teamstudio Export will attempt to set this correctly but you may need to change it if you have multiple versions of Notes installed. Teamstudio Export uses a helper program, DxlExporter, to generate archive files. Export will add the folder specified here to the path before invoking DxlExporter. If you see an error like</p>
+<figure>
+<p><img alt="nnotes_error" src="../img/nnotes_error.png" /></p>
+</figure>
+<p>then this folder is not set correctly.</p>
+<h3 id="notes-ini-location">Notes INI Location</h3>
+<p>The location of the notes.ini file to use when generating archives. This will usually be set correctly for you, but you can modify it if necessary.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>You need to specify the full path to the notes.ini file here, including the file name. Do not just
+provide the folder containing the ini file.</p>
+</div>
+<h3 id="notes-id-file">Notes ID File</h3>
+<p>The location of the Notes ID file to use when generating archives. This ID must have access to the databases that you will be archiving.</p>
+<h3 id="password">Password</h3>
+<p>The password for the Notes ID file above. The password is stored in an encrypted form, but it is passed to the DxlExporter program in plain text when you create an archive. If you do not want to store a password, you can leave this blank and instead ensure that your Notes client is running whenever you run Export. To allow Notes to share credentials with Export, you must choose <em>File|Security|User Security...</em> from the menu in the Notes client, and check the box labeled <em>Don't prompt for a password from other Notes-based programs (reduces security)</em>.</p>
+<h3 id="request-full-access-admin">Request Full Access Admin</h3>
+<p>If this box is checked, Teamstudio Export will attempt to enable Full Admin Administration mode when exporting a database. This will allow you to export databases even when you are not listed in the ACL for that database and will also export documents that you would not normally be able to access owing to readers fields. This setting will only work if you are listed in the Full Access Administrators list on the Security tab in the server document for the Domino server; you cannot use this setting to override standard Notes security.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Teamstudio Export will not return an error if your request for Full Access Admin mode is not
+granted. This information is not returned to us by the Notes API. However Teamstudio Export <strong>will</strong>
+return an error if it is unable to export any part of a database because of ACL or readers issues.</p>
+</div>
+<h3 id="domino-servers">Domino Servers</h3>
+<p>The list of servers that Teamstudio Export will search for databases to archive.
+* To add a new server to the list, enter the server name, and press the Add button. You can enter the server name in any form that is convenient for you: canonical, abbreviated, or just the common name. Archives will always contain the full canonical server name.
+* To remove a server from the list, select the server and press the Remove button.</p>
+<p>To pick from a list of available servers, click the down arrow at the end of the server name field and select <Scan> from the dropdown. This will populate the dropdown with a list of known servers from the address books on your local client and home mail server. Note that the ability to scan for available servers relies on earlier Notes settings being correct so you may see an error if, for example, the Notes program folder is not set correctly.</p>
+<h3 id="local-databases">Local Databases</h3>
+<p>Export 3.2 and later supports archiving local databases (those located in the Notes "data" folder on the local workstation). This feature can be enabled in the Export configuration settings.  When enabled, local databases are listed in the Export UI along with server-based databases, and can be archived in the same manner.</p>
+<h2 id="html-settings">HTML Settings</h2>
+<h3 id="display-mode">Display Mode</h3>
+<p>Notes can display documents slightly differently when they are opened for reading, editing, printing, etc. Export 4.5.1 and above allows you to configure whether the document should be displayed in read mode (the default in earlier versions) or print mode. Display modes primarily affect hide-when formulas and whether sections are displayed expanded or collapsed. This option can be overridden using database-level configuration.</p>
+<h3 id="expand-all-sections">Expand All Sections</h3>
+<p>If you have sections that are configured to collapse in both read and print mode, you can use this option to force all sections to be displayed expanded. This option can be overridden using database-level configuration.</p>
+<h2 id="pdf-settings">PDF Settings</h2>
+<h3 id="pdf-page-size">PDF Page Size</h3>
+<p>If you are exporting archives to PDF, this allows you to choose between US Letter, A4 and A3 page sizes in Portrait and Landscape orientation. Please contact Teamstudio Technical Support if you need a different page size.</p>
+<h3 id="pdf-default-font">PDF Default Font</h3>
+<p>This option allows you to specify the font to use when exporting documents to PDF if no specific font is specified in the form design or rich text content. This font will also be used for any characters that cannot be represented using the font specified in the form design. The default is <em>Arial</em> since it is available on the widest variety of machines and it is a good choice for English and Western European languages. If your applications require Japanese or other characters then you should change this font to a unicode font that is available to you and your users. If it is available to you, <em>Arial Unicode MS</em> is known to work well.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Notes, in common with other Windows programs, often substitutes fonts when displaying content on the screen. So if, for example, you have some rich text containing Japanese characters and specifying the <em>Calibri</em> font, Notes will display it correctly even though Japanese characters are not available in Calibri. PDFs are much stricter and will only display characters using the specified font. That is why Export will substitute the default font for characters that cannot be displayed. If you have characters that display correctly in Notes but display as empty squares after exporting to PDF then you need to change the default font setting to a font that contains the missing characters.</p>
+</div>
+<h3 id="display-mode_1">Display Mode</h3>
+<p>Notes can display documents slightly differently when they are opened for reading, editing, printing, etc. Export 4.5.1 and above allows you to configure whether the document should be displayed in read mode (the default in earlier versions) or print mode. Display modes primarily affect hide-when formulas and whether sections are displayed expanded or collapsed. This option can be overridden using database-level configuration.</p>
+<h3 id="expand-all-sections_1">Expand All Sections</h3>
+<p>If you have sections that are configured to collapse in both read and print mode, you can use this option to force all sections to be displayed expanded. This option can be overridden using database-level configuration.</p>
+<h3 id="pdf-attachments">PDF Attachments</h3>
+<p>By default, attachments in documents are created as files within the PDF output folder, and <em>relative links</em> are used in documents where the attachments reside. This configuration works best when the full archive folder is made available via web browser from a file server or web server, and is supported by most browsers' PDF viewers.  Alternatively, if this setting is set to <em>Embedded</em>, Export will insert the attached files within the PDF, which is helpful when distributing PDFs individually. At this time, however, most browsers cannot view embedded files and you will need to use Acrobat Reader or FireFox.</p>
+<h2 id="advanced-settings">Advanced Settings</h2>
+<p>The settings on this page allow you to configure advanced properties in Export and enable beta features.</p>
+<h3 id="temporary-files-folder">Temporary Files Folder</h3>
+<p>This is the folder where Teamstudio Export will create temporary files while archiving a database. These files may be large, typically two to three times the size of the database being archived. Export uses the system temporary folder by default which is on the C: drive for most users. If you need to use a different location, uncheck Use system folder for temporary files and select the desired folder.</p>
+<h3 id="enable-enhanced-logging">Enable Enhanced Logging</h3>
+<p>This setting writes more detailed information to the log.txt file during archiving. Our Technical Support team may ask you to enable this option if you are having problems generating an archive.</p>
+<h3 id="enable-archivehtml-deletion">Enable Archive/HTML Deletion</h3>
+<p>Some users prefer to manage everything to do with archives and HTML/PDF output from within Teamstudio Export. Checking this box enables menu options to allow users to delete archives and exported content from within Export. Deleting HTML and PDF output is relatively benign as it can always be recreated from the archive file. Deleting archives may be irreversible if the original Domino server is no longer available. While Export will prompt for confirmation before deleting files, we also disable this option by default to minimize the likelihood of accidental deletion.</p>
+<h3 id="full-text-search-language">Full-Text Search Language</h3>
+<p>The Export configuration includes an option to optimize searches for Japanese content by creating the search index using a tokenizer tuned for Japanese ideograms. Enabling this option improves search accuracy for Japanese content.</p>
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="../installing/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Installing Teamstudio Export" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Installing Teamstudio Export
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../overview/" class="md-footer__link md-footer__link--next" aria-label="Next: Overview" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Overview
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../assets/javascripts/workers/search.0bbba5b5.min.js"}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.e1a181d9.min.js"></script>
+      
+    
+  </body>
+</html>

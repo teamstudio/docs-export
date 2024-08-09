@@ -1,0 +1,1036 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.1.3">
+    
+    
+      
+        <title>Archive File Format - Teamstudio Export 5.0</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.edf004c2.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.e6a45f82.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#archive-file-format" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Teamstudio Export 5.0" class="md-header__button md-logo" aria-label="Teamstudio Export 5.0" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Teamstudio Export 5.0
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Archive File Format
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <div class="md-header__option">
+        <div class="md-select">
+          
+          <button class="md-header__button md-icon" aria-label="Select language">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.52 17.52 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11.76-2.04M18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2l-4.5-12m-2.62 7 1.62-4.33L19.12 17h-3.24z"/></svg>
+          </button>
+          <div class="md-select__inner">
+            <ul class="md-select__list">
+              
+                <li class="md-select__item">
+                  <a href="./" hreflang="en" class="md-select__link">
+                    English
+                  </a>
+                </li>
+                
+                <li class="md-select__item">
+                  <a href="../ja/archive/" hreflang="ja" class="md-select__link">
+                    日本語
+                  </a>
+                </li>
+                
+            </ul>
+          </div>
+        </div>
+      </div>
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Teamstudio Export 5.0" class="md-nav__button md-logo" aria-label="Teamstudio Export 5.0" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    Teamstudio Export 5.0
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        Documentation
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          Teamstudio Export
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Teamstudio Export" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Teamstudio Export
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../installing/" class="md-nav__link">
+        Installing Teamstudio Export
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../configuration/" class="md-nav__link">
+        Configuration
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../overview/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../archiving/" class="md-nav__link">
+        Archiving
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_5" type="checkbox" id="__nav_2_5" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_5">
+          HTML
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="HTML" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_5">
+          <span class="md-nav__icon md-icon"></span>
+          HTML
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../html/" class="md-nav__link">
+        Exporting to HTML
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../htmlviewfield/" class="md-nav__link">
+        HTML View and Field Display
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keyboard/" class="md-nav__link">
+        Keyboard Navigation
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pdf/" class="md-nav__link">
+        Exporting to PDF
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_7" type="checkbox" id="__nav_2_7" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_7">
+          Exporting Data
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Exporting Data" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_7">
+          <span class="md-nav__icon md-icon"></span>
+          Exporting Data
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../data/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../spsites/" class="md-nav__link">
+        Configuring SharePoint
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../progress/" class="md-nav__link">
+        Progress Window
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Archive File Format
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Archive File Format
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#directory-structure" class="md-nav__link">
+    Directory Structure
+  </a>
+  
+    <nav class="md-nav" aria-label="Directory Structure">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#data-folder" class="md-nav__link">
+    Data Folder
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#design-folders" class="md-nav__link">
+    Design Folders
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#profile-folder" class="md-nav__link">
+    Profile Folder
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#views" class="md-nav__link">
+    Views
+  </a>
+  
+    <nav class="md-nav" aria-label="Views">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#view" class="md-nav__link">
+    view
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#category" class="md-nav__link">
+    category
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#document" class="md-nav__link">
+    document
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#total" class="md-nav__link">
+    total
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#value" class="md-nav__link">
+    value
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#acldxl" class="md-nav__link">
+    acl.dxl
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#audittxt" class="md-nav__link">
+    audit.txt
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dbdxl" class="md-nav__link">
+    db.dxl
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#logtxt" class="md-nav__link">
+    log.txt
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#metaxml" class="md-nav__link">
+    meta.xml
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#unidindextxt" class="md-nav__link">
+    unidindex.txt
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#archive-version-history" class="md-nav__link">
+    Archive Version History
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#support" class="md-nav__link">
+    Support
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../release/" class="md-nav__link">
+        Release Notes
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#directory-structure" class="md-nav__link">
+    Directory Structure
+  </a>
+  
+    <nav class="md-nav" aria-label="Directory Structure">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#data-folder" class="md-nav__link">
+    Data Folder
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#design-folders" class="md-nav__link">
+    Design Folders
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#profile-folder" class="md-nav__link">
+    Profile Folder
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#views" class="md-nav__link">
+    Views
+  </a>
+  
+    <nav class="md-nav" aria-label="Views">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#view" class="md-nav__link">
+    view
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#category" class="md-nav__link">
+    category
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#document" class="md-nav__link">
+    document
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#total" class="md-nav__link">
+    total
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#value" class="md-nav__link">
+    value
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#acldxl" class="md-nav__link">
+    acl.dxl
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#audittxt" class="md-nav__link">
+    audit.txt
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dbdxl" class="md-nav__link">
+    db.dxl
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#logtxt" class="md-nav__link">
+    log.txt
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#metaxml" class="md-nav__link">
+    meta.xml
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#unidindextxt" class="md-nav__link">
+    unidindex.txt
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#archive-version-history" class="md-nav__link">
+    Archive Version History
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#support" class="md-nav__link">
+    Support
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+
+<h1 id="archive-file-format">Archive File Format</h1>
+<p>Teamstudio Export archive files are designed to be simple to access without requiring any proprietary APIs or tools. All of the files in the archive are text, either XML or plain text. The files are combined into a single file using standard Zip compression.</p>
+<h2 id="directory-structure">Directory Structure</h2>
+<p>The easiest way to explore an archive file is to add a .zip extension and then open the file in Windows Explorer.</p>
+<p><img alt="archive folder" src="../img/archive_dir.png" /></p>
+<h3 id="data-folder">Data Folder</h3>
+<p>The <em>data</em> folder contains a file for every data document in the database. Each file is XML, using the Domino DXL format. While this is largely self-explanatory, a DTD for DXL is available at <a href="https://help.hcltechsw.com/dom_designer/11.0.0/appdev/builds/H_DOMINO_DTD.html">The Domino DTD</a>. The name of each file is <em>noteid</em>.dxl where <em>noteid</em> is the id of the document, expressed as an 8 digit hexadecimal number.</p>
+<h3 id="design-folders">Design Folders</h3>
+<p>The <em>design</em> and <em>design2</em> folders have the same format as the data folder, with a DXL file for each design element named using the note id.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Domino supports two different styles of DXL: binary and default. Both are standard text-based XML, but
+in binary mode complex data values are exported as base-64 encoded versions of the raw binary data
+stored in the nsf file. The binary mode offers maximum fidelity but it is impossible to interpret
+without a deep knowledge of Domino internal data structures. Prior to archive version 4, Teamstudio
+Export only uses the default mode that converts even complex data values to human-readable XML elements.
+Archive version 4, introduced with Export 3.0, also includes binary mode for forms and views to ensure
+that the archive contains complete design information. The human-readable DXL is stored in the <em>design</em>
+folder and, from Export 3.0 onwards, the binary-mode DXL is stored in the <em>design2</em> folder.</p>
+</div>
+<h3 id="profile-folder">Profile Folder</h3>
+<p>The <em>profile</em> folder has the same format as the data folder, with a DXL file for each profile document named using the note id.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The <em>profile</em> folder was added in archive version 2.</p>
+</div>
+<h3 id="views">Views</h3>
+<p>The <em>views</em> folder contains an XML file for every view and folder in the database. Unlike the <em>data</em> and <em>design</em> folders, there is no Domino standard for view data. The format we have adopted is a very simple UTF-8 encoded XML with the following elements.</p>
+<h4 id="view">view</h4>
+<p>The root element, contains a sequence of <em>document</em>, <em>category</em>, and <em>total</em> elements.</p>
+<h4 id="category">category</h4>
+<p>A container element corresponding to a category row in the view. It has a single, optional attribute, <em>indent</em>, identifying how many spaces the categorized value in the row should be indented within its column. If this attribute is omitted, the value is not indented. Indented categories occur when a categorized column contains a value such as <em>a\b</em>. This will generate two category rows in the view. The first with value <em>a</em> and no indent and the second with category <em>b</em> and indent="1". A <em>category</em> element contains a sequence of <em>value</em> elements.</p>
+<h4 id="document">document</h4>
+<p>A container element corresponding to a document row in the view. Every document element has a noteId attribute specifying the 8-digit hexadecimal note id of the document. As with categories, there is also an optional <em>indent</em> attribute specifying how many spaces the final data value should be indented within its column. Indented documents occur when you are using a response hierarchy and the document is a response or response to response. A <em>document</em> element contains a sequence of <em>value</em> elements.</p>
+<h4 id="total">total</h4>
+<p>A container element containing view totals (or averages etc depending on the view definition.) A <em>total</em> element contains a sequence of <em>value</em> elements.</p>
+<h4 id="value">value</h4>
+<p>A wrapper for a view column value. Each <em>category</em>, <em>document</em> and <em>total</em> element contains one or more <em>value</em> elements for the column values. A <em>value</em> element may be empty (i.e. &lt;value /&gt;) if it is an outer column in a categorized view. Otherwise it will contain a value in standard DXL format (i.e. &lt;text&gt;, &lt;number&gt;, etc.)</p>
+<h3 id="acldxl">acl.dxl</h3>
+<p>This file is the DXL representation of the database ACL.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><em>acl.dxl</em> was added in archive version 2.</p>
+</div>
+<h3 id="audittxt">audit.txt</h3>
+<p>This is a UTF-8 encoded plain-text log file largely generated during the DXL export. It contains high-level summary information about the archiving process such as the user that performed the archive, the start and finish times and counts of the number of documents that archived successfully or encountered errors. This file complements the older log.txt that contains lower level information about the run, such as the note ids of any documents that could not be archived.</p>
+<h3 id="dbdxl">db.dxl</h3>
+<p>This file is created by DXL exporting an empty collection from the database. It captures database-level information such as the replica id.</p>
+<h3 id="logtxt">log.txt</h3>
+<p>This is a plain-text log file generated during the DXL export. It captures any errors and warnings generated during the export, along with some trace debugging information. Any errors and warnings in this file will have been displayed to the user when the archive was created, but we retain the log file for future review. This file is intended mainly for troubleshooting and debugging: if you are interested in higher-level information about the run such as the total number of documents processed then see the separate audit.txt file.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>From archive version 3 onwards, <em>log.txt</em> is UTF-8 encoded. Earliers versions were inconsistent in their
+encoding, with a mix of machine-native and LMBCS.</p>
+</div>
+<h3 id="metaxml">meta.xml</h3>
+<p>This is a metadata file primarily used by Teamstudio Export to maintain the UI. It consists of a single archive element with the following attributes</p>
+<ul>
+<li><strong>server</strong> - the server from which the database was archived</li>
+<li><strong>path</strong> - the path of the database on that server</li>
+<li><strong>title</strong> - the database title</li>
+<li><strong>archiveDate</strong> - a timestamp on which the archive was created. Since this is only used by Teamstudio Export, it is stored in a .NET-friendly format. Specifically, the value is the number of 10ms ticks since 1/1/0001 00:00 Gregorian. This is the same origin as the .NET DateTime type (see <a href="https://docs.microsoft.com/en-us/dotnet/api/system.datetime.ticks">System.DateTime</a>) but since Notes only stores times to a 10ms resolution, we divide DateTime.Ticks by 100000 to convert from 100ns ticks to 10ms ticks.</li>
+<li><strong>archiveVersion</strong> - a version indicator to denote significant changes to the archive format. Currently set to "6". Future releases will use this to identify databases that should be re-archived. See <a href="#archive-version-history">Archive Version History</a> below for details.</li>
+<li><strong>demoMode</strong> - optional. Set to <em>true</em> if the archive was generated with a demo version of Export that limits the number of entries in each view. If <em>false</em> or omitted, the archive was generated with a full version of Export.</li>
+</ul>
+<h3 id="unidindextxt">unidindex.txt</h3>
+<p>This is a plain-text CSV file generated during the export to map NoteIDs to UniversalNoteIDs (UNIDs.) Teamstudio Export itself uses note ids to identify documents, but doclinks use UNIDs so we need an index to convert UNIDs to file names during HTML export.</p>
+<h2 id="archive-version-history">Archive Version History</h2>
+<table>
+<thead>
+<tr>
+<th>Number</th>
+<th>Date</th>
+<th>Export Version</th>
+<th>Comments</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>January 2018</td>
+<td>1.0.0</td>
+<td>Initial release</td>
+</tr>
+<tr>
+<td>2</td>
+<td>February 2018</td>
+<td>1.0.1</td>
+<td>Add support for database ACL and profile documents</td>
+</tr>
+<tr>
+<td>3</td>
+<td>October 2018</td>
+<td>2.1.0</td>
+<td>Change log.txt encoding to UTF-8</td>
+</tr>
+<tr>
+<td>4</td>
+<td>October 2019</td>
+<td>3.0.0</td>
+<td>Add the design2 folder with binary mode design DXL</td>
+</tr>
+<tr>
+<td>5</td>
+<td>December 2019</td>
+<td>3.1.0</td>
+<td>Add the audit.txt log</td>
+</tr>
+<tr>
+<td>6</td>
+<td>May 2020</td>
+<td>3.1.1</td>
+<td>Always use period for decimals in view column data</td>
+</tr>
+</tbody>
+</table>
+<h2 id="support">Support</h2>
+<p>The archive file format is intended to be public and supported. If you have any questions about the file format, please contact us at <a href="https://www.teamstudio.com/support">teamstudio.com</a>.</p>
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="../progress/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Progress Window" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Progress Window
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../release/" class="md-footer__link md-footer__link--next" aria-label="Next: Release Notes" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Release Notes
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../assets/javascripts/workers/search.0bbba5b5.min.js"}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.e1a181d9.min.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,838 @@
+
+<!doctype html>
+<html lang="ja" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.1.3">
+    
+    
+      
+        <title>PDFへのエクスポート - Teamstudio Export 5.0</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.edf004c2.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.e6a45f82.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#pdf" class="md-skip">
+          コンテンツにスキップ
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="ヘッダー">
+    <a href="../.." title="Teamstudio Export 5.0" class="md-header__button md-logo" aria-label="Teamstudio Export 5.0" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Teamstudio Export 5.0
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              PDFへのエクスポート
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <div class="md-header__option">
+        <div class="md-select">
+          
+          <button class="md-header__button md-icon" aria-label="Select language">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.52 17.52 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11.76-2.04M18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2l-4.5-12m-2.62 7 1.62-4.33L19.12 17h-3.24z"/></svg>
+          </button>
+          <div class="md-select__inner">
+            <ul class="md-select__list">
+              
+                <li class="md-select__item">
+                  <a href="../../pdf/" hreflang="en" class="md-select__link">
+                    English
+                  </a>
+                </li>
+                
+                <li class="md-select__item">
+                  <a href="./" hreflang="ja" class="md-select__link">
+                    日本語
+                  </a>
+                </li>
+                
+            </ul>
+          </div>
+        </div>
+      </div>
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="検索" placeholder="検索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="クリア" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            検索を初期化
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="ナビゲーション" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Teamstudio Export 5.0" class="md-nav__button md-logo" aria-label="Teamstudio Export 5.0" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    Teamstudio Export 5.0
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        ドキュメンテーション
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          Teamstudio Export
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Teamstudio Export" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Teamstudio Export
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../installing/" class="md-nav__link">
+        Teamstudio Exportのインストール
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../configuration/" class="md-nav__link">
+        設定
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../overview/" class="md-nav__link">
+        概要
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../archiving/" class="md-nav__link">
+        アーカイブ
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_5" type="checkbox" id="__nav_2_5" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_5">
+          HTML
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="HTML" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_5">
+          <span class="md-nav__icon md-icon"></span>
+          HTML
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../html/" class="md-nav__link">
+        HTMLへのエクスポート
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../htmlviewfield/" class="md-nav__link">
+        HTML ビューとフィールドの表示
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keyboard/" class="md-nav__link">
+        キーボードナビゲーション
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          PDFへのエクスポート
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        PDFへのエクスポート
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目次">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目次
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    設定
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pdf_1" class="md-nav__link">
+    PDF の生成
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    データベースレベルの設定
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pdf_2" class="md-nav__link">
+    PDF サイトの表示
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    文書リンク
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    埋め込みビュー
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    プリビュー表示の制限
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pdf_3" class="md-nav__link">
+    一般的な PDF に関する制限
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    全文検索
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_7" type="checkbox" id="__nav_2_7" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_7">
+          Exporting Data
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Exporting Data" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_7">
+          <span class="md-nav__icon md-icon"></span>
+          Exporting Data
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../data/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../spsites/" class="md-nav__link">
+        Configuring SharePoint
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../progress/" class="md-nav__link">
+        進行状況ウィンドウ
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../archive/" class="md-nav__link">
+        アーカイブファイルの形式
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../release/" class="md-nav__link">
+        リリースノート
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目次">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目次
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    設定
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pdf_1" class="md-nav__link">
+    PDF の生成
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    データベースレベルの設定
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pdf_2" class="md-nav__link">
+    PDF サイトの表示
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    文書リンク
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    埋め込みビュー
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    プリビュー表示の制限
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pdf_3" class="md-nav__link">
+    一般的な PDF に関する制限
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    全文検索
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+
+<h1 id="pdf">PDFへのエクスポート</h1>
+<p>Teamstudio Export はアーカイブから静的な HTML/PDF サイトを生成することができます。このサイトには、データベース内のすべての文書を PDF に変換したものと、データベース内のカテゴリー別のようなビューすべてを HTML で表現した構成になっています。HTML ビューを使用して PDF をナビゲートしたり、お客様独自のコンテンツ管理システムに直接 PDF を保存して、そのシステムの上で検索機能を使用し文書を検索したりすることも可能です。</p>
+<h2 id="_1">設定</h2>
+<p>PDFを出力する前に、設定ウィザードを実行して、(再)出力を書き出す<em>PDF Output Folder</em>を指定する必要があります。PDFのデフォルトのページサイズは<em>US Letter</em>ですが、詳細設定ページで<em>A4</em>または<em>A3</em>に変更することができ、また必要に応じてページの向きを<em>Portrait</em>から<em>Landscape</em>に変更することもできます。データベースに日本語のような非ヨーロッパ言語の文字が含まれている場合、デフォルトフォントの変更も検討する必要があります。詳細については、<a href="../configuration/">設定</a>を参照してください。</p>
+<h2 id="pdf_1">PDF の生成</h2>
+<p>アーカイブを PDF にエクスポートするには、メイン画面からエクスポートするデータベースを選択し、選択したデータベースの一つを右クリックし、コンテキストメニューから「PDF にエクスポート」を選択します。標準的な Windows の操作と同様に、<em>Ctrl キーを押しながら</em>クリックしてデータベースの範囲を選択し、 <em>Alt キーを押しながら</em>選択項目にデータベースを追加することもできます。追加する前に既存のアーカイブ操作が完了するのを待つ必要はありませんが、エクスポートは最大3つのタスクを一度に実行し、それ以外のタスクは既存のタスクが完了するまで待機状態になります。</p>
+<p><a href="../progress/">進行状況ウィンドウ</a>から、進行中または待機状態にあるアーカイブのタスクの状況を確認することができます。エクスポート中に発生したエラーや警告を処理する方法については、上記のリンクページを参照してください。</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>PDF 出力は自己完結型の Web サイトであり、ランタイムの要件はありません。このサイトをコピーして
+フォルダをファイルシステム上の別の場所や Web サーバーにコピーし、最新のブラウザで表示することができます。
+Teamstudio Export ライセンスは、サイトの<strong>生成</strong>に関してのみ必要で、閲覧するだけの用途では継続的なライセンスは必要ありません。
+生成したサイトを配布し閲覧するためのコストは発生しません。</p>
+</div>
+<h2 id="_2">データベースレベルの設定</h2>
+<p>Export 4.5.0 では、各データベースごとに @UserName、@UserRoles、@Environment で返される値をカスタマイズする機能が追加されました。新しい設定ダイアログにアクセスするには、データベースを右クリックし、コンテキストメニューから <em>Configure PDF...</em> を選択してください。ダイアログに入力された値は、PDF 出力の <em>config</em> フォルダに保存され、後で同じデータベースを再出力する場合にも再利用されます。</p>
+<p>Export 4.5.1 では表示モードの設定をデータベースレベルで変更できるオプションを追加しています。<em>Use Defaults</em> BOXにチェックされている場合、Export の設定からのグローバル設定が採用されます。このチェックを外した場合、このデータベースだけに適用する <em>Display Mode</em> (表示モード)と <em>Expand all sections</em> (全セクションの展開) が設定可能となります。</p>
+<h2 id="pdf_2">PDF サイトの表示</h2>
+<p>アーカイブを PDF にエクスポートしたら、メイン画面からデータベースを右クリックし、コンテキストメニューから<em>View PDF</em>を選択してサイトを表示させることができます。このプロセスによりデフォルトブラウザでサイトのホームページが表示されます。</p>
+<figure>
+<p><img alt="html1" src="../../img/html1.png" /></p>
+</figure>
+<p>データベースをクリックすると、データベース内のビューのリストと、各ビューの文書数が表示されます。</p>
+<figure>
+<p><img alt="html2" src="../../img/html2.png" /></p>
+</figure>
+<p>ビューをクリックすると、ビューに相当する画面が表示されます。元々ある Notes ビューの外観と完全に一致はしませんが、ほとんどが元のフォーマットと一致し、すべてのデータを含みます。</p>
+<figure>
+<p><img alt="html3" src="../../img/html3.png" /></p>
+</figure>
+<p>ビューで文書をクリックすると、その文書の PDF がブラウザで開きます。</p>
+<p>Teamstudio Export が文書のレンダリングに使用するフォームを見つけられない場合、一般的なアイテム名/値テーブルを含むドキュメントが作成されます。これには、リッチテキストを含む文書内のすべてのアイテムが含まれます。</p>
+<h2 id="_3">文書リンク</h2>
+<p>データベース毎に文書リンクがサポートされています。対象となるデータベースが<strong>アーカイブされている</strong>限り、データベース間の文書リンクもサポートされています。もちろん対象となるデータベースは、文書リンクが正しく機能するために PDF にエクスポートする必要はありますが、対象となるデータベースのアーカイブが存在する限り、文書リンクは作成されます。</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+</div>
+<p>文書リンクを含むデータベースのグループがある場合、それらのいずれかを PDF にエクスポートする前に、<strong>全ての</strong>データベースをアーカイブする必要があります。このプロセスにより、全ての文書リンクが適切にエクスポートされます。</p>
+<h2 id="_4">埋め込みビュー</h2>
+<p>Export 4.3.0 より埋め込みビューも PDF へ出力できるようになりました。埋め込みビューを出力するための要件があります:</p>
+<ul>
+<li>データベースにあるビューはアーカイブされていること。</li>
+<li>埋め込みビューには <em>単一カテゴリの表示</em> のオプションがセットされていること。</li>
+</ul>
+<p>埋め込みビューをエクスポートすると、エクスポート処理が少し遅くなります。現在の実装は、数十万エントリまでのビューに最適化されています。これよりはるかに大きなビューを使用していて、パフォーマンスの問題が発生した場合は、サポートに連絡してください。</p>
+<p>Export 4.5.0　より前のバージョンでは、埋め込みビューは現在のデータベース内にある必要がありましたが、Export 4.5.0 より他のデータベースの埋め込みビューの参照をサポートするようになりました。ただし、文書リンクと同様、他のデータベースはアーカイブされている必要があり、ビューデータが Export で利用できる状態である必要があります。</p>
+<h2 id="_5">プリビュー表示の制限</h2>
+<p>Export の PDF 出力は Notes フォームを表示するのに必要なほとんどのプロパティを理解し動作します。しかしながらサポートされない主な機能は以下のとおりです</p>
+<ul>
+<li>フォームで使用されていたりフィールドから起動される LotusScript、JavaScript、エージェント</li>
+<li>@DbColumn。 ただし、Export 4.5.0　では @DbLookup と @GetDocField の両方をサポートしています</li>
+<li>アクション</li>
+<li>レイアウト領域</li>
+<li>埋め込みのコントロール群 (埋め込みビューはサポート<em>しています</em>)</li>
+<li>パススルー HTML</li>
+</ul>
+<p>Export はリッチテキストを PDF へ変換し、@関数言語のサブセットを処理し文書プリビューを生成します。プリビューには計算結果の値や非表示式の計算も可能な限り遵守しています。Export の新リリースでは頻繁に @関数 のサポートとレンダリングに関する改善を行っています。Export はアプリケーションのアーカイブからPDFを再生成することでこれらの改善を組み入れることができるようになっています。オリジナルの Notes アプリケーションにアクセスする必要はありません。実装されていない @関数およびレンダリングに関する問題がありましたら調査のために <a href="mailto:techsupport_japan@teamstudio.com">techsupport_japan@teamstudio.com</a> までご連絡ください。</p>
+<h2 id="pdf_3">一般的な PDF に関する制限</h2>
+<p>Export はアーカイブしたアプリケーションを読み取り専用のデータの表示を簡単にできるようデザインされた HTML/PDF サイトを生成します。ビューと文書にのみフォーカスしており、ユーザーがこれまで慣れ親しんだやり方で文書を見つけアクセスできる方法を提供しつつ、Notes フォームに表示されるのと同等の内容を表示しています。しかしながら、 Export ではナビゲーター、アウトライン、フレームセット、ページ、エージェント、スクリプトライブラリーのような他の設計要素の代わりとなるいかなる HTML や PDF も生成しません。</p>
+<h2 id="_6">全文検索</h2>
+<p>PDFにエクスポートされたデータベースは、全文検索が可能です。まず、検索したいビューを選択し、虫眼鏡をクリックすると検索ボックスが表示されます。<em>Enter</em>キーを押すと、検索が実行されます。ビューの中で、検索語の <strong>全て</strong> に一致するすべての文書が表示されます。文書は、文書内の一致件数と、一致した単語がデータベース内でどれだけ共通しているかによって決まる、一致の強さに基づいて並べ替えられます。例えば、データベース内に数回しか出現しない検索語にマッチした場合、<em>the</em>のような一般的な単語にマッチした場合よりも強いマッチングとなります。</p>
+<p>全文索引には、テキストまたはリッチテキストフィールドで見つかった 2 文字以上のすべての単語が含まれます。検索は、単語の先頭にある検索語のみにマッチします。例えば、<em>at</em>を検索すると、<em>attach</em>にはマッチしますが、<em>cat</em>にはマッチしません。</p>
+<p>Export では、最小 2 文字の制限のもとで、テキストだけでなく数字も索引が作成されます。索引の生成には、共通の単語境界が使用されることに注意してください。345678のような注文番号のような連続した数字のセットの検索はサポートされていますが、03/04/1999の検索は、それらが一緒に配置されているか日付値としてフォーマットされているかにかかわらず、03、04、1999で始まる個々のトークンを持つすべての文書と一致します。</p>
+<p>検索の索引には添付ファイル内のテキストは含まれていません。</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Export には 詳細設定の中で日本語のコンテンツに対する検索を調整するオプションがあります。日本語の表意文字用に調整したトークナイザーを使用して検索索引を作成します。この設定を有効にし、PDF に再出力すると検索索引が更新されます。</p>
+</div>
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="フッター">
+      
+        
+        <a href="../keyboard/" class="md-footer__link md-footer__link--prev" aria-label="前: キーボードナビゲーション" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                前
+              </span>
+              キーボードナビゲーション
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../data/" class="md-footer__link md-footer__link--next" aria-label="次: Overview" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                次
+              </span>
+              Overview
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "translations": {"clipboard.copy": "\u30af\u30ea\u30c3\u30d7\u30dc\u30fc\u30c9\u3078\u30b3\u30d4\u30fc", "clipboard.copied": "\u30b3\u30d4\u30fc\u3057\u307e\u3057\u305f", "search.config.lang": "ja", "search.config.pipeline": "trimmer, stemmer", "search.config.separator": "[\\s\\-\u3000\u3001\u3002\uff0c\uff0e]+", "search.placeholder": "\u691c\u7d22", "search.result.placeholder": "\u691c\u7d22\u30ad\u30fc\u30ef\u30fc\u30c9\u3092\u5165\u529b\u3057\u3066\u304f\u3060\u3055\u3044", "search.result.none": "\u4f55\u3082\u898b\u3064\u304b\u308a\u307e\u305b\u3093\u3067\u3057\u305f", "search.result.one": "1\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.other": "#\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.more.one": "\u3053\u306e\u30da\u30fc\u30b8\u5185\u306b\u3082\u30461\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.more.other": "\u3053\u306e\u30da\u30fc\u30b8\u5185\u306b\u3042\u3068#\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.term.missing": "\u691c\u7d22\u306b\u542b\u307e\u308c\u306a\u3044", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.0bbba5b5.min.js"}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.e1a181d9.min.js"></script>
+      
+    
+  </body>
+</html>
