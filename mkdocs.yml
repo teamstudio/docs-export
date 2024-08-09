@@ -1,4 +1,4 @@
-site_name: Teamstudio Export 4.5
+site_name: Teamstudio Export 5.0
 
 nav:
   - 'index.md'
@@ -12,6 +12,9 @@ nav:
       - 'htmlviewfield.md'
       - 'keyboard.md'
     - 'pdf.md'
+    - 'Exporting Data' :
+      - 'data.md'
+      - 'spsites.md'
     - 'progress.md'
   - 'archive.md'
   - 'release.md'
