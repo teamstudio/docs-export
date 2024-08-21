@@ -42,7 +42,7 @@ If username and password authentication is available to you, then choose *Online
 Enter your usernmae and password into the appropriate fields. You can use the *Test Connection* button to verify that everything is working correctly. Your password will be encrypted using the Microsoft Data Protection APIs (DPAPI) and will not be readable by any other user logging onto the computer.
 
 ## Online (Modern) Authentication
-This authentication method for SharePoint Online requires more configuration but offers significantly enhanced security. In particular, your admin will need to register Export as an allowed application. This is a fairly simple process, but it must be performed by a user with the necessary rights to access Entra.
+This authentication method for SharePoint Online offers significantly enhanced security and is recommended for most users.
 
 If you select *Online (Modern)* authentication, your dialog will look like this:
 
@@ -50,14 +50,20 @@ If you select *Online (Modern)* authentication, your dialog will look like this:
   ![SharePoint Site Modern](img/sp_sitemodern.png)
 </figure>
 
-You will need a *Tenant ID* and *Client ID* from your SharePoint admin team. The steps for an admin to perform are listed below. Note that these steps only need to be performed once for all users in your organization.
+While this method uses a *Tenant ID* and *Client ID*, Export can usually provide these values automatically and you will leave these fields blank.
 
-Once you have your Tenant ID and Client ID, you can use the *Test Connection* button to verify that everything is set up correctly. The first time you use it, you will be prompted to log in with your username and password. This will generate an access token that will saved on your computer so that you do not need to log in again. The access token is saved in a file named *MSALCache* in your local application data folder, usually AppData\Local\Teamstudio in your home folder. As with passwords, this file is encrypted using DPAPI and is not readable by any other user logging onto the computer.
+### Tenant ID
+The *Tenant ID* identifies your organization on Microsoft 365. If your Site URL is of the form *https://<tenant\>.sharepoint.com/...* then *<tenant\>* is your tenant name, and Export will be able to retrieve the Tenant ID automatically. In that case, you can leave the *Tenant Name/ID* field blank. If your Site URL is not on sharepoint.com then you will need to ask your administrator for your tenant name or ID. You can enter either into the Tenant ID field.
+
+### Client ID
+The *Client ID* identifies the application that you will use to access SharePoint. In most cases, you can leave this blank to use the default *Teamstudio Export* application that we have registered. If your organization does not allow you to grant access to third-party applications then your administrator will need to register a private application as described below. They can then give you the Client ID for that application.
+
+Once you have set your Tenant ID and Client ID if necessary, you can use the *Test Connection* button to verify that everything is set up correctly. The first time you use it, you will be prompted to log in with your username and password. This will generate an access token that will saved on your computer so that you do not need to log in again. The access token is saved in a file named *MSALCache* in your local application data folder, usually AppData\Local\Teamstudio in your home folder. As with passwords, this file is encrypted using DPAPI and is not readable by any other user logging onto the computer.
 
 If you have problems connecting, you can enable detailed connection logging by checking the *Enable Connection Logging* box. This will write a detailed connection log to a log file in your local application data folder. The log will not include any personally identifiable information. 
 
 ## Registering Teamstudio Export in Entra
-These are instructions for your SharePoint Online administrator. They can configure SharePoint Online to allow application access and give you the necessary values you need to configure Export.
+These are instructions for your SharePoint Online administrator. They are necessary only if you cannot or do not want to use the default application that we have registerd. In most cases they will not be needed. Your administrator can configure SharePoint Online to allow application access and give you the necessary values you need to configure Export.
 
 Export must be registered as an application in Microsoft Entra with the necessary permissions to write and create lists. This is performed from [Microsoft Entra](https://entra.microsoft.com).
 

@@ -106,6 +106,9 @@ The final step is to configure the columns to be exported. Each column has a tit
 * **Content** This describes the content of the column. It cannot be directly edited.
 * **Type** The datatype of the column. This is only relevant for SharePoint, since list columns need to have a datatype in SharePoint. In CSV, all columns are treated as text, so that Export can format them using the number/datetime formatting options specified in the original Notes database. The datatype will be automatically set from Notes when you add a new column from a form field, but you can change it by clicking on it in the list. Export will attempt to convert data to the requested column type, but will leave the column blank if the conversion is not possible.
 
+!!! note
+    The *Text* column type is limited to 255 characters to meet SharePoint requirements. Export will truncate longer values if necessary. If you have longer text values, you may want to use the *Multiline Text* type instead.
+
 The columns are not used at all when you are exporting attachments.
 
 You can delete a column by selecting it and hitting the *Delete* key or by right-clicking on it and choosing *Remove* from the menu. If you delete a column by mistake, you can add it back using the *Add...* button. You can also reorder columns in the output by dragging them up and down in the list.
