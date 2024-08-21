@@ -904,6 +904,10 @@ objects should export correctly.</li>
 <li><strong>Content</strong> This describes the content of the column. It cannot be directly edited.</li>
 <li><strong>Type</strong> The datatype of the column. This is only relevant for SharePoint, since list columns need to have a datatype in SharePoint. In CSV, all columns are treated as text, so that Export can format them using the number/datetime formatting options specified in the original Notes database. The datatype will be automatically set from Notes when you add a new column from a form field, but you can change it by clicking on it in the list. Export will attempt to convert data to the requested column type, but will leave the column blank if the conversion is not possible.</li>
 </ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The <em>Text</em> column type is limited to 255 characters to meet SharePoint requirements. Export will truncate longer values if necessary. If you have longer text values, you may want to use the <em>Multiline Text</em> type instead.</p>
+</div>
 <p>The columns are not used at all when you are exporting attachments.</p>
 <p>You can delete a column by selecting it and hitting the <em>Delete</em> key or by right-clicking on it and choosing <em>Remove</em> from the menu. If you delete a column by mistake, you can add it back using the <em>Add...</em> button. You can also reorder columns in the output by dragging them up and down in the list.</p>
 <h3 id="add-a-standard-column">Add A Standard Column</h3>
