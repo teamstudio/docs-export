@@ -39,7 +39,7 @@ If username and password authentication is available to you, then choose *Online
   ![SharePoint Site](img/sp_sitebasic.png)
 </figure>
 
-Enter your usernmae and password into the appropriate fields. You can use the *Test Connection* button to verify that everything is working correctly. Your password will be encrypted using the Microsoft Data Protection APIs (DPAPI) and will not be readable by any other user logging onto the computer.
+Enter your username and password into the appropriate fields. You can use the *Test Connection* button to verify that everything is working correctly. Your password will be encrypted using the Microsoft Data Protection APIs (DPAPI) and will not be readable by any other user logging onto the computer.
 
 ## Online (Modern) Authentication
 This authentication method for SharePoint Online offers significantly enhanced security and is recommended for most users.

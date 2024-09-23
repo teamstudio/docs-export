@@ -25,11 +25,6 @@ There is no need to re-archive your database to take advantage of any of the new
 Please refer to [Installing Teamstudio Export](installing.md) for details on system requirements and installation. This page will be updated with any known issues and fixes as they become available.
 
 ## Fix List
-### Export 5.0.0 Beta 2
-[188138621] Simplify SharePoint modern authenticaion  
-[188138649] Sharepoint site dialog may not close on OK  
-[188152811] Truncate text at 255 characters to meet SharePoint requirements
-
 ### Export 5.0.0
 [187316243]	Handle missing view data file in @DbLookup  
 [187318928]	Provide a way to import DXL to an archive  
@@ -41,4 +36,5 @@ Please refer to [Installing Teamstudio Export](installing.md) for details on sys
 [187694126]	Protect against @Created in column hide formula  
 [187703998]	Support cross-database @DbLookups  
 [187937349]	Support 'PBrush' and 'AutoCAD' OLE types  
-[187961958]	Support 'Paint.Picture' and 'SoundRec' OLE types
+[187961958]	Support 'Paint.Picture' and 'SoundRec' OLE types  
+[188164406] Improve display of long decimal numbers
