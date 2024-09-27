@@ -13,7 +13,7 @@
     
     
       
-        <title>Configuring SharePoint - Teamstudio Export 5.0</title>
+        <title>SharePoint の設定 - Teamstudio Export 5.0</title>
       
     
     
@@ -58,7 +58,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#configuring-sharepoint" class="md-skip">
+        <a href="#sharepoint" class="md-skip">
           コンテンツにスキップ
         </a>
       
@@ -91,7 +91,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Configuring SharePoint
+              SharePoint の設定
             
           </span>
         </div>
@@ -402,14 +402,14 @@
       
       
         <label class="md-nav__link" for="__nav_2_7">
-          Exporting Data
+          データのエクスポート
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="Exporting Data" data-md-level="2">
+      <nav class="md-nav" aria-label="データのエクスポート" data-md-level="2">
         <label class="md-nav__title" for="__nav_2_7">
           <span class="md-nav__icon md-icon"></span>
-          Exporting Data
+          データのエクスポート
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -420,7 +420,7 @@
   
     <li class="md-nav__item">
       <a href="../data/" class="md-nav__link">
-        Overview
+        概要
       </a>
     </li>
   
@@ -443,12 +443,12 @@
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          Configuring SharePoint
+          SharePoint の設定
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        Configuring SharePoint
+        SharePoint の設定
       </a>
       
         
@@ -467,32 +467,32 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#configuring-a-site" class="md-nav__link">
-    Configuring a Site
+  <a href="#_1" class="md-nav__link">
+    サイトの設定
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#common-settings" class="md-nav__link">
-    Common Settings
+  <a href="#_2" class="md-nav__link">
+    共通設定
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#online-basic-authentication" class="md-nav__link">
-    Online (Basic) Authentication
+  <a href="#online-basic" class="md-nav__link">
+    Online (Basic) 認証
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#online-modern-authentication" class="md-nav__link">
-    Online (Modern) Authentication
+  <a href="#online-modern" class="md-nav__link">
+    Online (Modern) 認証
   </a>
   
-    <nav class="md-nav" aria-label="Online (Modern) Authentication">
+    <nav class="md-nav" aria-label="Online (Modern) 認証">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -515,8 +515,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#registering-teamstudio-export-in-entra" class="md-nav__link">
-    Registering Teamstudio Export in Entra
+  <a href="#teamstudio-export-entra" class="md-nav__link">
+    Teamstudio Export の Entra への登録
   </a>
   
 </li>
@@ -614,32 +614,32 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#configuring-a-site" class="md-nav__link">
-    Configuring a Site
+  <a href="#_1" class="md-nav__link">
+    サイトの設定
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#common-settings" class="md-nav__link">
-    Common Settings
+  <a href="#_2" class="md-nav__link">
+    共通設定
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#online-basic-authentication" class="md-nav__link">
-    Online (Basic) Authentication
+  <a href="#online-basic" class="md-nav__link">
+    Online (Basic) 認証
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#online-modern-authentication" class="md-nav__link">
-    Online (Modern) Authentication
+  <a href="#online-modern" class="md-nav__link">
+    Online (Modern) 認証
   </a>
   
-    <nav class="md-nav" aria-label="Online (Modern) Authentication">
+    <nav class="md-nav" aria-label="Online (Modern) 認証">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -662,8 +662,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#registering-teamstudio-export-in-entra" class="md-nav__link">
-    Registering Teamstudio Export in Entra
+  <a href="#teamstudio-export-entra" class="md-nav__link">
+    Teamstudio Export の Entra への登録
   </a>
   
 </li>
@@ -681,66 +681,66 @@
               
                 
 
-<h1 id="configuring-sharepoint">Configuring SharePoint</h1>
-<p>Clicking the <em>Sites...</em> button will display the SharePoint Sites dialog, allowing you to manage your SharePoint site configurations. </p>
+<h1 id="sharepoint">SharePoint の設定</h1>
+<p><em>Sites...</em> ボタンをクリックすると、SharePoint サイトの設定を管理するための SharePoint サイトダイアログが表示されます。</p>
 <figure>
 <p><img alt="SharePoint Sites" src="../../img/sp_sites.png" /></p>
 </figure>
-<p>Each site configuration defines the location (URL) of a SharePoint site, along with the authentication method and, if necessary, credentials needed to access it.</p>
-<h2 id="configuring-a-site">Configuring a Site</h2>
-<p>You can use the <em>Add...</em> and <em>Edit...</em> buttons to create a new site or edit an existing one. Choosing either option will display the SharePoint Site dialog.</p>
+<p>各サイト設定では、SharePoint サイトの場所 (URL)、認証方法、および必要に応じてアクセスに必要な資格情報が定義されます。</p>
+<h2 id="_1">サイトの設定</h2>
+<p><em>Add...</em> および <em>Edit...</em> ボタンを使用して、新しいサイトを作成するか、既存のサイトを編集できます。どちらかを選択すると、SharePoint サイトダイアログが表示されます。</p>
 <figure>
 <p><img alt="SharePoint Site" src="../../img/sp_sitebasic.png" /></p>
 </figure>
-<p>This dialog will look slightly different depending on the authentication method selected.</p>
-<h2 id="common-settings">Common Settings</h2>
+<p>Tこのダイアログは、選択された認証方法によって少し異なる見た目になります。</p>
+<h2 id="_2">共通設定</h2>
 <ul>
-<li><strong>Name</strong> A name used to refer to the site. This can be any text you choose, and is only used to identify the site in the Export UI.</li>
-<li><strong>Site URL</strong> The full URL of the SharePoint site.</li>
-<li><strong>Authentication</strong> The authentication method. Export currently supports two methods:<ul>
-<li><strong>Online (Basic)</strong> SharePoint Online with basic username/password authentication.</li>
-<li><strong>Online (Modern)</strong> SharePoint Online using modern OAuth authentication.</li>
+<li><strong>Name</strong> サイトを参照するために使用される名前。これは任意のテキストを指定でき、Export UI でサイトを識別するためだけに使用されます。</li>
+<li><strong>Site URL</strong> SharePoint サイトの完全な URL。</li>
+<li><strong>Authentification</strong> 認証方法。現在、Export は次の2つの方法をサポートしています:<ul>
+<li><strong>Online (Basic)</strong> 基本的なユーザー名/パスワード認証を使用する SharePoint Online。</li>
+<li><strong>Online (Modern)</strong> モダン OAuth 認証を使用する SharePoint Online。</li>
 </ul>
 </li>
 </ul>
-<h2 id="online-basic-authentication">Online (Basic) Authentication</h2>
-<p>This authentication method is used with SharePoint Online if your organization still allows basic username/password authentication. Note that this method is disabled by default in SharePoint Online and would have to have been explicitly re-enabled by your admin team. An admin can verify whether it is available by logging into <a href="https://entra.microsoft.com">Microsoft Entra</a>, selecting <em>Overview</em> and then <em>Properties</em>. At the bottom of the screen, you will see the <em>Security Defaults</em> setting. If this says</p>
+<h2 id="online-basic">Online (Basic) 認証</h2>
+<p>この認証方法は、組織がまだ基本的なユーザー名/パスワード認証を許可している場合に、SharePoint Online で使用されます。この方法は SharePoint Online ではデフォルトで無効になっており、管理者チームによって明示的に再有効化される必要があります。管理者は <a href="https://entra.microsoft.com">Microsoft Entra</a> にログインし、<em>Overview</em> を選択してから <em>Properties</em> を選択することで、この方法が利用可能かどうかを確認できます。画面の下部に <em>Security Defaults</em> 設定が表示されます。もし以下のように表示されている場合、</p>
 <figure>
 <p><img alt="Entra Security Defaults" src="../../img/sp_entradefaults.png" /></p>
 </figure>
-<p>then you are using modern authentication and will not be able to log in with a username and password.</p>
-<p>If username and password authentication is available to you, then choose <em>Online (Basic)</em> as the authenticaion method. Your dialog will look like this:</p>
+<p>モダン認証が使用されており、ユーザー名とパスワードでログインすることはできません。</p>
+<p>ユーザー名とパスワード認証が利用可能な場合は、認証方法として <em>Online (Basic)</em> を選択してください。この場合、ダイアログは次のようになります:</p>
 <figure>
 <p><img alt="SharePoint Site" src="../../img/sp_sitebasic.png" /></p>
 </figure>
-<p>Enter your usernmae and password into the appropriate fields. You can use the <em>Test Connection</em> button to verify that everything is working correctly. Your password will be encrypted using the Microsoft Data Protection APIs (DPAPI) and will not be readable by any other user logging onto the computer.</p>
-<h2 id="online-modern-authentication">Online (Modern) Authentication</h2>
-<p>This authentication method for SharePoint Online offers significantly enhanced security and is recommended for most users.</p>
-<p>If you select <em>Online (Modern)</em> authentication, your dialog will look like this:</p>
+<p>適切なフィールドにユーザー名とパスワードを入力します。<em>Test Connection</em> ボタンを使用して、すべてが正常に動作しているかどうかを確認できます。パスワードは Microsoft Data Protection API (DPAPI) を使用して暗号化され、コンピュータにログインしている他のユーザーは読み取ることはできません。</p>
+<h2 id="online-modern">Online (Modern) 認証</h2>
+<p>この認証方法は、SharePoint Online 向けに大幅に強化されたセキュリティを提供し、ほとんどのユーザーに推奨されます。</p>
+<p><em>Online (Modern)</em> 認証を選択すると、ダイアログは次のように表示されます:</p>
 <figure>
 <p><img alt="SharePoint Site Modern" src="../../img/sp_sitemodern.png" /></p>
 </figure>
-<p>While this method uses a <em>Tenant ID</em> and <em>Client ID</em>, Export can usually provide these values automatically and you will leave these fields blank.</p>
+<p>この方法では <em>Tenant ID</em> および <em>Client ID</em> を使用しますが、通常は Export がこれらの値を自動的に提供するため、これらのフィールドは空白のままにしておきます。</p>
 <h3 id="tenant-id">Tenant ID</h3>
-<p>The <em>Tenant ID</em> identifies your organization on Microsoft 365. If your Site URL is of the form <em>https://&lt;tenant>.sharepoint.com/...</em> then <em>&lt;tenant></em> is your tenant name, and Export will be able to retrieve the Tenant ID automatically. In that case, you can leave the <em>Tenant Name/ID</em> field blank. If your Site URL is not on sharepoint.com then you will need to ask your administrator for your tenant name or ID. You can enter either into the Tenant ID field.</p>
+<p>この <em>Tenant ID</em> は、Microsoft 365 上で組織を識別します。サイト URL が <em>https://&lt;tenant>.sharepoint.com/...</em> という形式の場合、<em>&lt;tenant></em> がテナント名であり、Export は自動的に Tenant ID を取得できます。その場合、Tenant Name/ID フィールドは空白のままにしておいてください。サイト URL が sharepoint.com ではない場合は、管理者に <em>Tenant Name/ID</em> を問い合わせる必要があります。Tenant ID フィールドには、いずれかを入力できます。</p>
 <h3 id="client-id">Client ID</h3>
-<p>The <em>Client ID</em> identifies the application that you will use to access SharePoint. In most cases, you can leave this blank to use the default <em>Teamstudio Export</em> application that we have registered. If your organization does not allow you to grant access to third-party applications then your administrator will need to register a private application as described below. They can then give you the Client ID for that application.</p>
-<p>Once you have set your Tenant ID and Client ID if necessary, you can use the <em>Test Connection</em> button to verify that everything is set up correctly. The first time you use it, you will be prompted to log in with your username and password. This will generate an access token that will saved on your computer so that you do not need to log in again. The access token is saved in a file named <em>MSALCache</em> in your local application data folder, usually AppData\Local\Teamstudio in your home folder. As with passwords, this file is encrypted using DPAPI and is not readable by any other user logging onto the computer.</p>
-<p>If you have problems connecting, you can enable detailed connection logging by checking the <em>Enable Connection Logging</em> box. This will write a detailed connection log to a log file in your local application data folder. The log will not include any personally identifiable information. </p>
-<h2 id="registering-teamstudio-export-in-entra">Registering Teamstudio Export in Entra</h2>
-<p>These are instructions for your SharePoint Online administrator. They are necessary only if you cannot or do not want to use the default application that we have registerd. In most cases they will not be needed. Your administrator can configure SharePoint Online to allow application access and give you the necessary values you need to configure Export.</p>
-<p>Export must be registered as an application in Microsoft Entra with the necessary permissions to write and create lists. This is performed from <a href="https://entra.microsoft.com">Microsoft Entra</a>.</p>
+<p>この <em>Client ID</em> は、SharePoint へのアクセスに使用するアプリケーションを識別します。ほとんどの場合、デフォルトの <em>Teamstudio Export</em> アプリケーションを使用するため、空白のままにしておくことができます。組織がサードパーティのアプリケーションへのアクセスを許可していない場合、管理者は以下の説明に従ってプライベートアプリケーションを登録する必要があります。その後、管理者からそのアプリケーションの Client ID が提供されます。</p>
+<p>必要に応じて Tenant ID および Client ID を設定したら、<em>Test Connection</em> ボタンを使用してすべてが正しく設定されていることを確認できます。初めて使用するときは、ユーザー名とパスワードでログインするよう求められます。これにより、アクセストークンが生成され、コンピュータに保存されるため、再度ログインする必要はありません。アクセストークンは、通常 AppData\Local\Teamstudio 内のローカルアプリケーションデータフォルダにある <em>MSALCache</em> という名前のファイルに保存されます。このファイルもパスワードと同様に DPAPI を使用して暗号化されており、コンピュータにログインしている他のユーザーには読み取れません。</p>
+<p>接続に問題がある場合は、<em>Enable Connection Logging</em> ボックスにチェックを入れて詳細な接続ログを有効にできます。これにより、ローカルアプリケーションデータフォルダに詳細な接続ログが書き込まれます。ログには、個人を特定できる情報は含まれません。</p>
+<h2 id="teamstudio-export-entra">Teamstudio Export の Entra への登録</h2>
+<p>これらは SharePoint Online 管理者向けの手順です。デフォルトで登録されたアプリケーションを使用できない、または使用したくない場合にのみ必要です。ほとんどの場合、これらの手順は不要です。管理者は SharePoint Online を設定して、必要な値をユーザーに提供することができます。</p>
+<p>Export は、リストの作成と書き込みのために、必要な権限を持って Microsoft Entra にアプリケーションとして登録される必要があります。これは、<a href="https://entra.microsoft.com">Microsoft Entra</a> から実行されます。</p>
 <ol>
-<li>Expand the <em>Applications</em> category and choose <em>App Registrations</em>.</li>
-<li>Choose <em>New Registration</em>.</li>
-<li>Enter <em>Teamstudio Export</em> as the name.</li>
-<li>Under <em>Supported Account Types</em>, choose <em>Accounts in this organizational directory only</em>.</li>
-<li>Under <em>Redirect URI (Optional)</em>, choose <em>Public client/native</em> from the dropdown and enter <em>http://localhost</em> as the URI. Note that this must be http, not https. Also, this step is not optional!</li>
-<li>Click the <em>Register</em> button to create the application.</li>
-<li>Export will be creating lists in SharePoint, so it needs to be given the necessary permissions. To do this, select <em>API permissions</em> under <em>Manage</em>.</li>
-<li>Click <em>Add a permission</em>. Select <em>SharePoint</em> from the list of applications, and then <em>Delegated permissions</em>. Check the <em>AllSites.Manage</em> permission, and then click the <em>Add permissions</em> button.</li>
+<li><em>Applications</em> カテゴリを展開し、<em>App Registrations</em> を選択します。</li>
+<li><em>New Registration</em> を選択します。</li>
+<li>名前に <em>Teamstudio Export</em> と入力します。</li>
+<li><em>Supported Account Types</em> で、<em>Accounts in this organizational directory only</em> を選択します。</li>
+<li><em>Redirect URI (Optional)</em> では、ドロップダウンから <em>Public client/native</em> を選択し、URI に <em>http://localhost</em> と入力します。これは https ではなく http である必要があります。また、このステップは省略できません！</li>
+<li><em>Register</em> ボタンをクリックしてアプリケーションを作成します。</li>
+<li>Export は SharePoint でリストを作成するため、必要な権限を付与する必要があります。これを行うには、<em>Manage</em> の下にある <em>API permissions</em> を選択します。</li>
+<li><em>Add a permission</em> をクリックします。アプリケーションのリストから <em>SharePoint</em> を選択し、<em>Delegated permissions</em> を選択します。<em>AllSites.Manage</em> 権限をチェックし、<em>Add permissions</em> ボタンをクリックします。</li>
 </ol>
-<p>That will register the application with the necessary settings. From the application overvew, you can copy the <em>Application (client) ID</em> value and the <em>Directory (tenant) ID</em>. These are the values that your users will need to configure Export.</p>
+<p>これで必要な設定でアプリケーションが登録されます。アプリケーションの概要から、<em>Application (client) ID</em> の値と <em>Directory (tenant) ID</em> をコピーできます。これらが、ユーザーが Export を設定する際に必要となる値です。</p>
 
               
             </article>
@@ -754,7 +754,7 @@
     <nav class="md-footer__inner md-grid" aria-label="フッター">
       
         
-        <a href="../data/" class="md-footer__link md-footer__link--prev" aria-label="前: Overview" rel="prev">
+        <a href="../data/" class="md-footer__link md-footer__link--prev" aria-label="前: 概要" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -763,7 +763,7 @@
               <span class="md-footer__direction">
                 前
               </span>
-              Overview
+              概要
             </div>
           </div>
         </a>
