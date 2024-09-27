@@ -1,2 +1,2 @@
 # ドキュメンテーション
-これはTeamstudio Export 4.5 のドキュメンテーションです。
+これはTeamstudio Export 5.0 のドキュメンテーションです。
