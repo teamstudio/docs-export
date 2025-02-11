@@ -63,7 +63,7 @@ Once you have set your Tenant ID and Client ID if necessary, you can use the *Te
 If you have problems connecting, you can enable detailed connection logging by checking the *Enable Connection Logging* box. This will write a detailed connection log to a log file in your local application data folder. The log will not include any personally identifiable information. 
 
 ## Registering Teamstudio Export in Entra
-These are instructions for your SharePoint Online administrator. They are necessary only if you cannot or do not want to use the default application that we have registerd. In most cases they will not be needed. Your administrator can configure SharePoint Online to allow application access and give you the necessary values you need to configure Export.
+These are instructions for your SharePoint Online administrator. They are necessary only if you cannot or do not want to use the default application that we have registered. In most cases they will not be needed. Your administrator can configure SharePoint Online to allow application access and give you the necessary values you need to configure Export.
 
 Export must be registered as an application in Microsoft Entra with the necessary permissions to write and create lists. This is performed from [Microsoft Entra](https://entra.microsoft.com).
 
