@@ -1,5 +1,5 @@
 # Release Notes
-## Teamstudio Export 5.0.0
+## Teamstudio Export 5.0
 Teamstudio Export 5.0 is a feature update to Export.
 
 The major new feature of Export 5.0 is a powerful data exporter. This allows you to export data in a variety of formats:
@@ -25,6 +25,38 @@ There is no need to re-archive your database to take advantage of any of the new
 Please refer to [Installing Teamstudio Export](installing.md) for details on system requirements and installation. This page will be updated with any known issues and fixes as they become available.
 
 ## Fix List
+### Export 5.0.1
+[478] Handle missing Content-Type in SharePoint upload  
+[479] SharePoint upload fails with "Unauthorized" error  
+[480] Improve error message when refresh hits a corrupt archive  
+[481] Improve SharePoint connection logging  
+[482] Create a separate MSAL cache for each site  
+[483] Support Visio.Drawing.4 OLE type  
+[484] Handle additional invalid file name characters in data export  
+[485] Do not automatically index SharePoint list columns  
+[486] Trim attachment filenames in data export  
+[487] Handle additional invalid file name character in data export  
+[488] Handle Package OLE2 objects  
+[489] Repair right-click support file generation  
+[490] Embedded view column widths incorrect in European locales  
+[491] Support @ sign in variable names  
+[492] Support @ServerName  
+[493] Handle large note ids in archived views  
+[494] Skip PaintShopPro OLE 1 objects  
+[495] Support Excel.Chart.5 OLE 1 type  
+[496] Skip images specified by URL  
+[497] Handle invalid row/colspans in stored forms  
+[498] Handle text horizontal alignment in stored forms  
+[499] Handle page breaks in stored forms  
+[500] Table margins may be incorrect in older databases  
+[501] Table margins may be incorrect in stored forms  
+[502] Support Visio.Drawing.3 OLE type  
+[503] Unreferenced attachments do not embed correctly in PDFs  
+[504] Handle OLE object references with no attachments  
+[505] Dedupe multiple periods in attachment file names  
+[506] Handle $file objects with an empty name  
+[507] Improve section title background handling
+
 ### Export 5.0.0
 [187316243]	Handle missing view data file in @DbLookup  
 [187318928]	Provide a way to import DXL to an archive  
