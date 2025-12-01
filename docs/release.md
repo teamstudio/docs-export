@@ -25,6 +25,41 @@ There is no need to re-archive your database to take advantage of any of the new
 Please refer to [Installing Teamstudio Export](installing.md) for details on system requirements and installation. This page will be updated with any known issues and fixes as they become available.
 
 ## Fix List
+### Export 5.0.2
+[508] Support non-literal variable names in @Transform  
+[509] Bump copyright year to 2025  
+[510] Convert unids to text for data export  
+[511] Handle AttachmentRefs nested in UrlLinks  
+[512] Empty rows can prevent tables from hiding on HTML  
+[514] Skip 'PaintShopPro' OLE 2 objects  
+[515] Handle base64 encoded attachments  
+[516] Fix NullReferenceException when CSV path is invalid  
+[517] Fix rare NullReferenceException using Lucene with Data Export  
+[518] Support @UrlDecode  
+[519] Improve local database resolution in @DbLookup  
+[520] Handle disabled view column hide formulas  
+[521] Permuted (*) equality operators may return incorrect values  
+[522] Data Export field picker categorizes incorrectly  
+[523] Respect newline separator in view columns  
+[524] Handle Visio 2 OLE1 objects  
+[525] Fix error generating PDF imagemaps in European locales  
+[526] Handle attachments incorrectly marked as base64 encoded  
+[527] Handle unexpected runs in embedded controls  
+[528] @Name([Canonicalize]) loses OU components  
+[529] Cap the request size when exporting to SharePoint  
+[530] Add documents to archive without MIME conversion if necessary  
+[531] Implement MIME->DXL conversion  
+[534] Skip Word.Picture.6 OLE objects  
+[535] Skip ABCFlow OLE objects  
+[536] Add @Max and @Min  
+[537] Add @WebDbName  
+[538] Add @UrlEncode  
+[539] Formula compilation errors should not throw an exception  
+[540] Skip MSDraw OLE objects  
+[541] Skip unknown OLE object types  
+[543] Intermittent IO error cleaning up view cache directory  
+[544] Work around SharePoint issue with certain similar filenames
+
 ### Export 5.0.1
 [478] Handle missing Content-Type in SharePoint upload  
 [479] SharePoint upload fails with "Unauthorized" error  
