@@ -1,107 +1,32 @@
 # Release Notes
-## Teamstudio Export 5.0
-Teamstudio Export 5.0 is a feature update to Export.
+## Teamstudio Export 5.1
+Teamstudio Export 5.1 is a feature update to Export.
 
-The major new feature of Export 5.0 is a powerful data exporter. This allows you to export data in a variety of formats:
+The data export feature introduced in Export 5.0 has been updated to allow you to save and reload your data selection criteria. This includes your specific selection (formula, view, or search) as well as the list of columns to be exported.
 
-* **SharePoint Lists** - Upload data to a new or existing SharePoint list, optionally including attachments.
-* **CSV** - Generate text files delimited with commas or tabs.
-* **Attachments** - Extract all attachments, OLE objects and embedded images.
+Export 5.1 has transitioned to *.NET 10*, replacing the older .NET Framework used in all previous versions. We now bundle a local .NET runtime directly with Export. While this increases the download and install size, it removes the need for a shared .NET installation on your computer. 
 
-For any output format, you can select documents in three different ways:
+This architectural shift provides several key benefits:
 
-* **By Formula** - Similar to a view selection formula, using any @function supported by Export.
-* **By View** - Includes all of the documents from an existing view.
-* **By Search** - Export now includes the Apache Lucene.NET search library, allowing you to perform full-text searches on your data. The full-text search that Export uses when you export data to HTML/PDF needs to run within a browser using JavaScript. This places severe limitations on the features that it can provide. Lucene.NET, on the other hand, runs within Export and thus can offer a much more powerful experience. For example, you can search for phrases rather than single words, and can also exclude documents matching certain terms.
+* **Simplified Deployment:** Eliminates bugs caused by subtle differences in user-installed .NET Framework versions.
+* **Cutting-Edge Security:** Allows Export to take advantage of the newest, most secure .NET features.
+* **Easier Maintenance:** Simplifies the process of updating Export if vulnerabilities are ever discovered in .NET or third-party libraries.
 
-In addition to selecting which documents to include, you can also specify the data to be exported, in the form of one or more columns. When you select documents by formula or by search the columns can be any fields from the database design or any computed expressions using @formulas. When you select documents by view, the columns will initially be all of the columns defined in the view along with a column for the Note ID. You can re-order the columns and remove any unwanted ones, but you cannot add new values.
-
-For full details on the new data export features, see [Exporting Data](data.md).
+Lastly, we have updated our code signing to use *Microsoft Artifact Signing*. This improves security by utilizing short-lived certificates that are valid for only 3 days. Because of this, *it is normal and expected for the certificate to appear expired by the time you install the product.* Rest assured, our signatures are all securely timestamped at the exact moment of signing. As long as the certificate was valid when the product was signed, the signature remains completely valid. Expiring the certificates quickly simply ensures they cannot be misused if they ever fall into the wrong hands.
 
 Additional fixes are identified in the Fix List section below.
-
-There is no need to re-archive your database to take advantage of any of the new features and fixes in Export 5.0.
 
 Please refer to [Installing Teamstudio Export](installing.md) for details on system requirements and installation. This page will be updated with any known issues and fixes as they become available.
 
 ## Fix List
-### Export 5.0.2
-[508] Support non-literal variable names in @Transform  
-[509] Bump copyright year to 2025  
-[510] Convert unids to text for data export  
-[511] Handle AttachmentRefs nested in UrlLinks  
-[512] Empty rows can prevent tables from hiding on HTML  
-[514] Skip 'PaintShopPro' OLE 2 objects  
-[515] Handle base64 encoded attachments  
-[516] Fix NullReferenceException when CSV path is invalid  
-[517] Fix rare NullReferenceException using Lucene with Data Export  
-[518] Support @UrlDecode  
-[519] Improve local database resolution in @DbLookup  
-[520] Handle disabled view column hide formulas  
-[521] Permuted (*) equality operators may return incorrect values  
-[522] Data Export field picker categorizes incorrectly  
-[523] Respect newline separator in view columns  
-[524] Handle Visio 2 OLE1 objects  
-[525] Fix error generating PDF imagemaps in European locales  
-[526] Handle attachments incorrectly marked as base64 encoded  
-[527] Handle unexpected runs in embedded controls  
-[528] @Name([Canonicalize]) loses OU components  
-[529] Cap the request size when exporting to SharePoint  
-[530] Add documents to archive without MIME conversion if necessary  
-[531] Implement MIME->DXL conversion  
-[534] Skip Word.Picture.6 OLE objects  
-[535] Skip ABCFlow OLE objects  
-[536] Add @Max and @Min  
-[537] Add @WebDbName  
-[538] Add @UrlEncode  
-[539] Formula compilation errors should not throw an exception  
-[540] Skip MSDraw OLE objects  
-[541] Skip unknown OLE object types  
-[543] Intermittent IO error cleaning up view cache directory  
-[544] Work around SharePoint issue with certain similar filenames
-
-### Export 5.0.1
-[478] Handle missing Content-Type in SharePoint upload  
-[479] SharePoint upload fails with "Unauthorized" error  
-[480] Improve error message when refresh hits a corrupt archive  
-[481] Improve SharePoint connection logging  
-[482] Create a separate MSAL cache for each site  
-[483] Support Visio.Drawing.4 OLE type  
-[484] Handle additional invalid file name characters in data export  
-[485] Do not automatically index SharePoint list columns  
-[486] Trim attachment filenames in data export  
-[487] Handle additional invalid file name character in data export  
-[488] Handle Package OLE2 objects  
-[489] Repair right-click support file generation  
-[490] Embedded view column widths incorrect in European locales  
-[491] Support @ sign in variable names  
-[492] Support @ServerName  
-[493] Handle large note ids in archived views  
-[494] Skip PaintShopPro OLE 1 objects  
-[495] Support Excel.Chart.5 OLE 1 type  
-[496] Skip images specified by URL  
-[497] Handle invalid row/colspans in stored forms  
-[498] Handle text horizontal alignment in stored forms  
-[499] Handle page breaks in stored forms  
-[500] Table margins may be incorrect in older databases  
-[501] Table margins may be incorrect in stored forms  
-[502] Support Visio.Drawing.3 OLE type  
-[503] Unreferenced attachments do not embed correctly in PDFs  
-[504] Handle OLE object references with no attachments  
-[505] Dedupe multiple periods in attachment file names  
-[506] Handle $file objects with an empty name  
-[507] Improve section title background handling
-
-### Export 5.0.0
-[187316243]	Handle missing view data file in @DbLookup  
-[187318928]	Provide a way to import DXL to an archive  
-[187363948]	Protect against invalid attachment names  
-[187408442]	Handle multi-value icon columns in embedded views  
-[187416749]	Handle multi-line entries in embedded views  
-[187486941]	Include TYPE\_NOTEREF\_LIST items in full text index  
-[187540358]	Add beta option to size PDF images to fit  
-[187694126]	Protect against @Created in column hide formula  
-[187703998]	Support cross-database @DbLookups  
-[187937349]	Support 'PBrush' and 'AutoCAD' OLE types  
-[187961958]	Support 'Paint.Picture' and 'SoundRec' OLE types  
-[188164406] Improve display of long decimal numbers
+### Export 5.1.0
+[545] Fix debug warnings from SQLite  
+[546] Constant columns are not properly handled in @DbLookup  
+[547] Update Code Signing Certificate  
+[548] Improve handling of corrupt Base64 attachments  
+[549] Support @While  
+[550] Fix HTML generation for aligned paragraphs with custom bullets  
+[551] Fix PDF error with relative/ambiguous URL links  
+[552] Data for views hidden from the client is not archived  
+[553] Fix 'cannot access file' exception processing certain corrupt OLE objects  
+[554] Support Visio.Drawing.5 OLE type

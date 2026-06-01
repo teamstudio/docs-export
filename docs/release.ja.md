@@ -1,108 +1,32 @@
-# リリースノート
-## Teamstudio Export 5.0
-Teamstudio Export 5.0 は機能拡張版です。
+# Release Notes
+## Teamstudio Export 5.1
+Teamstudio Export 5.1 is a feature update to Export.
 
-Export 5.0 の主な新機能は、強力なデータエクスポーターです。これにより、さまざまな形式でデータをエクスポートできます:
+The data export feature introduced in Export 5.0 has been updated to allow you to save and reload your data selection criteria. This includes your specific selection (formula, view, or search) as well as the list of columns to be exported.
 
-* **SharePoint リスト** - 新規または既存の SharePoint リストにデータをアップロードし、添付ファイルを含めることも可能です。
-* **CSV** - コンマやタブで区切られたテキストファイルを生成します。
-* **添付ファイル** - すべての添付ファイル、OLEオブジェクト、埋め込み画像を抽出できます。
+Export 5.1 has transitioned to *.NET 10*, replacing the older .NET Framework used in all previous versions. We now bundle a local .NET runtime directly with Export. While this increases the download and install size, it removes the need for a shared .NET installation on your computer. 
 
-どの出力形式においても、次の 3 つの異なる方法で文書を選択できます。:
+This architectural shift provides several key benefits:
 
-* **式による選択** - ビュー選択式に似ており、Export がサポートする任意の @関数を使用できます。
-* **ビューによる選択** - 指定した既存のビュー内のすべての文書が含まれます。
-* **検索による選択** - Export は Apache Lucene.NET 検索ライブラリが組み込まれており、データに対して全文検索を実行できます。HTML/PDF にデータをエクスポートする際に使用される全文検索は、ブラウザ内で JavaScript を使って実行されるため、提供できる機能に大きな制約があります。その一方、Lucene.NET は Export 内で動作するため、はるかに強力なエクスペリエンスを提供します。例えば、単語ではなくフレーズでの検索が可能であり、特定の用語に一致する文書を除外することもできます。
+* **Simplified Deployment:** Eliminates bugs caused by subtle differences in user-installed .NET Framework versions.
+* **Cutting-Edge Security:** Allows Export to take advantage of the newest, most secure .NET features.
+* **Easier Maintenance:** Simplifies the process of updating Export if vulnerabilities are ever discovered in .NET or third-party libraries.
 
-どの文書を含めるかを選択するだけでなく、エクスポートするデータを 1 つ以上の列の形式で指定することもできます。式や検索による文書選択時、列はデータベース設計の任意のフィールドまたは @関数を使用した計算式を使用できます。ビューによる選択時、初期状態ではビューに定義されたすべての列と Note ID 用の列が含まれます。列の順序を変更したり、不要な列を削除したりできますが、新しい値を追加することはできません。
+Lastly, we have updated our code signing to use *Microsoft Artifact Signing*. This improves security by utilizing short-lived certificates that are valid for only 3 days. Because of this, *it is normal and expected for the certificate to appear expired by the time you install the product.* Rest assured, our signatures are all securely timestamped at the exact moment of signing. As long as the certificate was valid when the product was signed, the signature remains completely valid. Expiring the certificates quickly simply ensures they cannot be misused if they ever fall into the wrong hands.
 
-新しいデータエクスポート機能の詳細は、 [データのエクスポート](data.md)を参照してください。
+Additional fixes are identified in the Fix List section below.
 
-追加の修正内容は以下の不具合修正リストのセクションで確認できます。
+Please refer to [Installing Teamstudio Export](installing.md) for details on system requirements and installation. This page will be updated with any known issues and fixes as they become available.
 
-
-Export 5.0 の新機能や修正を活用するために、データベースを再度アーカイブし直す必要はありません。
-
-システム要件やインストールに関する詳細は [Teamstudio Exportのインストール](installing.md) を参照してください。このページは、既知の問題や修正が利用可能になるたびに更新されます。
-
-## 不具合修正リスト
-### Export 5.0.2
-[508] @Transform で非リテラルの変数名をサポート  
-[509] 著作権表記の年を 2025 年に更新  
-[510] データエクスポート時に UNID をテキストへ変換  
-[511] UrlLinks 内にネストされた AttachmentRefs を処理  
-[512] 空行があると HTML でテーブルが非表示にならない問題を修正  
-[514] “PaintShopPro” の OLE2 オブジェクトをスキップ  
-[515] Base64 エンコードされた添付ファイルを処理  
-[516] CSV パスが無効な場合の NullReferenceException を修正  
-[517] Data Export で Lucene 使用時にまれに発生する NullReferenceException を修正  
-[518] @UrlDecode をサポート  
-[519] @DbLookup のローカルデータベース取得方法を改善  
-[520] 無効化なビュー列の非表示式を処理  
-[521] 置換に用いる（*）の等価演算子が誤った値を返す可能性のある問題を修正  
-[522] Data Export のフィールドピッカーがカテゴリ分けを誤る問題を修正  
-[523] ビュー列で改行区切りを遵守  
-[524] Visio 2 OLE1 オブジェクトを処理  
-[525] 欧州ロケールで PDF イメージマップ生成エラーを修正  
-[526] Base64 エンコードと誤認識されている添付ファイルを処理  
-[527] 埋め込みコントロールで予期しない実行処理  
-[528] @Name([Canonicalize]) が OU コンポーネントを失う問題を修正  
-[529] SharePoint へのエクスポートでリクエストサイズを上限設定  
-[530] 必要に応じて MIME 変換を行わずにドキュメントをアーカイブへ追加  
-[531] MIME→DXL 変換を実装  
-[534] Word.Picture.6 OLE オブジェクトをスキップ  
-[535] ABCFlow OLE オブジェクトをスキップ  
-[536] @Max と @Min を追加  
-[537] @WebDbName を追加  
-[538] @UrlEncode を追加  
-[539] 式のコンパイルエラーで例外出力しないよう修正  
-[540] MSDraw OLE オブジェクトをスキップ  
-[541] 不明な OLE オブジェクトタイプをスキップ  
-[543] ビューキャッシュディレクトリのクリーンアップ中に発生する断続的な IO エラーを修正  
-[544] 類似したファイル名が原因で発生する SharePoint の問題に対処
-
-### Export 5.0.1
-[478] SharePoint アップロード時に Content-Type が欠落している場合の処理を改善  
-[479] SharePoint アップロード時に「Unauthorized」エラーが発生する問題を修正  
-[480] 破損したアーカイブをリフレッシュした際のエラーメッセージを改善  
-[481] SharePoint 接続のログ記録を強化  
-[482] 各サイトごとに個別の MSAL キャッシュを作成  
-[483] Visio.Drawing.4 OLE タイプをサポート  
-[484] データエクスポート時の追加の無効なファイル名文字を処理するように改善  
-[485] SharePoint リストの列を自動的にインデックスしないよう変更  
-[486] データエクスポート時の添付ファイル名に不要な空白などを削除するように改善  
-[487] データエクスポート時の追加の無効なファイル名文字を処理するように改善  
-[488] Package OLE2 オブジェクトの処理を追加  
-[489] 右クリックでサポートファイルを生成する機能を修正  
-[490] ヨーロッパのロケールで埋め込みビューの列幅が正しく表示されない問題を修正  
-[491] 変数名で「@」記号をサポート  
-[492] @ServerName をサポート  
-[493] アーカイブビューで大きなノート ID を処理できるよう修正  
-[494] PaintShopPro OLE 1 オブジェクトをスキップ  
-[495] Excel.Chart.5 OLE 1 タイプをサポート  
-[496] URL で指定された画像をスキップ  
-[497] 格納フォーム内の無効な行/列結合を処理するように修正  
-[498] 格納フォーム内のテキストの水平配置を処理するように修正  
-[499] 格納フォーム内のページ区切りを処理するように修正  
-[500] 古いデータベースでテーブルの余白が正しくない問題を修正  
-[501] 格納フォームでテーブルの余白が正しくない問題を修正  
-[502] Visio.Drawing.3 OLE タイプをサポート  
-[503] 参照されていない添付ファイルが PDF に正しく埋め込まれない問題を修正  
-[504] 添付ファイルのない OLE オブジェクト参照を処理するように修正  
-[505] 添付ファイル名に含まれる複数のピリオド（.）を重複排除  
-[506] ファイル名が空の $file オブジェクトを処理するように修正  
-[507] セクションタイトルの背景処理を改善
-
-### Export 5.0.0
-[187316243]	@DbLookupでビューのデータファイルがない場合の処理  
-[187318928]	アーカイブにDXLをインポートする方法の提供  
-[187363948]	無効な添付ファイル名に対する保護  
-[187408442]	埋め込みビューでの複数値アイコン列の処理  
-[187416749]	埋め込みビューでの複数行エントリーの処理  
-[187486941]	全文索引にTYPE_NOTEREF_LIST項目を含めるように修正  
-[187540358]	PDF 画像サイズをフィットさせるベータオプションの追加  
-[187694126]	列非表示数式での @Created に対する保護  
-[187703998]	データベース間の @DbLookup のサポート  
-[187937349]	'PBrush' および 'AutoCAD' の OLE タイプのサポート  
-[187961958]	'Paint.Picture' および 'SoundRec' の OLE タイプのサポート  
-[188164406] 長い小数点数の表示を改善
+## Fix List
+### Export 5.1.0
+[545] Fix debug warnings from SQLite  
+[546] Constant columns are not properly handled in @DbLookup  
+[547] Update Code Signing Certificate  
+[548] Improve handling of corrupt Base64 attachments  
+[549] Support @While  
+[550] Fix HTML generation for aligned paragraphs with custom bullets  
+[551] Fix PDF error with relative/ambiguous URL links  
+[552] Data for views hidden from the client is not archived  
+[553] Fix 'cannot access file' exception processing certain corrupt OLE objects  
+[554] Support Visio.Drawing.5 OLE type

@@ -152,5 +152,22 @@ Notes のビュー選択式に似た式を入力できます。ほとんどの @
 ## プレビュー
 ダイアログの左下にある *Preview...* ボタンをクリックすると、データベースから最大 50 件の一致する文書が表示されます。これにより、文書の選択や列の定義が正しく設定されているかを確認できます。大規模なデータベースを検索している場合や、選択式に一致する文書が少ない場合、プレビューが一致する文書を見つけるのに時間がかかることがあります。プレビューは、文書が見つかるたびに更新されます。完了を待たずに、いつでも閉じることができます。
 
+## Saving and Loading Data Selections
+Export 5.1 introduces the ability to save and reload your data configuration, i.e., the selection type and the list of columns. The saved configuration does not include the output configuration - CSV file, SharePoint list etc - since this will almost always be different for different databases.
+
+### Save
+The *Save...* button will display a dialog asking for a name for the saved configuration. If you enter the name of an existing configuration, you will be asked if you want to overwrite it. This allows you to modify an existing configuration by loading it, making the necessary changes and then re-saving it using the same name.
+
+### Load
+The *Load...* button will display a dialog showing a list of previously saved configurations.
+
+<figure markdown="1">
+  ![Load Data](img/data_load.png)
+</figure>
+
+The list is categorized by the selection type: *Formula*, *View* or *Search*. If you select a configuration and click *OK*, Export will attempt to load it. In some cases Export will not be able to load the requested configuration. For example, if the selection is based on a view, Export will verify that a view with the correct name exists in the current database. If a matching view cannot be found, Export will be unable to load the configuration. If a view with the correct name is found but it does not have all of the required columns, Export will load the configuration but will display a warning that not all of the columns could be loaded.
+
+You can delete a saved configuration by right-clicking on it in the *Load* dialog and choosing *Delete* from the popup menu.
+
 ## エクスポート
 エクスポートを設定し、出力をプレビューした後、*OK* をクリックするとエクスポートが開始されます。エクスポートはバックグラウンドで実行され、他のバックグラウンドタスクと同様に [Progress Window](progress.md) で監視できます。

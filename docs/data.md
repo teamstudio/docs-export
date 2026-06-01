@@ -155,5 +155,22 @@ Link columns will be exported to SharePoint as URL columns rather than plain tex
 ## Preview
 The *Preview...* button at the bottom left of the dialog will show up to 50 matching documents from the database. This allows you to check that you have the document selection and column definitions set up correctly before starting the export. It may take some time for the preview to find matching documents if you are searching a large database and not many documents match the selection formula. The dialog will update to show matching documents as they are found. You can close it at any time without waiting for the preview to complete.
 
+## Saving and Loading Data Selections
+Export 5.1 introduces the ability to save and reload your data configuration, i.e., the selection type and the list of columns. The saved configuration does not include the output configuration - CSV file, SharePoint list etc - since this will almost always be different for different databases.
+
+### Save
+The *Save...* button will display a dialog asking for a name for the saved configuration. If you enter the name of an existing configuration, you will be asked if you want to overwrite it. This allows you to modify an existing configuration by loading it, making the necessary changes and then re-saving it using the same name.
+
+### Load
+The *Load...* button will display a dialog showing a list of previously saved configurations.
+
+<figure markdown="1">
+  ![Load Data](img/data_load.png)
+</figure>
+
+The list is categorized by the selection type: *Formula*, *View* or *Search*. If you select a configuration and click *OK*, Export will attempt to load it. In some cases Export will not be able to load the requested configuration. For example, if the selection is based on a view, Export will verify that a view with the correct name exists in the current database. If a matching view cannot be found, Export will be unable to load the configuration. If a view with the correct name is found but it does not have all of the required columns, Export will load the configuration but will display a warning that not all of the columns could be loaded.
+
+You can delete a saved configuration by right-clicking on it in the *Load* dialog and choosing *Delete* from the popup menu.
+
 ## Export
 Once you have configured the export and previewed the output, you can start the export by clicking *OK*. The export itself will take place in the background and, as with any background task, can be monitored in the [Progress Window](progress.md).
