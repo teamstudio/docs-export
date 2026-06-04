@@ -1,32 +1,32 @@
-# Release Notes
+# リリースノート
 ## Teamstudio Export 5.1
-Teamstudio Export 5.1 is a feature update to Export.
+Teamstudio Export 5.1 は機能拡張版です。
 
-The data export feature introduced in Export 5.0 has been updated to allow you to save and reload your data selection criteria. This includes your specific selection (formula, view, or search) as well as the list of columns to be exported.
+Export 5.0 で導入されたデータエクスポート機能が強化され、データ選択条件を保存および再読み込みできるようになりました。これには、選択条件（式、ビュー、または検索）に加え、エクスポート対象の列リストも含まれます。
 
-Export 5.1 has transitioned to *.NET 10*, replacing the older .NET Framework used in all previous versions. We now bundle a local .NET runtime directly with Export. While this increases the download and install size, it removes the need for a shared .NET installation on your computer. 
+Export 5.1 では、従来バージョンで使用していた .NET Framework に代わり *.NET 10* へ移行しました。これに伴い、Export にはローカル .NET ランタイムが同梱されます。ダウンロードサイズおよびインストールサイズは増加しますが、コンピュータ上に共有 .NET 環境を別途インストールする必要がなくなります。
 
-This architectural shift provides several key benefits:
+このアーキテクチャーの変更により、以下の主要なメリットが得られます:
 
-* **Simplified Deployment:** Eliminates bugs caused by subtle differences in user-installed .NET Framework versions.
-* **Cutting-Edge Security:** Allows Export to take advantage of the newest, most secure .NET features.
-* **Easier Maintenance:** Simplifies the process of updating Export if vulnerabilities are ever discovered in .NET or third-party libraries.
+* **導入の簡素化:** ユーザー環境にインストールされた .NET Framework の微妙なバージョン差異によって発生する不具合を排除します。
+* **最新のセキュリティ:** Export が最新かつ最も安全な .NET 機能を利用できるようになります。
+* **保守性の向上:** .NET やサードパーティライブラリに脆弱性が発見された場合でも、Export の更新作業を簡素化できます。
 
-Lastly, we have updated our code signing to use *Microsoft Artifact Signing*. This improves security by utilizing short-lived certificates that are valid for only 3 days. Because of this, *it is normal and expected for the certificate to appear expired by the time you install the product.* Rest assured, our signatures are all securely timestamped at the exact moment of signing. As long as the certificate was valid when the product was signed, the signature remains completely valid. Expiring the certificates quickly simply ensures they cannot be misused if they ever fall into the wrong hands.
+最後に、コード署名方式を *Microsoft Artifact Signing* に変更しました。これにより、有効期間が 3 日間の短い証明書を使用することで、セキュリティが向上しています。そのため、*製品のインストール時に、証明書が期限切れと表示されるのは正常な動作です。* ご安心ください。署名には署名時刻のタイムスタンプが安全に埋め込まれており、製品署名時点で証明書が有効であれば、その署名は引き続き完全に有効です。証明書の有効期限を短くしているのは、万一第三者の手に渡った場合でも悪用を防止するためです。
 
-Additional fixes are identified in the Fix List section below.
+その他の修正内容については、以下の「不具合修正リスト」セクションをご参照ください。
 
-Please refer to [Installing Teamstudio Export](installing.md) for details on system requirements and installation. This page will be updated with any known issues and fixes as they become available.
+システム要件およびインストール手順の詳細については、[Installing Teamstudio Export](installing.md) を参照してください。既知の問題および修正情報については、随時このページが更新されます。
 
-## Fix List
+## 不具合修正リスト
 ### Export 5.1.0
-[545] Fix debug warnings from SQLite  
-[546] Constant columns are not properly handled in @DbLookup  
-[547] Update Code Signing Certificate  
-[548] Improve handling of corrupt Base64 attachments  
-[549] Support @While  
-[550] Fix HTML generation for aligned paragraphs with custom bullets  
-[551] Fix PDF error with relative/ambiguous URL links  
-[552] Data for views hidden from the client is not archived  
-[553] Fix 'cannot access file' exception processing certain corrupt OLE objects  
-[554] Support Visio.Drawing.5 OLE type
+[545] SQLite に関するデバッグ警告を修正  
+[546] @DbLookup において固定列が正しく処理されない問題を修正  
+[547] コード署名証明書を更新  
+[548] 破損した Base64 添付ファイルの処理を改善  
+[549] @While をサポート  
+[550] カスタム箇条書きを使用した配置済み段落における HTML 生成を修正  
+[551] 相対 URL／曖昧な URL リンクによる PDF エラーを修正  
+[552] クライアント側で非表示のビューのデータがアーカイブされない問題を修正  
+[553] 一部の破損した OLE オブジェクト処理時に発生する「cannot access file」例外を修正  
+[554] Visio.Drawing.5 OLE タイプをサポート

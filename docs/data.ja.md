@@ -152,22 +152,22 @@ Notes のビュー選択式に似た式を入力できます。ほとんどの @
 ## プレビュー
 ダイアログの左下にある *Preview...* ボタンをクリックすると、データベースから最大 50 件の一致する文書が表示されます。これにより、文書の選択や列の定義が正しく設定されているかを確認できます。大規模なデータベースを検索している場合や、選択式に一致する文書が少ない場合、プレビューが一致する文書を見つけるのに時間がかかることがあります。プレビューは、文書が見つかるたびに更新されます。完了を待たずに、いつでも閉じることができます。
 
-## Saving and Loading Data Selections
-Export 5.1 introduces the ability to save and reload your data configuration, i.e., the selection type and the list of columns. The saved configuration does not include the output configuration - CSV file, SharePoint list etc - since this will almost always be different for different databases.
+## データ選択設定の保存と読み込み
+Export 5.1 では、データ設定（選択タイプおよび列リスト）を保存および再読み込みできる機能が追加されました。保存される設定には、出力設定（CSV ファイル、SharePoint リストなど）は含まれません。これは、出力先設定がデータベースごとに異なるケースがほとんどであるためです。
 
 ### Save
-The *Save...* button will display a dialog asking for a name for the saved configuration. If you enter the name of an existing configuration, you will be asked if you want to overwrite it. This allows you to modify an existing configuration by loading it, making the necessary changes and then re-saving it using the same name.
+*Save...* ボタンをクリックすると、保存する設定名を入力するダイアログが表示されます。既存の設定名を入力した場合は、上書きするかどうか確認メッセージが表示されます。これにより、既存の設定を読み込み、必要な変更を行った後、同じ名前で再保存して更新することができます。
 
 ### Load
-The *Load...* button will display a dialog showing a list of previously saved configurations.
+*Load...* ボタンをクリックすると、以前に保存された設定の一覧を表示するダイアログが表示されます。
 
 <figure markdown="1">
   ![Load Data](img/data_load.png)
 </figure>
 
-The list is categorized by the selection type: *Formula*, *View* or *Search*. If you select a configuration and click *OK*, Export will attempt to load it. In some cases Export will not be able to load the requested configuration. For example, if the selection is based on a view, Export will verify that a view with the correct name exists in the current database. If a matching view cannot be found, Export will be unable to load the configuration. If a view with the correct name is found but it does not have all of the required columns, Export will load the configuration but will display a warning that not all of the columns could be loaded.
+一覧は、選択タイプ: *Formula*、 *View*、*Search* ごとに分類されています。設定を選択して *OK* をクリックすると、Export はその設定の読み込みを試みます。一部のケースでは、要求された設定を読み込めない場合があります。たとえば、ビューを基にした設定の場合、Export は現在のデータベース内に同じ名前のビューが存在するか確認します。一致するビューが見つからない場合、その設定は読み込めません。同じ名前のビューが存在していても、必要な列がすべて含まれていない場合、Export は設定自体は読み込みますが、一部の列を読み込めなかったことを示す警告を表示します。
 
-You can delete a saved configuration by right-clicking on it in the *Load* dialog and choosing *Delete* from the popup menu.
+保存済み設定を削除するには、*Load* ダイアログ内で対象設定を右クリックし、ポップアップメニューから *Delete* を選択してください。
 
 ## エクスポート
 エクスポートを設定し、出力をプレビューした後、*OK* をクリックするとエクスポートが開始されます。エクスポートはバックグラウンドで実行され、他のバックグラウンドタスクと同様に [Progress Window](progress.md) で監視できます。
