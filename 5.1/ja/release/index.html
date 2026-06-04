@@ -25,7 +25,7 @@
     
     
       
-        <title>Release Notes - Teamstudio Export 5.1</title>
+        <title>リリースノート - Teamstudio Export 5.1</title>
       
     
     
@@ -66,7 +66,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#release-notes" class="md-skip">
+        <a href="#_1" class="md-skip">
           コンテンツにスキップ
         </a>
       
@@ -102,7 +102,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Release Notes
+              リリースノート
             
           </span>
         </div>
@@ -766,7 +766,7 @@
   <span class="md-ellipsis">
     
   
-    Release Notes
+    リリースノート
   
 
     
@@ -784,7 +784,7 @@
   <span class="md-ellipsis">
     
   
-    Release Notes
+    リリースノート
   
 
     
@@ -821,15 +821,15 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#fix-list" class="md-nav__link">
+  <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Fix List
+        不具合修正リスト
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Fix List">
+    <nav class="md-nav" aria-label="不具合修正リスト">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -894,15 +894,15 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#fix-list" class="md-nav__link">
+  <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Fix List
+        不具合修正リスト
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Fix List">
+    <nav class="md-nav" aria-label="不具合修正リスト">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -938,32 +938,32 @@
 
 
 
-<h1 id="release-notes">Release Notes</h1>
+<h1 id="_1">リリースノート</h1>
 <h2 id="teamstudio-export-51">Teamstudio Export 5.1</h2>
-<p>Teamstudio Export 5.1 is a feature update to Export.</p>
-<p>The data export feature introduced in Export 5.0 has been updated to allow you to save and reload your data selection criteria. This includes your specific selection (formula, view, or search) as well as the list of columns to be exported.</p>
-<p>Export 5.1 has transitioned to <em>.NET 10</em>, replacing the older .NET Framework used in all previous versions. We now bundle a local .NET runtime directly with Export. While this increases the download and install size, it removes the need for a shared .NET installation on your computer. </p>
-<p>This architectural shift provides several key benefits:</p>
+<p>Teamstudio Export 5.1 は機能拡張版です。</p>
+<p>Export 5.0 で導入されたデータエクスポート機能が強化され、データ選択条件を保存および再読み込みできるようになりました。これには、選択条件（式、ビュー、または検索）に加え、エクスポート対象の列リストも含まれます。</p>
+<p>Export 5.1 では、従来バージョンで使用していた .NET Framework に代わり <em>.NET 10</em> へ移行しました。これに伴い、Export にはローカル .NET ランタイムが同梱されます。ダウンロードサイズおよびインストールサイズは増加しますが、コンピュータ上に共有 .NET 環境を別途インストールする必要がなくなります。</p>
+<p>このアーキテクチャーの変更により、以下の主要なメリットが得られます:</p>
 <ul>
-<li><strong>Simplified Deployment:</strong> Eliminates bugs caused by subtle differences in user-installed .NET Framework versions.</li>
-<li><strong>Cutting-Edge Security:</strong> Allows Export to take advantage of the newest, most secure .NET features.</li>
-<li><strong>Easier Maintenance:</strong> Simplifies the process of updating Export if vulnerabilities are ever discovered in .NET or third-party libraries.</li>
+<li><strong>導入の簡素化:</strong> ユーザー環境にインストールされた .NET Framework の微妙なバージョン差異によって発生する不具合を排除します。</li>
+<li><strong>最新のセキュリティ:</strong> Export が最新かつ最も安全な .NET 機能を利用できるようになります。</li>
+<li><strong>保守性の向上:</strong> .NET やサードパーティライブラリに脆弱性が発見された場合でも、Export の更新作業を簡素化できます。</li>
 </ul>
-<p>Lastly, we have updated our code signing to use <em>Microsoft Artifact Signing</em>. This improves security by utilizing short-lived certificates that are valid for only 3 days. Because of this, <em>it is normal and expected for the certificate to appear expired by the time you install the product.</em> Rest assured, our signatures are all securely timestamped at the exact moment of signing. As long as the certificate was valid when the product was signed, the signature remains completely valid. Expiring the certificates quickly simply ensures they cannot be misused if they ever fall into the wrong hands.</p>
-<p>Additional fixes are identified in the Fix List section below.</p>
-<p>Please refer to <a href="../installing/">Installing Teamstudio Export</a> for details on system requirements and installation. This page will be updated with any known issues and fixes as they become available.</p>
-<h2 id="fix-list">Fix List</h2>
+<p>最後に、コード署名方式を <em>Microsoft Artifact Signing</em> に変更しました。これにより、有効期間が 3 日間の短い証明書を使用することで、セキュリティが向上しています。そのため、<em>製品のインストール時に、証明書が期限切れと表示されるのは正常な動作です。</em> ご安心ください。署名には署名時刻のタイムスタンプが安全に埋め込まれており、製品署名時点で証明書が有効であれば、その署名は引き続き完全に有効です。証明書の有効期限を短くしているのは、万一第三者の手に渡った場合でも悪用を防止するためです。</p>
+<p>その他の修正内容については、以下の「不具合修正リスト」セクションをご参照ください。</p>
+<p>システム要件およびインストール手順の詳細については、<a href="../installing/">Installing Teamstudio Export</a> を参照してください。既知の問題および修正情報については、随時このページが更新されます。</p>
+<h2 id="_2">不具合修正リスト</h2>
 <h3 id="export-510">Export 5.1.0</h3>
-<p>[545] Fix debug warnings from SQLite<br />
-[546] Constant columns are not properly handled in @DbLookup<br />
-[547] Update Code Signing Certificate<br />
-[548] Improve handling of corrupt Base64 attachments<br />
-[549] Support @While<br />
-[550] Fix HTML generation for aligned paragraphs with custom bullets<br />
-[551] Fix PDF error with relative/ambiguous URL links<br />
-[552] Data for views hidden from the client is not archived<br />
-[553] Fix 'cannot access file' exception processing certain corrupt OLE objects<br />
-[554] Support Visio.Drawing.5 OLE type</p>
+<p>[545] SQLite に関するデバッグ警告を修正<br />
+[546] @DbLookup において固定列が正しく処理されない問題を修正<br />
+[547] コード署名証明書を更新<br />
+[548] 破損した Base64 添付ファイルの処理を改善<br />
+[549] @While をサポート<br />
+[550] カスタム箇条書きを使用した配置済み段落における HTML 生成を修正<br />
+[551] 相対 URL／曖昧な URL リンクによる PDF エラーを修正<br />
+[552] クライアント側で非表示のビューのデータがアーカイブされない問題を修正<br />
+[553] 一部の破損した OLE オブジェクト処理時に発生する「cannot access file」例外を修正<br />
+[554] Visio.Drawing.5 OLE タイプをサポート</p>
 
 
 
